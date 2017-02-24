@@ -54,7 +54,7 @@ class Player extends Component {
           // eslint-disable-next-line
           ref={(ref) => this.audioEl = ref}
           src={sounds[selectedSound].stream_url + '?client_id=33c73dacce84dddddbc15117e071b6ce'} />
-        <div className='flex flex-row pb1'>
+        <div className='flex flex-row'>
           <div className='PlayButton grow' onClick={this.props.playClick}>
             <svg viewBox='0 0 200 200'>
               <circle cx='100' cy='100' r='95' fill='none' stroke='#000' />

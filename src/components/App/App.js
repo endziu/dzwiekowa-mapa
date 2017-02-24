@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router'
-import data from '../../assets/tracks.json'
+import sounds from '../../assets/tracks.json'
 
-const sounds = data.sort(() => 0.5 - Math.random())
+//const sounds = data.sort(() => 0.5 - Math.random())
 
 const makeListItem = (item, index) => {
   return (
@@ -25,11 +25,11 @@ class App extends Component {
         <div className='App-main pa2 w-two-thirds'>
           {this.props.children}
         </div>
-        <div className='flex flex-column w-third'>
-
-          <input className="input-reset pa3" id="search" placeholder="🔎 Szukaj dźwięków..." type="text" />
-
-          <ul className='App-Lista list bl pa2 overflow-auto'>
+        <div className='flex flex-column w-third pa2 bl'>
+          <form className=' pb2 bb'>
+            <input className="input-reset h2" id="search" placeholder="🔎 Szukaj dźwięków..." type="text" />
+          </form>
+          <ul className='App-Lista list overflow-auto'>
             { sounds.map(makeListItem) }
           </ul>
         </div>
