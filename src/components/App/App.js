@@ -29,7 +29,7 @@ class App extends Component {
           <form className=' pb2 bb'>
             <input className='input-reset h2' id='search' placeholder='🔎 Szukaj dźwięków...' type='text' />
           </form>
-          <ul className='App-Lista list overflow-auto'>
+          <ul className='App-Lista list mt2 overflow-auto'>
             { sounds.map(makeListItem) }
           </ul>
         </div>
