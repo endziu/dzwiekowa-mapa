@@ -9,7 +9,7 @@ class Sound extends Component {
   constructor () {
     super()
     this.state = {
-      isPlaying: false,
+      isPlaying: false
     }
     this.playClick = this.playClick.bind(this)
     this.onEnded = this.onEnded.bind(this)
@@ -33,7 +33,7 @@ class Sound extends Component {
     const sameID = (sound) => asNumber(sound.id) === asNumber(this.props.params.id)
     const item = takeFirst(sounds.filter(sameID))
     return (
-      <div className='playerWidth floatRight'>        
+      <div className='playerWidth floatRight'>
         <Player
           // eslint-disable-next-line
           ref={(ref)=>this.Player = ref}

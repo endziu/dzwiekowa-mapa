@@ -68,7 +68,7 @@ class Player extends Component {
             </svg>
           </div>
           <div className='h2 pl2 w-100' onClick={this.setPosition}>
-            <div className='h2' style={{width: `${this.state.percentPlayed}%`, background:"#333"}} />
+            <div className='h2' style={{width: `${this.state.percentPlayed}%`, background: '#333'}} />
             <img
               className='relative bottom-2 h2 w-100 bg-black-20'
               src={sounds[selectedSound].waveform_url}
