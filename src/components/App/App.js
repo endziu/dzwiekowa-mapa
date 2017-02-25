@@ -7,7 +7,7 @@ import sounds from '../../assets/tracks.json'
 class App extends Component {
   render () {
     return (
-      <div className='App flex f6 helvetica  black-80'>
+      <div className='App flex f6 black-80'>
         <div className='App-main pa2 w-two-thirds'>
           {this.props.children}
         </div>
@@ -15,7 +15,7 @@ class App extends Component {
           <form className=' pb2 bb'>
             <input className='input-reset h2' id='search' placeholder='🔎 Szukaj dźwięków...' type='text' />
           </form>
-          <ul className='App-Lista list mt2 overflow-auto'>
+          <ul className='App-Lista list mt2 lh-copy overflow-auto'>
             { sounds.map((item, index) => <Link
                 className='link'
                 key={index}
