@@ -1,21 +1,5 @@
 import React, { Component } from 'react'
-
-const prettyTime = (time) => {
-  let hours = Math.floor(time / 3600);
-  let mins = '' + Math.floor((time % 3600) / 60);
-  let secs = '0' + Math.floor((time % 60));
-
-  mins = mins.substr(mins.length - 2);
-  secs = secs.substr(secs.length - 2);
-
-  if (!isNaN(secs)) {
-    if (hours) {
-      return `${hours}:${mins}:${secs}`;
-    }
-    return `${mins}:${secs}`;
-  }
-  return '0:00';
-}
+import { prettyTime } from '../../helpers/index.js'
 
 class Player extends Component {
   constructor () {
@@ -73,7 +57,7 @@ class Player extends Component {
         <audio
           onTimeUpdate={this.onTimeUpdate}
           onEnded={this.onEnded}
-          onCanPlay={this.recReady}
+          onLoadedMetadata={this.recReady}
           // eslint-disable-next-line
           ref={(ref) => this.audioEl = ref}
           src={selectedSound.stream_url + '?client_id=33c73dacce84dddddbc15117e071b6ce'} />

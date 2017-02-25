@@ -2,8 +2,7 @@ import React, { Component } from 'react'
 import sounds from '../../assets/tracks.json'
 import Player from '../Player/Player.js'
 
-const takeFirst = (arr) => arr[0]
-const asNumber = (n) => parseInt(n, 10)
+import { takeFirst, asNumber, copyTextToClipboard } from '../../helpers/index.js'
 
 class Sound extends Component {
   constructor () {
@@ -32,6 +31,7 @@ class Sound extends Component {
   render () {
     const sameID = (sound) => asNumber(sound.id) === asNumber(this.props.params.id)
     const item = takeFirst(sounds.filter(sameID))
+
     return (
       <div className='playerWidth floatRight'>
         <Player
@@ -55,6 +55,11 @@ class Sound extends Component {
             src={item.artwork_url || item.userPic}
             alt='artwork'
           />
+        </div>
+        <div
+          onClick={() => copyTextToClipboard(`http://localhost:3000/rec/${item.id}`)}
+          className="sans-serif fr no-underline grow dib v-mid bg-near-white black ba b--black pa1 mb3 pointer">
+            copy link
         </div>
       </div>
     )
