@@ -16,7 +16,8 @@ const RouterContext = reactRouter.RouterContext
 const staticFiles = [
   '/static/*',
   '/asset-manifest.json',
-  '/favicon.ico'
+  '/favicon.ico',
+  '/tachyons.min.css'
 ]
 
 const routes = require('../src/routes').default()

@@ -4278,10 +4278,6 @@ react-scripts@0.8.4:
   optionalDependencies:
     fsevents "1.0.14"
 
-react-soundcloud-player@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/react-soundcloud-player/-/react-soundcloud-player-1.0.1.tgz#91cf2c08646583bc43d55174f4e312800965f544"
-
 react@^15.4.1:
   version "15.4.1"
   resolved "https://registry.yarnpkg.com/react/-/react-15.4.1.tgz#498e918602677a3983cd0fd206dfe700389a0dd6"
@@ -4868,6 +4864,10 @@ table@^3.7.8:
     lodash "^4.0.0"
     slice-ansi "0.0.4"
     string-width "^2.0.0"
+
+tachyons@^4.6.2:
+  version "4.6.2"
+  resolved "https://registry.yarnpkg.com/tachyons/-/tachyons-4.6.2.tgz#cf006fd516763e735b33565fc21b8b3616a012c8"
 
 tapable@^0.1.8, tapable@~0.1.8:
   version "0.1.10"
