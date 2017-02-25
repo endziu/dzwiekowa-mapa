@@ -1,7 +1,20 @@
 import React, { Component } from 'react'
 
-const msToTime = (ms) => {
+const prettyTime = (time) => {
+  let hours = Math.floor(time / 3600);
+  let mins = '' + Math.floor((time % 3600) / 60);
+  let secs = '0' + Math.floor((time % 60));
 
+  mins = mins.substr(mins.length - 2);
+  secs = secs.substr(secs.length - 2);
+
+  if (!isNaN(secs)) {
+    if (hours) {
+      return `${hours}:${mins}:${secs}`;
+    }
+    return `${mins}:${secs}`;
+  }
+  return '0:00';
 }
 
 class Player extends Component {
@@ -81,7 +94,7 @@ class Player extends Component {
           </div>
         </div>
         <div className='f6'>
-          {`${msToTime(this.state.currentTime) || '0:00'}/${msToTime(this.state.duration) || '0:00'}`}
+          {`${prettyTime(this.state.currentTime)}||${prettyTime(this.state.duration)}`}
         </div>
       </div>
     )
