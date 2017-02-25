@@ -45,7 +45,7 @@ class Sound extends Component {
           isPlaying={this.state.isPlaying}
         />
 
-        <div className='icons flex flex-row justify-start ml4 bb'>
+        <div className='icons flex flex-row justify-start ml4'>
 
           <div className='dim w2 h2 pa2 bg-white black pointer'>
             <Link to='/'>

@@ -24,7 +24,7 @@ class App extends Component {
                 key={index}
                 to={`/rec/${item.id}`}
               >
-                <li className={asNumber(this.props.params.id) === asNumber(item.id) ? 'white bg-black-80 truncate' : 'black-80 hover-near-white bg-animate hover-bg-black-80 truncate'}>
+                <li className={asNumber(this.props.params.id) === asNumber(item.id) ? 'white bg-black-60 truncate' : 'black-80 hover-near-white bg-animate hover-bg-black-60 truncate'}>
                   <span>{item.title}</span>
                 </li>
               </Link>) }

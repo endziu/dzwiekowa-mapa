@@ -76,7 +76,7 @@ class Player extends Component {
             </svg>
           </div>
           <div className='h2 pl2 w-100' onClick={this.setPosition}>
-            <div className='h2' style={{width: `${this.state.percentPlayed}%`, background: '#cf1'}} />
+            <div className='h2' style={{width: `${this.state.percentPlayed}%`, background: '#555'}} />
             <img
               className='relative bottom-2 h2 w-100 bg-black-20'
               src={selectedSound.waveform_url}
@@ -85,7 +85,7 @@ class Player extends Component {
           </div>
         </div>
 
-        <span className='fr relative bottom-1 black'>{`${prettyTime(this.state.currentTime)} / ${prettyTime(this.state.duration)}`}</span>
+        <span className='fr relative bottom-1 white bg-black-60'>{`${prettyTime(this.state.currentTime)} / ${prettyTime(this.state.duration)}`}</span>
 
       </div>
     )
