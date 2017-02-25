@@ -54,7 +54,7 @@ class Player extends Component {
     const { isPlaying, selectedSound } = this.props
 
     return (
-      <div className='App-Player bb'>
+      <div className='App-Player pb2 bb'>
         <audio
           onTimeUpdate={this.onTimeUpdate}
           onEnded={this.onEnded}
@@ -76,7 +76,7 @@ class Player extends Component {
             </svg>
           </div>
           <div className='h2 pl2 w-100' onClick={this.setPosition}>
-            <div className='h2' style={{width: `${this.state.percentPlayed}%`, background: '#333'}} />
+            <div className='h2' style={{width: `${this.state.percentPlayed}%`, background: '#cf1'}} />
             <img
               className='relative bottom-2 h2 w-100 bg-black-20'
               src={selectedSound.waveform_url}
@@ -84,11 +84,9 @@ class Player extends Component {
             />
           </div>
         </div>
-        
-        <div className='ml4 pa2 f6'>
-          {`[ ${prettyTime(this.state.currentTime)} : ${prettyTime(this.state.duration)} ]`}
-        </div>
-        
+
+        <span className='fr relative bottom-1 black'>{`${prettyTime(this.state.currentTime)} / ${prettyTime(this.state.duration)}`}</span>
+
       </div>
     )
   }
