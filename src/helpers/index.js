@@ -19,7 +19,7 @@ const takeFirst = (arr) => arr[0]
 const asNumber = (n) => parseInt(n, 10)
 
 const copyTextToClipboard = (text) => {
-  const textArea = document.createElement("textarea")
+  const textArea = document.createElement('textarea')
 
   // Place in top-left corner of screen regardless of scroll position.
   textArea.style.position = 'fixed'

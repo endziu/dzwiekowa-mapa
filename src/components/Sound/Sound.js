@@ -58,7 +58,7 @@ class Sound extends Component {
         </div>
         <div
           onClick={() => copyTextToClipboard(`https://devmap2.now.sh/rec/${item.id}`)}
-          className="sans-serif fr no-underline grow dib v-mid bg-near-white black ba b--black pa1 mb3 pointer">
+          className='sans-serif fr no-underline grow dib v-mid bg-near-white black ba b--black pa1 mb3 pointer'>
             copy link
         </div>
       </div>

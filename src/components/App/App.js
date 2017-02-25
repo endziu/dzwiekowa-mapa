@@ -17,14 +17,14 @@ class App extends Component {
           </form>
           <ul className='App-Lista list mt2 lh-copy overflow-auto'>
             { sounds.map((item, index) => <Link
-                className='link'
-                key={index}
-                to={`/rec/${item.id}`}
+              className='link'
+              key={index}
+              to={`/rec/${item.id}`}
               >
-                <li className='black-80 hover-near-white bg-animate hover-bg-black-80 truncate'>
-                  <span>{item.title}</span>
-                </li>
-              </Link>) }
+              <li className='black-80 hover-near-white bg-animate hover-bg-black-80 truncate'>
+                <span>{item.title}</span>
+              </li>
+            </Link>) }
           </ul>
         </div>
       </div>
