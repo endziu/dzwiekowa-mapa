@@ -21,10 +21,6 @@ input {
   border: none;
 }
 
-input:focus { 
-    outline: 0;
-}
-
 .PlayButton {
   min-height: 32px;
   min-width: 32px;

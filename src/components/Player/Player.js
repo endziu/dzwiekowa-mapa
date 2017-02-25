@@ -1,5 +1,8 @@
 import React, { Component } from 'react'
-import sounds from '../../assets/tracks.json'
+
+const msToTime = (ms) => {
+
+}
 
 class Player extends Component {
   constructor () {
@@ -46,6 +49,7 @@ class Player extends Component {
 
   render () {
     const { isPlaying, selectedSound } = this.props
+
     return (
       <div className='App-Player pb2 bb'>
         <audio
@@ -53,7 +57,7 @@ class Player extends Component {
           onEnded={this.onEnded}
           // eslint-disable-next-line
           ref={(ref) => this.audioEl = ref}
-          src={sounds[selectedSound].stream_url + '?client_id=33c73dacce84dddddbc15117e071b6ce'} />
+          src={selectedSound.stream_url + '?client_id=33c73dacce84dddddbc15117e071b6ce'} />
         <div className='flex flex-row'>
           <div className='PlayButton grow' onClick={this.props.playClick}>
             <svg viewBox='0 0 200 200'>
@@ -71,12 +75,14 @@ class Player extends Component {
             <div className='h2' style={{width: `${this.state.percentPlayed}%`, background: '#333'}} />
             <img
               className='relative bottom-2 h2 w-100 bg-black-20'
-              src={sounds[selectedSound].waveform_url}
+              src={selectedSound.waveform_url}
               alt='waveform'
             />
           </div>
         </div>
-
+        <div className='f6'>
+          {`${msToTime(this.state.currentTime) || '0:00'}/${msToTime(this.state.duration) || '0:00'}`}
+        </div>
       </div>
     )
   }

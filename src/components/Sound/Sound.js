@@ -39,7 +39,7 @@ class Sound extends Component {
           ref={(ref)=>this.Player = ref}
           playClick={this.playClick}
           onEnded={this.onEnded}
-          selectedSound={this.props.route.selectedSound}
+          selectedSound={item}
           isPlaying={this.state.isPlaying}
         />
         <div className='flex flex-row justify-end items-start'>

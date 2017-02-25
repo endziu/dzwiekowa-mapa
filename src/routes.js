@@ -10,7 +10,7 @@ const Routes = () => (
   <Router history={browserHistory}>
     <Route path='/' component={App}>
       <IndexRoute component={Welcome} />
-      <Route path='/sound/:id' selectedSound={0} component={Sound} />
+      <Route path='/rec/:id' component={Sound} />
       <Route path='*' component={NotFound} />
     </Route>
   </Router>

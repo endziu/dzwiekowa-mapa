@@ -4,20 +4,6 @@ import sounds from '../../assets/tracks.json'
 
 // const sounds = data.sort(() => 0.5 - Math.random())
 
-const makeListItem = (item, index) => {
-  return (
-    <Link
-      className='link'
-      key={index}
-      to={`/sound/${item.id}`}
-    >
-      <li className='black-80 hover-near-white bg-animate hover-bg-black-80 truncate'>
-        <span>{item.title}</span>
-      </li>
-    </Link>
-  )
-}
-
 class App extends Component {
   render () {
     return (
@@ -30,7 +16,15 @@ class App extends Component {
             <input className='input-reset h2' id='search' placeholder='🔎 Szukaj dźwięków...' type='text' />
           </form>
           <ul className='App-Lista list mt2 overflow-auto'>
-            { sounds.map(makeListItem) }
+            { sounds.map((item, index) => <Link
+                className='link'
+                key={index}
+                to={`/rec/${item.id}`}
+              >
+                <li className='black-80 hover-near-white bg-animate hover-bg-black-80 truncate'>
+                  <span>{item.title}</span>
+                </li>
+              </Link>) }
           </ul>
         </div>
       </div>
