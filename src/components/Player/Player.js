@@ -28,6 +28,7 @@ class Player extends Component {
     this.onTimeUpdate = this.onTimeUpdate.bind(this)
     this.setPosition = this.setPosition.bind(this)
     this.onEnded = this.onEnded.bind(this)
+    this.recReady = this.recReady.bind(this)
   }
 
   componentDidMount () {
@@ -39,6 +40,10 @@ class Player extends Component {
     this.audioEl.addEventListener('onEnded', (e) =>
       this.onEnded(e)
     )
+  }
+
+  recReady () {
+    this.setState({duration: this.audioEl.duration})
   }
 
   onEnded (e) {
@@ -68,6 +73,7 @@ class Player extends Component {
         <audio
           onTimeUpdate={this.onTimeUpdate}
           onEnded={this.onEnded}
+          onCanPlay={this.recReady}
           // eslint-disable-next-line
           ref={(ref) => this.audioEl = ref}
           src={selectedSound.stream_url + '?client_id=33c73dacce84dddddbc15117e071b6ce'} />
