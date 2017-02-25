@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+
 import { prettyTime } from '../../helpers/index.js'
 
 class Player extends Component {
@@ -53,7 +54,7 @@ class Player extends Component {
     const { isPlaying, selectedSound } = this.props
 
     return (
-      <div className='App-Player pb2 bb'>
+      <div className='App-Player bb'>
         <audio
           onTimeUpdate={this.onTimeUpdate}
           onEnded={this.onEnded}
@@ -83,9 +84,11 @@ class Player extends Component {
             />
           </div>
         </div>
-        <div className='f6'>
-          {`${prettyTime(this.state.currentTime)}||${prettyTime(this.state.duration)}`}
+        
+        <div className='ml4 pa2 f6'>
+          {`[ ${prettyTime(this.state.currentTime)} : ${prettyTime(this.state.duration)} ]`}
         </div>
+        
       </div>
     )
   }
