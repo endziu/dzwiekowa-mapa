@@ -6,7 +6,7 @@ const IconHome = () => <Link to='/'>
   <svg width='16' height='16' fill='#000' data-id='geomicon-home' viewBox='0 0 32 32'>
     <path d='M16 0 L32 16 L28 16 L28 30 L20 30 L20 20 L12 20 L12 30 L4 30 L4 16 L0 16 Z' />
   </svg>
-</Link>  
+</Link>
 
 const IconAdd = () => <Link to='/add'>
   <svg viewBox='0 0 16 16' width='16' height='16' fill='#000' stroke='#000'>

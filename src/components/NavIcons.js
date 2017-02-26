@@ -9,7 +9,7 @@ const NavIcons = ({id}) => <div className='icons flex flex-row justify-start bb 
     <IconAdd />
   </div>
   <div className='dim w2 h2 pa2 bg-white black pointer'>
-    <IconLink id={id}/>
+    <IconLink id={id} />
   </div>
 </div>
 

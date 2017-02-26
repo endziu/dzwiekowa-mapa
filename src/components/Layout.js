@@ -7,7 +7,7 @@ import { asNumber } from '../helpers/index.js'
 const sounds = data.sort(() => 0.5 - Math.random())
 
 const Lista = ({id}) => {
-  return(
+  return (
     <div className='flex flex-column pl2 pt2 bl'>
       <form className='pb2 bb'>
         <input className='input-reset h2' id='search' placeholder='🔎 Szukaj dźwięków...' type='text' />
@@ -41,16 +41,16 @@ class Layout extends Component {
 
           { sound
             ? <div className='absolute onTop top-0 r--480'>
-                {sound}
-              </div>
+              {sound}
+            </div>
             : null }
 
           { mapa
             ? <div className='absolute top-0 left-0 bottom-0 r--480 pa2'>
-                {mapa}
-              </div>
+              {mapa}
+            </div>
             : null }
-          
+
         </div>
 
         <Lista

@@ -44,7 +44,7 @@ class Sound extends Component {
           isPlaying={this.state.isPlaying}
         />
 
-        <NavIcons id={item.id}/>
+        <NavIcons id={item.id} />
 
         <div className='flex flex-row justify-start items-start'>
 
