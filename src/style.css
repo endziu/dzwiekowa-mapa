@@ -43,3 +43,7 @@ input {
 .App-Lista {
   height: calc(100vh - 58px);
 }
+
+.onTop {
+  z-index: 999;
+}

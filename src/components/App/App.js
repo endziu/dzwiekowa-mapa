@@ -14,7 +14,7 @@ class App extends Component {
           {this.props.children}
         </div>
         <div className='flex flex-column w-third pl2 pt2 bl'>
-          <form className=' pb2 bb'>
+          <form className='pb2 bb'>
             <input className='input-reset h2' id='search' placeholder='🔎 Szukaj dźwięków...' type='text' />
           </form>
           <ul className='App-Lista list mt2 lh-copy overflow-auto'>

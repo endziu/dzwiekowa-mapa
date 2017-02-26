@@ -55,14 +55,17 @@ class Player extends Component {
 
     return (
       <div className='App-Player pb2 bb'>
+
         <audio
           onTimeUpdate={this.onTimeUpdate}
           onEnded={this.onEnded}
           onLoadedMetadata={this.recReady}
           // eslint-disable-next-line
           ref={(ref) => this.audioEl = ref}
-          src={selectedSound.stream_url + '?client_id=33c73dacce84dddddbc15117e071b6ce'} />
+          src={selectedSound.stream_url + '?client_id=33c73dacce84dddddbc15117e071b6ce'} />         
+
         <div className='flex flex-row'>
+          
           <div className='PlayButton grow' onClick={this.props.playClick}>
             <svg viewBox='0 0 200 200'>
               <circle cx='100' cy='100' r='95' fill='none' stroke='#000' />
@@ -75,7 +78,9 @@ class Player extends Component {
               }
             </svg>
           </div>
+
           <div className='h2 pl2 w-100' onClick={this.setPosition}>
+            <span className='white bg-black-60 fr mt2'>{`${prettyTime(this.state.currentTime)} / ${prettyTime(this.state.duration)}`}</span>
             <div className='h2' style={{width: `${this.state.percentPlayed}%`, background: '#555'}} />
             <img
               className='relative bottom-2 h2 w-100 bg-black-20'
@@ -83,10 +88,8 @@ class Player extends Component {
               alt='waveform'
             />
           </div>
+
         </div>
-
-        <span className='fr relative bottom-1 white bg-black-60'>{`${prettyTime(this.state.currentTime)} / ${prettyTime(this.state.duration)}`}</span>
-
       </div>
     )
   }
