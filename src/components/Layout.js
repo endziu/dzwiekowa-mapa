@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import Lista from './Lista.js'
 
 class Layout extends Component {
-
   render () {
     const {sound, mapa} = this.props
     return (
