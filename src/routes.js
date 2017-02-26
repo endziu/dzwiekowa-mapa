@@ -1,14 +1,14 @@
 import React from 'react'
 import { Router, Route, browserHistory, IndexRoute } from 'react-router'
 
-import App from './components/App/App.js'
-import Sound from './components/Sound/Sound.js'
-import Welcome from './components/Welcome/Welcome.js'
-import NotFound from './components/NotFound/NotFound.js'
+import Layout from './components/Layout.js'
+import Sound from './components/Sound.js'
+import Welcome from './components/Welcome.js'
+import NotFound from './components/NotFound.js'
 
 const Routes = () => (
   <Router history={browserHistory}>
-    <Route path='/' component={App}>
+    <Route path='/' component={Layout}>
       <IndexRoute component={Welcome} />
       <Route path='/rec/:id' component={Sound} />
       <Route path='*' component={NotFound} />

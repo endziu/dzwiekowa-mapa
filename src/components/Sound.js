@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
-import sounds from '../../assets/tracks.json'
-import Player from '../Player/Player.js'
+import sounds from '../assets/tracks.json'
+import Player from './Player.js'
 
-import { IconHome, IconAdd, IconLink } from '../Icons/'
-import { takeFirst, asNumber } from '../../helpers/'
+import { IconHome, IconAdd, IconLink } from './Icons.js'
+import { takeFirst, asNumber } from '../helpers/'
 
 class Sound extends Component {
   constructor () {

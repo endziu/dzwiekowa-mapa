@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-import { prettyTime } from '../../helpers/index.js'
+import { prettyTime } from '../helpers/index.js'
 
 class Player extends Component {
   constructor () {

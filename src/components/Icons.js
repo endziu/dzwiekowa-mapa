@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router'
-import { copyTextToClipboard } from '../../helpers/index.js'
+import { copyTextToClipboard } from '../helpers/index.js'
 
 const IconHome = () => <Link to='/'>
   <svg width='16' height='16' fill='#000' data-id='geomicon-home' viewBox='0 0 32 32'>
