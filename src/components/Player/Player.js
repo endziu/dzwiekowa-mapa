@@ -80,13 +80,13 @@ class Player extends Component {
           </div>
 
           <div className='h2 pl2 w-100' onClick={this.setPosition}>
-            <span className='white bg-black-60 fr mt2'>{`${prettyTime(this.state.currentTime)} / ${prettyTime(this.state.duration)}`}</span>
             <div className='h2' style={{width: `${this.state.percentPlayed}%`, background: '#555'}} />
             <img
               className='relative bottom-2 h2 w-100 bg-black-20'
               src={selectedSound.waveform_url}
               alt='waveform'
             />
+            <span className='black fr relative moveUp'>{`${prettyTime(this.state.currentTime)} / ${prettyTime(this.state.duration)}`}</span>
           </div>
 
         </div>

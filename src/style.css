@@ -47,3 +47,7 @@ input {
 .onTop {
   z-index: 999;
 }
+
+.moveUp {
+  top: -1.5em;
+}
