@@ -54,7 +54,7 @@ class Player extends Component {
     const { isPlaying, selectedSound } = this.props
 
     return (
-      <div className='App-Player pb2 bb'>
+      <div className='App-Player pb2 bb b--black-40'>
 
         <audio
           onTimeUpdate={this.onTimeUpdate}
