@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import sounds from '../assets/tracks.json'
 import Player from './Player.js'
 import { takeFirst, asNumber } from '../helpers/'
-import NavIcons from './NavIcons.js'
 
 class Sound extends Component {
   constructor () {
@@ -33,35 +32,38 @@ class Sound extends Component {
     const item = takeFirst(sounds.filter(sameID))
 
     return (
-      <div className='bg-white pr2'>
-        { this.props.id &&
+      this.props.id
+      ? <div className='pr2'>
+
         <Player
-          // eslint-disable-next-line
-          ref={(ref) => this.Player = ref}
+            // eslint-disable-next-line
+            ref={(ref) => this.Player = ref}
           playClick={this.playClick}
           onEnded={this.onEnded}
           selectedSound={item}
           isPlaying={this.state.isPlaying}
-        /> }
-        { this.props.id &&
-        <NavIcons id={item.id} /> }
-        { this.props.id &&
+          />
+
         <div className='flex flex-row justify-start items-start'>
+
           <img
             className='pt2 dontScale'
             src={item.artwork_url || item.userPic}
             alt='artwork'
-          />
+            />
 
           <p className='pt2 pl2'>
             { takeFirst(
-              item.description
-                .split('\n')
-                .filter(s => s.includes('Opis'))
-            ).substring(5) }
+                item.description
+                  .split('\n')
+                  .filter(s => s.includes('Opis'))
+              ).substring(5) }
           </p>
-        </div> }
+
+        </div>
+
       </div>
+      : null
     )
   }
 }

@@ -69,22 +69,22 @@ class Player extends Component {
               <circle cx='100' cy='100' r='95' fill='none' stroke='#000' />
               { isPlaying
                 ? <g>
-                  <polygon points='60,55 60,145 90,145 90,55' fill='#000' />
-                  <polygon points='110,55 110,145 140,145 140,55' fill='#000' />
-                </g>
+                    <polygon points='60,55 60,145 90,145 90,55' fill='#000' />
+                    <polygon points='110,55 110,145 140,145 140,55' fill='#000' />
+                  </g>
                 : <polygon points='70,55 70,145 145,100' fill='#000' />
               }
             </svg>
           </div>
 
           <div className='h2 pl2 w-100' onClick={this.setPosition}>
-            <div className='h2' style={{width: `${this.state.percentPlayed}%`, background: '#0f0'}} />
+            <span className='black absolute top-1 right-1'>{`${prettyTime(this.state.currentTime)} / ${prettyTime(this.state.duration)}`}</span>
+            <div className='h2' style={{width: `${this.state.percentPlayed}%`, background: '#dea'}} />
             <img
               className='relative bottom-2 h2 w-100 bg-black-20'
               src={selectedSound.waveform_url}
               alt='waveform'
             />
-            <span className='black fr relative moveUp'>{`${prettyTime(this.state.currentTime)} / ${prettyTime(this.state.duration)}`}</span>
           </div>
         </div>
       </div>
