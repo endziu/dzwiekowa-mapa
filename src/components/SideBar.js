@@ -6,7 +6,7 @@ import sounds from '../assets/tracks.json'
 
 // const sounds = data.sort(() => 0.5 - Math.random())
 
-const Lista = ({id, sound}) => {
+const SideBar = ({id, sound}) => {
   return (
     <div className='flex flex-column pl2 pt2 bl vh-100 mw6'>
       <Sound id={id} />
@@ -29,4 +29,4 @@ const Lista = ({id, sound}) => {
   )
 }
 
-export default Lista
+export default SideBar

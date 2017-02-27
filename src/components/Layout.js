@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Lista from './Lista.js'
+import SideBar from './SideBar.js'
 
 class Layout extends Component {
   render () {
@@ -10,7 +10,7 @@ class Layout extends Component {
           { this.props.children }
           { mapa ? {mapa} : null }
         </div>
-        <Lista
+        <SideBar
           id={this.props.params.id}
         />
       </div>
