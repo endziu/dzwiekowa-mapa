@@ -28,17 +28,8 @@ input {
   max-width: 32px;
 }
 
-.playerWidth {
-  max-width: 400px;
-}
-
 .dontScale {
   object-fit: contain;
-}
-
-.App-Lista {
-  max-height: calc(100vh - 58px);
-  max-width: 490px;
 }
 
 .moveUp {
@@ -47,10 +38,6 @@ input {
 
 .onTop {
   z-index: 9999;
-}
-
-.r--480 {
-  right: 480px;
 }
 
 .vw-100 {

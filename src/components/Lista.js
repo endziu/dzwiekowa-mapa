@@ -1,17 +1,19 @@
 import React from 'react'
 import { Link } from 'react-router'
+import Sound from './Sound.js'
 import { asNumber } from '../helpers/index.js'
-import data from '../assets/tracks.json'
+import sounds from '../assets/tracks.json'
 
-const sounds = data.sort(() => 0.5 - Math.random())
+//const sounds = data.sort(() => 0.5 - Math.random())
 
-const Lista = ({id}) => {
+const Lista = ({id, sound}) => {
   return (
-    <div className='flex flex-column pl2 pt2 bl'>
-      <form className='pb2 bb'>
+    <div className='flex flex-column pl2 pt2 bl vh-100 mw6'>
+      <Sound id={id}/>
+      <form className='pb2 mr2 bb b--black-40'>
         <input className='input-reset h2' id='search' placeholder='🔎 Szukaj dźwięków...' type='text' />
       </form>
-      <ul className='App-Lista list mt2 lh-copy overflow-auto'>
+      <ul className='list mt2 lh-copy overflow-auto'>
         { sounds.map((item, index) =>
           <Link
             className='link'

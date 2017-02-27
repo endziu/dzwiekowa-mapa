@@ -55,7 +55,6 @@ class Player extends Component {
 
     return (
       <div className='App-Player pb2 bb b--black-40'>
-
         <audio
           onTimeUpdate={this.onTimeUpdate}
           onEnded={this.onEnded}
@@ -65,7 +64,6 @@ class Player extends Component {
           src={selectedSound.stream_url + '?client_id=33c73dacce84dddddbc15117e071b6ce'} />
 
         <div className='flex flex-row'>
-
           <div className='PlayButton grow' onClick={this.props.playClick}>
             <svg viewBox='0 0 200 200'>
               <circle cx='100' cy='100' r='95' fill='none' stroke='#000' />
@@ -80,7 +78,7 @@ class Player extends Component {
           </div>
 
           <div className='h2 pl2 w-100' onClick={this.setPosition}>
-            <div className='h2' style={{width: `${this.state.percentPlayed}%`, background: '#555'}} />
+            <div className='h2' style={{width: `${this.state.percentPlayed}%`, background: '#0f0'}} />
             <img
               className='relative bottom-2 h2 w-100 bg-black-20'
               src={selectedSound.waveform_url}
@@ -88,7 +86,6 @@ class Player extends Component {
             />
             <span className='black fr relative moveUp'>{`${prettyTime(this.state.currentTime)} / ${prettyTime(this.state.duration)}`}</span>
           </div>
-
         </div>
       </div>
     )

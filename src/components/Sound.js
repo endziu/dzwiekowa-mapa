@@ -29,12 +29,12 @@ class Sound extends Component {
   }
 
   render () {
-    const sameID = (sound) => asNumber(sound.id) === asNumber(this.props.params.id)
+    const sameID = (sound) => asNumber(sound.id) === asNumber(this.props.id)
     const item = takeFirst(sounds.filter(sameID))
 
     return (
-      <div className='playerWidth bg-white pa2'>
-
+      <div className='bg-white pr2'>
+        { this.props.id &&
         <Player
           // eslint-disable-next-line
           ref={(ref) => this.Player = ref}
@@ -42,12 +42,11 @@ class Sound extends Component {
           onEnded={this.onEnded}
           selectedSound={item}
           isPlaying={this.state.isPlaying}
-        />
-
-        <NavIcons id={item.id} />
-
+        /> }
+        { this.props.id &&
+        <NavIcons id={item.id} /> }
+        { this.props.id &&
         <div className='flex flex-row justify-start items-start'>
-
           <img
             className='pt2 dontScale'
             src={item.artwork_url || item.userPic}
@@ -55,15 +54,13 @@ class Sound extends Component {
           />
 
           <p className='pt2 pl2'>
-            {takeFirst(
+            { takeFirst(
               item.description
                 .split('\n')
                 .filter(s => s.includes('Opis'))
-            ).substring(5)}
+            ).substring(5) }
           </p>
-
-        </div>
-
+        </div> }
       </div>
     )
   }
