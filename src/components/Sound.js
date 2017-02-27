@@ -44,7 +44,7 @@ class Sound extends Component {
           isPlaying={this.state.isPlaying}
           />
 
-        <div className='flex flex-row justify-start items-start'>
+        <div className='flex flex-row justify-start items-start pb2'>
 
           <img
             className='pt2 dontScale'
