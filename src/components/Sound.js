@@ -1,6 +1,9 @@
 import React, { Component } from 'react'
-import sounds from '../assets/tracks.json'
+
 import Player from './Player.js'
+import Info from './Info.js'
+
+import sounds from '../assets/tracks.json'
 import { takeFirst, asNumber } from '../helpers/'
 
 class Sound extends Component {
@@ -42,20 +45,7 @@ class Sound extends Component {
               selectedSound={item}
               isPlaying={this.state.isPlaying}
             />
-            <div className='flex flex-row justify-start items-start pb2 dn-sh'>
-              <img
-                className='pt2'
-                src={item.artwork_url || item.userPic}
-                alt='artwork'
-              />
-              <p className='measure pt2 pl2'>
-                { takeFirst(
-                      item.description
-                        .split('\n')
-                        .filter(s => s.includes('Opis'))
-                  ).substring(5) }
-              </p>
-            </div>
+            <Info selectedSound={item} />
           </div>
         : null
     )
