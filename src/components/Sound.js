@@ -33,7 +33,7 @@ class Sound extends Component {
 
     return (
       this.props.currentId
-        ? <div className=''>
+        ? <div className='pr2'>
             <Player
               // eslint-disable-next-line
               ref={(ref) => this.Player = ref}

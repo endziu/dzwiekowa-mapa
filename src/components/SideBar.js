@@ -5,7 +5,7 @@ import List from './List.js'
 
 const SideBar = ({id}) => {
   return (
-    <div className='flex flex-column pl2 pt2 pr2 bl vh-100 mw6'>
+    <div className='flex flex-column pl2 pt2 bl-ns bt vh-50 vh-100-ns w-100 mw6-ns'>
       <Sound currentId={id} />
       <SearchField />
       <List currentId={id} />
