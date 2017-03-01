@@ -6,8 +6,7 @@ import { asNumber } from '../helpers/index.js'
 
 const List = ({currentId}) =>
   <ul className='list pt2 lh-copy overflow-auto'>
-    { sounds.map((item, index) =>
-      <Link className='link'
+    { sounds.map((item, index) => <Link className='link'
         key={index}
         to={`/rec/${item.id}`}>
         <li className={

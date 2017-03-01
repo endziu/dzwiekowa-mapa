@@ -33,7 +33,7 @@ class Sound extends Component {
 
     return (
       this.props.currentId
-        ? <div className='pr2'>
+        ? <div className=''>
             <Player
               // eslint-disable-next-line
               ref={(ref) => this.Player = ref}
@@ -44,11 +44,11 @@ class Sound extends Component {
             />
             <div className='flex flex-row justify-start items-start pb2'>
               <img
-                className='pt2 dontScale'
+                className='pt2'
                 src={item.artwork_url || item.userPic}
                 alt='artwork'
               />
-              <p className='pt2 pl2'>
+              <p className='measure pt2 pl2'>
                 { takeFirst(
                       item.description
                         .split('\n')

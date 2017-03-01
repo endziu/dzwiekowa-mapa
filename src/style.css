@@ -17,10 +17,6 @@ h1, h2, h3, h4, h5, ol, ul, li, p {
   padding: 0;
 }
 
-input {
-  border: none;
-}
-
 .PlayButton {
   min-height: 32px;
   min-width: 32px;
@@ -28,18 +24,6 @@ input {
   max-width: 32px;
 }
 
-.dontScale {
-  object-fit: contain;
-}
-
-.moveUp {
-  top: -1.5em;
-}
-
-.onTop {
-  z-index: 9999;
-}
-
-.vw-100 {
-  width: 100vw;
+.bn {
+  border: none;
 }
