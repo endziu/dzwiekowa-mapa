@@ -6,7 +6,7 @@ class Layout extends Component {
     const { mapa } = this.props
     return (
       <div className='App flex-auto flex-ns flex-row-ns justify-end f6 black-80'>
-        <div className='App-main w-100 vh-50 vh-100-ns'>
+        <div className='App-main w-100 vh-40 vh-100-ns'>
           { this.props.children }
           { mapa ? {mapa} : null }
         </div>
