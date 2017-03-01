@@ -42,7 +42,7 @@ class Sound extends Component {
               selectedSound={item}
               isPlaying={this.state.isPlaying}
             />
-            <div className='flex flex-row justify-start items-start pb2'>
+            <div className='flex flex-row justify-start items-start pb2 dn-sh'>
               <img
                 className='pt2'
                 src={item.artwork_url || item.userPic}
