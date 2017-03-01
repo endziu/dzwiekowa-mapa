@@ -1,3 +1,5 @@
+const randomizeList = (list) => list.sort(() => 0.5 - Math.random())
+
 const prettyTime = (time) => {
   let hours = Math.floor(time / 3600)
   let mins = '' + Math.floor((time % 3600) / 60)
@@ -60,6 +62,7 @@ const copyTextToClipboard = (text) => {
 }
 
 export {
+  randomizeList,
   prettyTime,
   takeFirst,
   asNumber,

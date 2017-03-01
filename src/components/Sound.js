@@ -28,45 +28,38 @@ class Sound extends Component {
   }
 
   render () {
-    const sameID = (sound) => asNumber(sound.id) === asNumber(this.props.id)
+    const sameID = (sound) => asNumber(sound.id) === asNumber(this.props.currentId)
     const item = takeFirst(sounds.filter(sameID))
 
     return (
-      this.props.id
-      ? <div className='pr2'>
-
-        <Player
-            // eslint-disable-next-line
-            ref={(ref) => this.Player = ref}
-          playClick={this.playClick}
-          onEnded={this.onEnded}
-          selectedSound={item}
-          isPlaying={this.state.isPlaying}
-          />
-
-        <div className='flex flex-row justify-start items-start pb2'>
-
-          <img
-            className='pt2 dontScale'
-            src={item.artwork_url || item.userPic}
-            alt='artwork'
+      this.props.currentId
+        ? <div className='pr2'>
+            <Player
+              // eslint-disable-next-line
+              ref={(ref) => this.Player = ref}
+              playClick={this.playClick}
+              onEnded={this.onEnded}
+              selectedSound={item}
+              isPlaying={this.state.isPlaying}
             />
-
-          <p className='pt2 pl2'>
-            { takeFirst(
-                item.description
-                  .split('\n')
-                  .filter(s => s.includes('Opis'))
-              ).substring(5) }
-          </p>
-
-        </div>
-
-      </div>
-      : null
+            <div className='flex flex-row justify-start items-start pb2'>
+              <img
+                className='pt2 dontScale'
+                src={item.artwork_url || item.userPic}
+                alt='artwork'
+              />
+              <p className='pt2 pl2'>
+                { takeFirst(
+                      item.description
+                        .split('\n')
+                        .filter(s => s.includes('Opis'))
+                  ).substring(5) }
+              </p>
+            </div>
+          </div>
+        : null
     )
   }
 }
 
 export default Sound
-
