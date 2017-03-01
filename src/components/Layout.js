@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
-import SideBar from './SideBar.js'
+import Sound from './Sound.js'
+import SearchField from './SearchField.js'
+import List from './List.js'
 
 class Layout extends Component {
   render () {
@@ -10,7 +12,11 @@ class Layout extends Component {
           { this.props.children }
           { mapa ? {mapa} : null }
         </div>
-        <SideBar id={this.props.params.id} />
+        <div className='flex flex-column vh-60 vh-100-ns w-100 mw6-ns pl2 pt2 bl-m bl-l bt'>
+          <Sound currentId={this.props.params.id} />
+          <SearchField />
+          <List currentId={this.props.params.id} />
+        </div>
       </div>
     )
   }
