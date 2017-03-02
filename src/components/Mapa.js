@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import sounds from '../assets/tracks.json'
-import {Gmaps} from 'react-gmaps'
+import { Gmaps, Marker } from 'react-gmaps'
 import { takeFirst, asNumber } from '../helpers/'
 
 class SoundMap extends Component {
@@ -27,7 +27,14 @@ class SoundMap extends Component {
         lng={item.GPS.lng}
         zoom={17}
         params={{v: '3', key: 'AIzaSyB7GQAjLtFuxLYjfSQq3PLX3o0mX6qT-CU'}}
-        onMapCreated={this.onMapCreated} />
+        onMapCreated={this.onMapCreated}>
+
+        <Marker 
+          lat={item.GPS.lat}
+          lng={item.GPS.lng}
+        />
+        
+      </Gmaps>
     )
   }
 }
