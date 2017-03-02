@@ -3,7 +3,7 @@ import { Link } from 'react-router'
 import { asNumber } from '../helpers/index.js'
 
 const List = ({currentId, sounds}) =>
-  <ul className='list f5-m f4-l lh-copy overflow-auto'>
+  <ul className='list f5-ns lh-copy overflow-auto'>
     { sounds.map((elem, index) => <Link className='link'
         key={index}
         to={`/rec/${elem.id}`}>

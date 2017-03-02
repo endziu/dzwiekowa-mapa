@@ -52,7 +52,7 @@ class Player extends Component {
 
   render () {
     const { isPlaying, selectedSound } = this.props
-
+    //const url = `https://soundcloud.com/${selectedSound.userName}/${selectedSound.permalink}`
     return (
       <div className='App-Player pb2 bb b--black-40'>
         <audio
@@ -62,6 +62,8 @@ class Player extends Component {
           // eslint-disable-next-line
           ref={(ref) => this.audioEl = ref}
           src={selectedSound.stream_url + '?client_id=33c73dacce84dddddbc15117e071b6ce'} />
+
+
 
         <div className='flex flex-row'>
           <div className='PlayButton grow' onClick={this.props.playClick}>
@@ -78,7 +80,6 @@ class Player extends Component {
           </div>
 
           <div className='h2 pl2 w-100' onClick={this.setPosition}>
-            <span className='black absolute top-1 right-1'>{`${prettyTime(this.state.currentTime)} / ${prettyTime(this.state.duration)}`}</span>
             <div className='h2' style={{width: `${this.state.percentPlayed}%`, background: '#dea'}} />
             <img
               className='relative bottom-2 h2 w-100 bg-black-20'
@@ -87,6 +88,14 @@ class Player extends Component {
             />
           </div>
         </div>
+        <div className='flex flex-row justify-between pt1'>
+          <div className='black-80 truncate'>
+            <span className='link dim pointer underline'>{`${selectedSound.userName}`}</span>
+            <span>{` - `}</span>
+            <span className='link dim pointer'>{`${selectedSound.title}`}</span>
+          </div>
+          <span className='white bg-black-60'>{`${prettyTime(this.state.currentTime)}/${prettyTime(this.state.duration)}`}</span>
+        </div>        
       </div>
     )
   }
