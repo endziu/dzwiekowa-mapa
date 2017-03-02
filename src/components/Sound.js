@@ -3,7 +3,6 @@ import React, { Component } from 'react'
 import Player from './Player.js'
 import Info from './Info.js'
 
-import sounds from '../assets/tracks.json'
 import { takeFirst, asNumber } from '../helpers/'
 
 class Sound extends Component {
@@ -31,11 +30,12 @@ class Sound extends Component {
   }
 
   render () {
-    const sameID = (sound) => asNumber(sound.id) === asNumber(this.props.currentId)
+    const { sounds, currentId } =  this.props
+    const sameID = (sound) => asNumber(sound.id) === asNumber(currentId)
     const item = takeFirst(sounds.filter(sameID))
 
     return (
-      this.props.currentId
+      currentId
         ? <div className='pr2'>
             <Player
               // eslint-disable-next-line

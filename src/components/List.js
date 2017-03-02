@@ -1,21 +1,19 @@
 import React from 'react'
 import { Link } from 'react-router'
-
-import sounds from '../assets/tracks.json'
 import { asNumber } from '../helpers/index.js'
 
-const List = ({currentId}) =>
+const List = ({currentId, sounds}) =>
   <ul className='list f5-m f4-l lh-copy overflow-auto'>
-    { sounds.map((item, index) => <Link className='link'
+    { sounds.map((elem, index) => <Link className='link'
         key={index}
-        to={`/rec/${item.id}`}>
+        to={`/rec/${elem.id}`}>
         <li className={
-          asNumber(currentId) === asNumber(item.id)
+          asNumber(currentId) === asNumber(elem.id)
             ? 'white bg-black-60 truncate'
             : 'black-80 hover-near-white bg-animate hover-bg-black-60 truncate'
         }>
           <span>
-            {item.title}
+            {elem.title}
           </span>
         </li>
       </Link>) }
