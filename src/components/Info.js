@@ -1,7 +1,7 @@
 import React from 'react'
 import { takeFirst } from '../helpers/'
 
-const Info = ({selectedSound}) => <div className='flex flex-row justify-start items-start pb2 dn-sh'>
+const Info = ({selectedSound}) => <div className='flex flex-row justify-start items-start dn-sh'>
   <img
     className='pt2 dontScale'
     src={selectedSound.artwork_url || selectedSound.userPic}

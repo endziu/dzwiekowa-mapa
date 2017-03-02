@@ -5,7 +5,7 @@ import sounds from '../assets/tracks.json'
 import { asNumber } from '../helpers/index.js'
 
 const List = ({currentId}) =>
-  <ul className='list f5-m f4-l lh-copy pt2 overflow-auto'>
+  <ul className='list f5-m f4-l lh-copy overflow-auto'>
     { sounds.map((item, index) => <Link className='link'
         key={index}
         to={`/rec/${item.id}`}>
