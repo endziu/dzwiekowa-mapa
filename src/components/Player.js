@@ -52,7 +52,7 @@ class Player extends Component {
 
   render () {
     const { isPlaying, selectedSound } = this.props
-    //const url = `https://soundcloud.com/${selectedSound.userName}/${selectedSound.permalink}`
+    // const url = `https://soundcloud.com/${selectedSound.userName}/${selectedSound.permalink}`
     return (
       <div className='App-Player pb2 bb b--black-40'>
         <audio
@@ -62,8 +62,6 @@ class Player extends Component {
           // eslint-disable-next-line
           ref={(ref) => this.audioEl = ref}
           src={selectedSound.stream_url + '?client_id=33c73dacce84dddddbc15117e071b6ce'} />
-
-
 
         <div className='flex flex-row'>
           <div className='PlayButton grow' onClick={this.props.playClick}>
@@ -95,7 +93,7 @@ class Player extends Component {
             <span className='link dim pointer'>{`${selectedSound.title}`}</span>
           </div>
           <span className='white bg-black-60'>{`${prettyTime(this.state.currentTime)}/${prettyTime(this.state.duration)}`}</span>
-        </div>        
+        </div>
       </div>
     )
   }

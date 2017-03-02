@@ -8,13 +8,13 @@ const Info = ({selectedSound}) => <div className='flex flex-row justify-start it
     alt='artwork'
   />
   <div className='overflow-auto'>
-  <p className='measure-wide pt2 pl2 infoHeight'>
-    { takeFirst(
-          selectedSound.description
-            .split('\n')
-            .filter(s => s.includes('Opis'))
-      ).substring(5) }
-  </p>
+    <p className='measure-wide pt2 pl2 infoHeight'>
+      { takeFirst(
+            selectedSound.description
+              .split('\n')
+              .filter(s => s.includes('Opis'))
+        ).substring(5) }
+    </p>
   </div>
 </div>
 

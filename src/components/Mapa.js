@@ -29,11 +29,11 @@ class SoundMap extends Component {
         params={{v: '3', key: 'AIzaSyB7GQAjLtFuxLYjfSQq3PLX3o0mX6qT-CU'}}
         onMapCreated={this.onMapCreated}>
 
-        <Marker 
+        <Marker
           lat={item.GPS.lat}
           lng={item.GPS.lng}
         />
-        
+
       </Gmaps>
     )
   }

@@ -30,23 +30,23 @@ class Sound extends Component {
   }
 
   render () {
-    const { sounds, currentId } =  this.props
+    const { sounds, currentId } = this.props
     const sameID = (sound) => asNumber(sound.id) === asNumber(currentId)
     const item = takeFirst(sounds.filter(sameID))
 
     return (
       currentId
         ? <div className='pr2'>
-            <Player
+          <Player
               // eslint-disable-next-line
               ref={(ref) => this.Player = ref}
-              playClick={this.playClick}
-              onEnded={this.onEnded}
-              selectedSound={item}
-              isPlaying={this.state.isPlaying}
+            playClick={this.playClick}
+            onEnded={this.onEnded}
+            selectedSound={item}
+            isPlaying={this.state.isPlaying}
             />
-            <Info selectedSound={item} />
-          </div>
+          <Info selectedSound={item} />
+        </div>
         : null
     )
   }
