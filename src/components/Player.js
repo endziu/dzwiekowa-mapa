@@ -57,7 +57,7 @@ class Player extends Component {
     const { isPlaying, selectedSound } = this.props
     // const url = `https://soundcloud.com/${selectedSound.userName}/${selectedSound.permalink}`
     return (
-      <div className='App-Player pb1 bb b--black-40'>
+      <div className='App-Player pb1'>
         <audio
           onTimeUpdate={this.onTimeUpdate}
           onEnded={this.onEnded}
@@ -110,11 +110,7 @@ class Player extends Component {
             <span className='link dim pointer'>{`${selectedSound.title}`}</span>
           </div>
           <span className='white bg-black-60'>
-            {
-              `${prettyTime(this.state.currentTime)}/${prettyTime(
-                this.state.duration
-              )}`
-            }
+            { `${prettyTime(this.state.currentTime)}/${prettyTime(this.state.duration)}` }
           </span>
         </div>
       </div>

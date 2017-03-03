@@ -35,3 +35,7 @@ h1, h2, h3, h4, h5, ol, ul, li, p {
 .infoHeight {
   max-height: 108px;
 }
+
+.onTop {
+  z-index: 99999;
+}
