@@ -37,8 +37,8 @@ class Sound extends Component {
     return currentId
       ? <div className='pr2'>
         <Player
-            // eslint-disable-next-line
-            ref={ref => this.Player = ref}
+          // eslint-disable-next-line
+          ref={ref => this.Player = ref}
           playClick={this.playClick}
           onEnded={this.onEnded}
           selectedSound={item}

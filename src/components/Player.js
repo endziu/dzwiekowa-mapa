@@ -64,24 +64,19 @@ class Player extends Component {
           onLoadedMetadata={this.recReady}
           // eslint-disable-next-line
           ref={ref => this.audioEl = ref}
-          src={
-            selectedSound.stream_url +
-              '?client_id=33c73dacce84dddddbc15117e071b6ce'
-          }
+          src={selectedSound.stream_url + '?client_id=33c73dacce84dddddbc15117e071b6ce'}
         />
 
         <div className='flex flex-row'>
-          <div className='PlayButton grow' onClick={this.props.playClick}>
+          <div className='PlayButton grow black bg-white ba br4' onClick={this.props.playClick}>
             <svg viewBox='0 0 200 200'>
-              <circle cx='100' cy='100' r='95' fill='none' stroke='#000' />
               {isPlaying
                 ? <g>
-                  <polygon points='60,55 60,145 90,145 90,55' fill='#000' />
-                  <polygon
-                    points='110,55 110,145 140,145 140,55'
-                    fill='#000'
-                    />
-                </g>
+                    <polygon points='60,55 60,145 90,145 90,55' fill='#000' />
+                    <polygon
+                      points='110,55 110,145 140,145 140,55'
+                      fill='#000' />
+                  </g>
                 : <polygon points='70,55 70,145 145,100' fill='#000' />}
             </svg>
           </div>
