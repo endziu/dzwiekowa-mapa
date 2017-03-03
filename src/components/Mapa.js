@@ -4,7 +4,6 @@ import { Gmaps, Marker } from 'react-gmaps'
 import { takeFirst, asNumber } from '../helpers/'
 
 class SoundMap extends Component {
-
   onMapCreated (map) {
     map.setOptions({
       disableDefaultUI: false,
@@ -16,7 +15,8 @@ class SoundMap extends Component {
   }
 
   render () {
-    const sameID = (sound) => asNumber(sound.id) === asNumber(this.props.params.id)
+    const sameID = sound =>
+      asNumber(sound.id) === asNumber(this.props.params.id)
     const item = takeFirst(sounds.filter(sameID))
     return (
       <Gmaps
@@ -26,13 +26,11 @@ class SoundMap extends Component {
         lat={item.GPS.lat}
         lng={item.GPS.lng}
         zoom={17}
-        params={{v: '3', key: 'AIzaSyB7GQAjLtFuxLYjfSQq3PLX3o0mX6qT-CU'}}
-        onMapCreated={this.onMapCreated}>
+        params={{ v: '3', key: 'AIzaSyB7GQAjLtFuxLYjfSQq3PLX3o0mX6qT-CU' }}
+        onMapCreated={this.onMapCreated}
+      >
 
-        <Marker
-          lat={item.GPS.lat}
-          lng={item.GPS.lng}
-        />
+        <Marker lat={item.GPS.lat} lng={item.GPS.lng} />
 
       </Gmaps>
     )
