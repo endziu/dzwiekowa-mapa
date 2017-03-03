@@ -4,7 +4,7 @@ import { takeFirst } from '../helpers/'
 const Info = ({ selectedSound }) => (
   <div className='flex flex-row justify-start items-start dn-sh'>
     <img
-      className='pt2 dontScale'
+      className='pt2 w3 dontScale'
       src={selectedSound.artwork_url || selectedSound.userPic}
       alt='artwork'
     />

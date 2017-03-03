@@ -9,7 +9,7 @@ class Layout extends Component {
   render () {
     const { mapa } = this.props
     return (
-      <div className='App flex-auto flex-ns flex-row-ns justify-end f6 black-80 fadeIn animated'>
+      <div className='App flex-auto flex-ns flex-row-ns justify-end f6 black-80'>
         { this.props.params.id ? <Menu /> : null }
         <div className='App-main w-100 vh-40 vh-100-ns fadeIn animated'>
           {this.props.children}
