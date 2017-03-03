@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-
 import { prettyTime } from '../helpers/index.js'
 
 class Player extends Component {
@@ -72,11 +71,11 @@ class Player extends Component {
             <svg viewBox='0 0 200 200'>
               {isPlaying
                 ? <g>
-                    <polygon points='60,55 60,145 90,145 90,55' fill='#000' />
-                    <polygon
-                      points='110,55 110,145 140,145 140,55'
-                      fill='#000' />
-                  </g>
+                  <polygon points='60,55 60,145 90,145 90,55' fill='#000' />
+                  <polygon
+                    points='110,55 110,145 140,145 140,55'
+                    fill='#000' />
+                </g>
                 : <polygon points='70,55 70,145 145,100' fill='#000' />}
             </svg>
           </div>
