@@ -10,20 +10,20 @@ class Menu extends Component {
       hovered: false
     }
     this.mouseOverMenu = this.mouseOverMenu.bind(this)
-    this.mouseOutMenu = this.mouseOutMenu.bind(this)
+    //this.mouseOutMenu = this.mouseOutMenu.bind(this)
     this.menuClick = this.menuClick.bind(this)
   }
 
   mouseOverMenu(e) {
     //console.log(e)
-    this.setState({hovered: true})
+    this.setState({hovered: !this.state.hovered})
   }
-
+/*
   mouseOutMenu(e) {
     //console.log(e)
     this.setState({hovered: false})
   }
-
+*/
   menuClick(e) {
     e.preventDefault()
     this.setState({opened: !this.state.opened})
