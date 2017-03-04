@@ -1,7 +1,7 @@
 import React from 'react'
 
 const Info = () => <div>
-  <p>szipupi info info szipapi</p>
+  <h1>info</h1>
 </div>
 
 export default Info
