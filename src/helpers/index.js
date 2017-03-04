@@ -61,10 +61,17 @@ const copyTextToClipboard = (text) => {
   document.body.removeChild(textArea)
 }
 
+const getSoundById = (id, sounds) => {
+  const sameID = sound => asNumber(sound.id) === asNumber(id)
+  const item = takeFirst(sounds.filter(sameID))
+  return item
+}
+
 export {
   randomizeList,
   prettyTime,
   takeFirst,
   asNumber,
-  copyTextToClipboard
+  copyTextToClipboard,
+  getSoundById
 }
