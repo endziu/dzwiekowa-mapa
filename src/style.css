@@ -34,3 +34,7 @@ h1, h2, h3, h4, h5, ol, ul, li, p {
 .onTop {
   z-index: 99999;
 }
+
+.w1-7 {
+  width: 1.7rem;
+}
