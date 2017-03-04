@@ -35,7 +35,7 @@ class Sound extends Component {
     const item = takeFirst(sounds.filter(sameID))
 
     return currentId
-      ? <div className='pr2'>
+      ? <div className='pr2 fadeIn animated'>
         <Player
           // eslint-disable-next-line
           ref={ref => this.Player = ref}
