@@ -56,7 +56,7 @@ class Player extends Component {
     const { isPlaying, selectedSound } = this.props
     // const url = `https://soundcloud.com/${selectedSound.userName}/${selectedSound.permalink}`
     return (
-      <div className='App-Player pb1'>
+      <div className='App-Player bg-near-white pb1'>
         <audio
           onTimeUpdate={this.onTimeUpdate}
           onEnded={this.onEnded}
