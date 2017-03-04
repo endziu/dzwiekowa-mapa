@@ -27,9 +27,8 @@ h1, h2, h3, h4, h5, ol, ul, li, p {
   object-fit: contain;
 }
 
-/* img height + img top padding*/
 .infoHeight {
-  max-height: calc(64px + 0.5rem);
+  max-height: 64px;
 }
 
 .onTop {
