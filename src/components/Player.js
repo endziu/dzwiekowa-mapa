@@ -69,12 +69,14 @@ class Player extends Component {
         <div className='flex flex-row'>
           <div className='PlayButton grow black bg-white w2 h2 ba br4' onClick={this.props.playClick}>
             <svg viewBox='0 0 32 32' className='h2 w2'>
-              {isPlaying
-                ? <g>
+              { isPlaying
+                ? (
+                  <g>
                     <polygon points='9,8 9,24 13,24 13,8' fill='#000' />
                     <polygon points='17,8 17,24 21,24 21,8' fill='#000' />
                   </g>
-                : <polygon points='10,8 10,24 24,16' fill='#000' />}
+                )
+                : (<polygon points='10,8 10,24 24,16' fill='#000' />) }
             </svg>
           </div>
 
