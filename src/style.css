@@ -17,12 +17,7 @@ h1, h2, h3, h4, h5, ol, ul, li, p {
   padding: 0;
 }
 
-.PlayButton {
-  min-height: 32px;
-  min-width: 32px;
-  max-height: 32px;
-  max-width: 32px;
-}
+
 
 .bn {
   border: none;
