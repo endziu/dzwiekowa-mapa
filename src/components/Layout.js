@@ -3,7 +3,9 @@ import List from './List.js'
 import Menu from './Menu.js'
 import Sound from './Sound.js'
 import SearchField from './SearchField.js'
-import sounds from '../assets/tracks.json'
+import data from '../assets/tracks.json'
+
+const sounds = data.sort(() => 0.5 - Math.random())
 
 class Layout extends Component {
   render () {
