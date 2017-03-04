@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-
 import Player from './Player.js'
 import Info from './Info.js'
 
@@ -28,20 +27,22 @@ class Sound extends Component {
   }
 
   render () {
-    const {currentSound} = this.props
-    return currentSound
-      ? <div className='fadeIn animated'>
-        <Player
-          // eslint-disable-next-line
-          ref={ref => this.Player = ref}
-          playClick={this.playClick}
-          onEnded={this.onEnded}
-          selectedSound={currentSound}
-          isPlaying={this.state.isPlaying}
-          />
-        <Info selectedSound={currentSound} />
-      </div>
-      : null
+    const { currentSound } = this.props
+    return (
+      currentSound
+        ? <div className='fadeIn animated'>
+            <Player
+                // eslint-disable-next-line
+                ref={ref => this.Player = ref}
+              playClick={this.playClick}
+              onEnded={this.onEnded}
+              selectedSound={currentSound}
+              isPlaying={this.state.isPlaying}
+            />
+            <Info selectedSound={currentSound} />
+          </div>
+        : null
+    )
   }
 }
 
