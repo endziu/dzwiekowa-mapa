@@ -1,3 +1,36 @@
+const animationClasses = [
+  'bounce', 'flash', 'pulse', 'rubberBand', 'shake',
+  'swing', 'tada', 'wobble', 'jello', 'bounceIn',
+  'bounceInDown', 'bounceInLeft', 'bounceInRight', 'bounceInUp', 'bounceOut',
+  'bounceOutDown', 'bounceOutLeft', 'bounceOutRight', 'bounceOutUp', 'fadeIn',
+  'fadeInDown', 'fadeInDownBig', 'fadeInLeft', 'fadeInLeftBig', 'fadeInRight',
+  'fadeInRightBig', 'fadeInUp', 'fadeInUpBig', 'fadeOut', 'fadeOutDown',
+  'fadeOutDownBig', 'fadeOutLeft', 'fadeOutLeftBig', 'fadeOutRight',
+  'fadeOutRightBig', 'fadeOutUp', 'fadeOutUpBig', 'flip', 'flipInX',
+  'flipInY', 'flipOutX', 'flipOutY', 'lightSpeedIn', 'lightSpeedOut',
+  'rotateIn', 'rotateInDownLeft', 'rotateInDownRight', 'rotateInUpLeft',
+  'rotateInUpRight', 'rotateOut', 'rotateOutDownLeft', 'rotateOutDownRight',
+  'rotateOutUpLeft', 'rotateOutUpRight', 'slideInUp', 'slideInDown',
+  'slideInLeft', 'slideInRight', 'slideOutUp', 'slideOutDown',
+  'slideOutLeft', 'slideOutRight', 'zoomIn', 'zoomInDown', 'zoomInLeft',
+  'zoomInRight', 'zoomInUp', 'zoomOut', 'zoomOutDown', 'zoomOutLeft',
+  'zoomOutRight', 'zoomOutUp', 'hinge', 'rollIn', 'rollOut'
+]
+
+const getAnimationTiming = (anim) => {
+  switch (anim) {
+    case 'hinge':
+      return 2000
+    case 'flipOutX':
+    case 'flipOutY':
+    case 'bounceIn':
+    case 'bounceOut':
+      return 750
+    default:
+      return 1000
+  }
+}
+
 const randomizeList = (list) => list.sort(() => 0.5 - Math.random())
 
 const prettyTime = (time) => {
@@ -57,6 +90,8 @@ const getSoundById = (id, sounds) => {
 }
 
 export {
+  animationClasses,
+  getAnimationTiming,
   randomizeList,
   prettyTime,
   takeFirst,

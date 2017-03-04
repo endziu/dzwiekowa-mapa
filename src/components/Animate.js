@@ -1,37 +1,5 @@
 import React, { Component, PropTypes } from 'react'
-
-const animationClasses = [
-  'bounce', 'flash', 'pulse', 'rubberBand', 'shake',
-  'swing', 'tada', 'wobble', 'jello', 'bounceIn',
-  'bounceInDown', 'bounceInLeft', 'bounceInRight', 'bounceInUp', 'bounceOut',
-  'bounceOutDown', 'bounceOutLeft', 'bounceOutRight', 'bounceOutUp', 'fadeIn',
-  'fadeInDown', 'fadeInDownBig', 'fadeInLeft', 'fadeInLeftBig', 'fadeInRight',
-  'fadeInRightBig', 'fadeInUp', 'fadeInUpBig', 'fadeOut', 'fadeOutDown',
-  'fadeOutDownBig', 'fadeOutLeft', 'fadeOutLeftBig', 'fadeOutRight',
-  'fadeOutRightBig', 'fadeOutUp', 'fadeOutUpBig', 'flip', 'flipInX',
-  'flipInY', 'flipOutX', 'flipOutY', 'lightSpeedIn', 'lightSpeedOut',
-  'rotateIn', 'rotateInDownLeft', 'rotateInDownRight', 'rotateInUpLeft',
-  'rotateInUpRight', 'rotateOut', 'rotateOutDownLeft', 'rotateOutDownRight',
-  'rotateOutUpLeft', 'rotateOutUpRight', 'slideInUp', 'slideInDown',
-  'slideInLeft', 'slideInRight', 'slideOutUp', 'slideOutDown',
-  'slideOutLeft', 'slideOutRight', 'zoomIn', 'zoomInDown', 'zoomInLeft',
-  'zoomInRight', 'zoomInUp', 'zoomOut', 'zoomOutDown', 'zoomOutLeft',
-  'zoomOutRight', 'zoomOutUp', 'hinge', 'rollIn', 'rollOut'
-]
-
-const getAnimationTiming = (anim) => {
-  switch (anim) {
-    case 'hinge':
-      return 2000
-    case 'flipOutX':
-    case 'flipOutY':
-    case 'bounceIn':
-    case 'bounceOut':
-      return 750
-    default:
-      return 1000
-  }
-}
+import { getAnimationTiming, animationClasses } from '../helpers/'
 
 class Animate extends Component {
   constructor (props) {
