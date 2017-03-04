@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import sounds from '../assets/tracks.json'
 import { Gmaps, Marker } from 'react-gmaps'
-import { takeFirst, asNumber } from '../helpers/'
+import { getSoundById } from '../helpers/'
+import sounds from '../assets/tracks.json'
 
 class SoundMap extends Component {
   onMapCreated (map) {
@@ -16,9 +16,7 @@ class SoundMap extends Component {
   }
 
   render () {
-    const sameID = sound =>
-      asNumber(sound.id) === asNumber(this.props.params.id)
-    const item = takeFirst(sounds.filter(sameID))
+    const item = getSoundById(this.props.params.id, sounds)
     return (
       <Gmaps
         ref={'mapa'}

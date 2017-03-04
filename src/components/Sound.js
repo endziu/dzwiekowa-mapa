@@ -3,8 +3,6 @@ import React, { Component } from 'react'
 import Player from './Player.js'
 import Info from './Info.js'
 
-import { takeFirst, asNumber } from '../helpers/'
-
 class Sound extends Component {
   constructor () {
     super()
@@ -30,21 +28,18 @@ class Sound extends Component {
   }
 
   render () {
-    const { sounds, currentId } = this.props
-    const sameID = sound => asNumber(sound.id) === asNumber(currentId)
-    const item = takeFirst(sounds.filter(sameID))
-
-    return currentId
+    const {currentSound} = this.props
+    return currentSound
       ? <div className='fadeIn animated'>
         <Player
           // eslint-disable-next-line
           ref={ref => this.Player = ref}
           playClick={this.playClick}
           onEnded={this.onEnded}
-          selectedSound={item}
+          selectedSound={currentSound}
           isPlaying={this.state.isPlaying}
           />
-        <Info selectedSound={item} />
+        <Info selectedSound={currentSound} />
       </div>
       : null
   }
