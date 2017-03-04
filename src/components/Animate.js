@@ -60,7 +60,7 @@ class Animate extends Component {
 
   setAnimating (animation) {
     this.setState({ animating: true })
-    setTimeout(() => this.setState({ animating: false }), getAnimationTiming(animation))
+    setTimeout(() => this.setState({ animating: false }), this.props.timeout || getAnimationTiming(animation))
   }
 
   render () {
