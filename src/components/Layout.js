@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import List from './List.js'
 import Menu from './Menu.js'
 import Sound from './Sound.js'
-import SearchField from './SearchField.js'
 import data from '../assets/tracks.json'
 
 const sounds = data.sort(() => 0.5 - Math.random())
@@ -19,7 +18,6 @@ class Layout extends Component {
         </div>
         <div className='flex flex-column vh-60 vh-100-ns w-100 mw6-ns pl2 pt2 bl-m bl-l fadeIn animated'>
           <Sound currentId={this.props.params.id} sounds={sounds} />
-          <SearchField />
           <List currentId={this.props.params.id} sounds={sounds} />
         </div>
       </div>
