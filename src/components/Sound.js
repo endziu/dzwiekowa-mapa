@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Player from './Player.js'
-import Info from './Info.js'
+import Description from './Description.js'
 
 class Sound extends Component {
   constructor () {
@@ -39,7 +39,7 @@ class Sound extends Component {
               selectedSound={currentSound}
               isPlaying={this.state.isPlaying}
             />
-            <Info selectedSound={currentSound} />
+            <Description selectedSound={currentSound} />
           </div>
         : null
     )
