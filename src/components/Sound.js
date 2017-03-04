@@ -30,7 +30,7 @@ class Sound extends Component {
     const { currentSound } = this.props
     return (
       currentSound
-        ? <div className='fadeIn animated'>
+        ? <div className='fadeIn animated pt1'>
             <Player
               // eslint-disable-next-line
               ref={ref => this.Player = ref}
