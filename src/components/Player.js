@@ -85,7 +85,7 @@ class Player extends Component {
               className='h2'
               style={{
                 width: `${this.state.percentPlayed}%`,
-                background: '#dea'
+                background: '#000'
               }}
             />
             <img
