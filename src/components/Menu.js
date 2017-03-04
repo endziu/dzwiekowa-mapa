@@ -36,7 +36,7 @@ class Menu extends Component {
           { this.state.opened
           ? <div className='flex flex-column-ns flex-row animated fadeIn'>
               <Link
-                to={'#'}
+                to={'/'}
                 title={'Home'}
                 className='f5 no-underline black bg-white bg-animate hover-bg-black hover-white inline-flex items-center pa1 ba border-box mb1 mr1'>
                 <svg className='w2' viewBox='0 0 32 32' fill='currentcolor'>
@@ -46,8 +46,8 @@ class Menu extends Component {
               </Link>
 
               <Link
-                to={'/'}
-                title={'Pics'}
+                to={'/imgs'}
+                title={'Zdjęcia'}
                 className='f5 no-underline black bg-white bg-animate hover-bg-black hover-white inline-flex items-center pa1 ba border-box mb1 mr1'>
                 <svg className='w2' viewBox='0 0 24 24' fill='currentcolor'>
                   <path d='M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z' />
@@ -55,8 +55,8 @@ class Menu extends Component {
               </Link>
 
               <Link
-                to={'/'}
-                title={'Info'}
+                to={'/info'}
+                title={'Wiecej Informacji'}
                 className='f5 no-underline black bg-white bg-animate hover-bg-black hover-white inline-flex items-center pa1 ba border-box mb1 mr1'>
                 <svg className='w2' viewBox='0 0 24 24' fill='currentcolor'>
                   <path d='M11 17h2v-6h-2v6zm1-15C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zM11 9h2V7h-2v2z' />
@@ -64,8 +64,8 @@ class Menu extends Component {
               </Link>
 
               <Link
-                to={'/'}
-                title={'Add Sound'}
+                to={'/add'}
+                title={'Dodaj dźwięk'}
                 className='f5 no-underline black bg-white bg-animate hover-bg-black hover-white inline-flex items-center pa1 ba border-box mb1 mr1'>
                 <svg className='w2' viewBox='0 0 16 16' stroke='currentcolor' fill='none' strokeWidth='3'>
                   <path d='M0 8 L16 8' />
