@@ -3,9 +3,7 @@ import List from './List.js'
 import Menu from './Menu.js'
 import Sound from './Sound.js'
 import sounds from '../assets/tracks.json'
-import { getSoundById/*, randomizeList*/ } from '../helpers/'
-
-//const sounds = randomizeList(data)
+import { getSoundById } from '../helpers/'
 
 class Layout extends Component {
   render () {
