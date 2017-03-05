@@ -9,8 +9,8 @@ const List = ({ currentId, sounds }) => (
         <li
           className={
             asNumber(currentId) === asNumber(elem.id)
-              ? 'white bg-black-60 truncate pv1 pv2-m pv3-l'
-              : 'black-80 hover-near-white bg-animate hover-bg-black-60 truncate pv1 pv2-m pv3-l'
+              ? 'white bg-black-60 truncate pv1 pv2-ns'
+              : 'black-80 hover-near-white bg-animate hover-bg-black-60 truncate pv1 pv2-ns'
           }
         >
           <span>
