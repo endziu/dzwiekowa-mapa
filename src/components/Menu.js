@@ -5,7 +5,7 @@ class Menu extends Component {
   render () {
     return (
       <div className='onTop absolute top-1 left-1'>
-        <div className='flex flex-row animated fadeIn'>
+        <div className='flex flex-row flex-column-ns animated fadeIn'>
           
           <Link
             to={'/'}
