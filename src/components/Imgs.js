@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Imgs = (props) => <div className='pl2 pl5-ns pt5 pt2-ns'>
+const Imgs = (props) => <div className='self-end self-start-ns pa2'>
   <p>{`id: ${props.params.id}`}</p>
   <p>{`route: ${props.currentRoute}`}</p>
   <p>
