@@ -6,7 +6,7 @@ class Menu extends Component {
     return (
       <div className='onTop absolute top-1-ns left-1-ns pl1 pt1'>
         <div className='flex flex-row flex-column-ns animated fadeIn'>
-          
+
           <Link
             to={'/'}
             title={'Home'}
@@ -31,8 +31,8 @@ class Menu extends Component {
             to={'/search'}
             title={'szukaj'}
             className='f5 no-underline black bg-white bg-animate hover-bg-black hover-white inline-flex items-center pa1 ba border-box mb1 mr1'>
-            <svg className='w1-8' fill="currentColor" viewBox="0 0 32 32">
-              <path d="M12 0 A12 12 0 0 0 0 12 A12 12 0 0 0 12 24 A12 12 0 0 0 18.5 22.25 L28 32 L32 28 L22.25 18.5 A12 12 0 0 0 24 12 A12 12 0 0 0 12 0 M12 4 A8 8 0 0 1 12 20 A8 8 0 0 1 12 4" />
+            <svg className='w1-8' fill='currentColor' viewBox='0 0 32 32'>
+              <path d='M12 0 A12 12 0 0 0 0 12 A12 12 0 0 0 12 24 A12 12 0 0 0 18.5 22.25 L28 32 L32 28 L22.25 18.5 A12 12 0 0 0 24 12 A12 12 0 0 0 12 0 M12 4 A8 8 0 0 1 12 20 A8 8 0 0 1 12 4' />
             </svg>
           </Link>
 
