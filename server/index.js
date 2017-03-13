@@ -44,6 +44,8 @@ app.get('*', (req, res) => {
       match({ routes, location: req.url }, (err, redirect, ssrData) => {
         if (err) {
           error()
+        } else if (redirect) {
+          res.redirect(302, redirect.pathname + redirect.search)
         } else if (ssrData) {
           const ReactApp = renderToString(react.createElement(RouterContext, ssrData))
           const RenderedApp = htmlData.replace('{{SSR}}', ReactApp)
