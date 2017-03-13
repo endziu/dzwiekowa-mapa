@@ -4,12 +4,12 @@ import { takeFirst } from '../helpers/'
 const Description = ({ selectedSound }) => (
   <div className='flex flex-row justify-start items-start dn-sh mt1 bg-near-white'>
     <img
-      className='w3 h-auto'
+      style={{maxWidth: '100px', maxHeight: '100px'}}
       src={selectedSound.artwork_url || selectedSound.userPic}
       alt='artwork'
     />
     <div className='overflow-auto pl2'>
-      <p className='measure-wide infoHeight'>
+      <p className='infoHeight'>
         {takeFirst(
           selectedSound.description.split('\n').filter(s => s.includes('Opis'))
         ).substring(5)}
