@@ -67,8 +67,8 @@ class Player extends Component {
         />
 
         <div className='flex flex-row'>
-          <div className='PlayButton grow black bg-white w2 h2 ba br4' onClick={this.props.playClick}>
-            <svg viewBox='0 0 32 32' className='h2 w2'>
+          <div className='PlayButton grow black bg-white w3 h3 ba br-100' onClick={this.props.playClick}>
+            <svg viewBox='0 0 32 32' className='h3 w3'>
               { isPlaying
                 ? (
                   <g>
@@ -80,16 +80,16 @@ class Player extends Component {
             </svg>
           </div>
 
-          <div className='h2 pl2 w-100' onClick={this.setPosition}>
+          <div className='h3 pl2 w-100' onClick={this.setPosition}>
             <div
-              className='h2'
+              className='h3'
               style={{
                 width: `${this.state.percentPlayed}%`,
                 background: '#000'
               }}
             />
             <img
-              className='relative bottom-2 h2 w-100 bg-black-20'
+              className='relative bottom-3 h3 w-100 bg-black-20'
               src={selectedSound.waveform_url}
               alt='waveform'
             />
