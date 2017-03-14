@@ -4,7 +4,7 @@ import { Link } from 'react-router'
 class Menu extends Component {
   render () {
     return (
-      <div className='onTop absolute top-1-ns left-1-ns pl1 pt1'>
+      <div className='onTop menuPosition'>
         <div className='flex flex-row flex-column-ns animated fadeIn'>
 
           <Link
