@@ -44,7 +44,6 @@ class Player extends Component {
   }
 
   setPosition (e) {
-    console.log('setting position')
     const currentPosition = (e.clientX - e.target.x) / e.target.width * 100
     this.audioEl.currentTime = parseFloat(
       currentPosition * 0.01 * this.audioEl.duration

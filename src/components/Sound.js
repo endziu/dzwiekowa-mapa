@@ -32,8 +32,8 @@ class Sound extends Component {
       currentSound
         ? <div className='fadeIn animated pt1'>
             <Player
-                // eslint-disable-next-line
-                ref={ref => this.Player = ref}
+              // eslint-disable-next-line
+              ref={ref => this.Player = ref}
               playClick={this.playClick}
               onEnded={this.onEnded}
               selectedSound={currentSound}
