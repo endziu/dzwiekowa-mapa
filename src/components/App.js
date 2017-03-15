@@ -5,7 +5,7 @@ import Sound from './Sound.js'
 import sounds from '../assets/tracks.json'
 import { getSoundById } from '../helpers/'
 
-class Layout extends Component {
+class App extends Component {
   render () {
     const currentSound = getSoundById(this.props.params.id, sounds)
     return (
@@ -26,4 +26,4 @@ class Layout extends Component {
   }
 }
 
-export default Layout
+export default App

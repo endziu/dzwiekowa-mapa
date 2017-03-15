@@ -1,7 +1,7 @@
 import React from 'react'
 import { Router, Route, browserHistory, IndexRoute } from 'react-router'
 
-import Layout from './components/Layout.js'
+import App from './components/App.js'
 import Mapa from './components/Mapa.js'
 import Info from './components/Info.js'
 import Imgs from './components/Imgs.js'
@@ -10,7 +10,7 @@ import NotFound from './components/NotFound.js'
 
 const Routes = () => (
   <Router history={browserHistory}>
-    <Route path='/' component={Layout}>
+    <Route path='/' component={App}>
       <IndexRoute component={Welcome} />
       <Route path='/rec/:id' component={Mapa} />
       <Route path='/info/:id' component={Info} />
