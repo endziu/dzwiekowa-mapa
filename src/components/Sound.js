@@ -3,29 +3,6 @@ import Player from './Player.js'
 import Description from './Description.js'
 
 class Sound extends Component {
-  constructor () {
-    super()
-    this.state = {
-      isPlaying: false
-    }
-    this.playClick = this.playClick.bind(this)
-    this.onEnded = this.onEnded.bind(this)
-  }
-
-  onEnded (e) {
-    this.setState({ isPlaying: false })
-  }
-
-  playClick (e) {
-    const audioElem = this.Player.audioEl
-    if (this.state.isPlaying) {
-      audioElem.pause()
-    } else {
-      audioElem.play()
-    }
-    this.setState({ isPlaying: !this.state.isPlaying })
-  }
-
   render () {
     const { currentSound } = this.props
     return (
@@ -34,10 +11,10 @@ class Sound extends Component {
             <Player
               // eslint-disable-next-line
               ref={ref => this.Player = ref}
-              playClick={this.playClick}
-              onEnded={this.onEnded}
+              playClick={this.props.playClick}
+              onEnded={this.props.onEnded}
               selectedSound={currentSound}
-              isPlaying={this.state.isPlaying}
+              isPlaying={this.props.isPlaying}
             />
             <Description selectedSound={currentSound} />
           </div>
