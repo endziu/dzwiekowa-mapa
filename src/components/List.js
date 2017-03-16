@@ -7,12 +7,13 @@ const List = ({ currentId, sounds, onClick }) => (
     {sounds.map((elem, index) => (
       <Link className='link' key={index} to={`/rec/${elem.id}`}>
         <li
+          id={index}
+          onClick={onClick}
           className={
             asNumber(currentId) === asNumber(elem.id)
               ? 'white bg-black-60 truncate pv1 pv2-ns'
               : 'black-80 hover-near-white bg-animate hover-bg-black-60 truncate pv1 pv2-ns'
           }
-          onClick={onClick}
         >
           <span>
             {elem.title}
