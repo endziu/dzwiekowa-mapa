@@ -51,8 +51,8 @@ class App extends Component {
         </div>
 
         <div className='flex flex-column vh-60 vh-100-ns w-100 mw6-ns ph1 bl-m bl-l fadeIn animated'>
-          
-          <Sound 
+
+          <Sound
             // eslint-disable-next-line
             ref={ref => this.Sound = ref}
             currentSound={currentSound}
@@ -60,9 +60,10 @@ class App extends Component {
             playClick={this.playClick}
             isPlaying={this.state.isPlaying}
           />
+
           <List
             onClick={this.listClick}
-            sounds={sounds} 
+            sounds={sounds}
             currentId={this.props.params.id}
           />
 
