@@ -4,7 +4,7 @@ import { takeFirst } from '../helpers/'
 const Description = ({ selectedSound }) => (
   <div className='flex flex-row justify-start items-start dn-sh mt1 bg-near-white'>
     <img
-      style={{maxWidth: '100px', maxHeight: '100px'}}
+      style={{minWidth: '80px', minHeight: '80px', maxWidth: '80px', maxHeight: '80px'}}
       src={selectedSound.artwork_url || selectedSound.userPic}
       alt='artwork'
     />
