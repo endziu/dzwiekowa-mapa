@@ -18,6 +18,10 @@ sourceMapSupport.install()
 const app = express()
 app.use('/static', express.static('./dist'))
 
+app.get('/api', (req,res) => {
+  res.status(200).send({"bibi":"boo"})
+})
+
 app.get('*', (req, res) => {
   const match = routes.reduce((acc, route) => matchPath(req.url, route, { exact: true }) || acc, null)
   if (!match) {
