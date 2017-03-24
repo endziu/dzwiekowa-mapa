@@ -4,6 +4,7 @@
   "description": "dzwiękowa mapa wrocławia",
   "main": "./src/server/index.js",
   "scripts": {
+    "prebuild": "rimraf dist",
     "build": "set NODE_ENV=production && webpack -p --config webpack.config.server.js && webpack -p --config webpack.config.client.js",
     "start": "node dist/server.js",
     "dev:server": "webpack --config webpack.config.server.js --watch",
@@ -40,6 +41,7 @@
     "css-loader": "^0.27.3",
     "extract-text-webpack-plugin": "^2.1.0",
     "nodemon": "^1.11.0",
+    "rimraf": "^2.6.1",
     "style-loader": "^0.16.0",
     "webpack": "^2.2.1",
     "webpack-node-externals": "^1.5.4"
