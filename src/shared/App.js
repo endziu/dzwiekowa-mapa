@@ -8,6 +8,9 @@ import Sound from './comps/Sound.js'
 import NoMatch from './comps/NoMatch.js'
 import { getSoundById } from './helpers/'
 
+import './assets/tachyons.min.css'
+import './assets/style.css'
+
 class App extends Component {
 
   constructor () {

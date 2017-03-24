@@ -23,24 +23,19 @@ app.get('/api', (req,res) => {
 })
 
 app.get('*', (req, res) => {
-  const match = routes.reduce((acc, route) => matchPath(req.url, route, { exact: true }) || acc, null)
+  const appWithRouter = (data) => <Router context={{}} location={req.url}>
+    <App sounds={data} />
+  </Router>
+
+  const match = routes.reduce((acc, route) => matchPath(req.url, route, { exact: false }) || acc, null)
   if (!match) {
     res.status(404).send(render(<NoMatch />))
     return
   }
   readFile('./src/shared/assets/tracks.json')
-    .then(file => {
-      const result = JSON.parse(file.toString())
-      return result
-    })
-    .then(sounds => {
-      res.status(200).send(render(
-        (
-          <Router context={{}} location={req.url}>
-            <App sounds={sounds} />
-          </Router>
-        ), sounds
-      ))
+    .then( file => JSON.parse(file.toString()) )
+    .then( sounds => {
+      res.status(200).send(render(appWithRouter(sounds), sounds))
     }).catch(err => {
       console.error(err)
       res.status(500).send(render(<Error />))

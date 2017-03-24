@@ -1,14 +1,17 @@
 const nodeExternals = require('webpack-node-externals');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const path = require('path');
 const srcPath = path.resolve(__dirname, 'src');
 const distPath = path.resolve(__dirname, 'dist');
 
 module.exports = {
     context: srcPath,
-    entry: './server/index.js',
+    entry: {
+        server: './server/index.js'
+    },
     output: {
         path: distPath,
-        filename: 'server.js'
+        filename: '[name].js'
     },
     target: 'node',
     node: {
@@ -24,10 +27,20 @@ module.exports = {
             {
                 test: /\.js$/,
                 exclude: /node_modules/,
-                loader: 'babel-loader'
+                use: 'babel-loader'
+            },
+            {
+                test: /\.css$/,
+                use: ExtractTextPlugin.extract({
+                    fallback: "style-loader",
+                    use: 'css-loader'
+                })
             }
         ]
     },
+    plugins: [
+        new ExtractTextPlugin('style.css')
+    ],  
     externals: nodeExternals(),
     devtool: 'source-map'
 };
