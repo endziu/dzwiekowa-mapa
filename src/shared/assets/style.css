@@ -26,10 +26,10 @@ h1, h2, h3, h4, h5, ol, ul, li, p {
 }
 
 .w1-8 {
-  width: 1.8rem;
+  width: 1.2rem;
 }
 
-.bottom-3 {
+.bottom-4 {
   bottom: 4rem;
 }
 
@@ -43,4 +43,36 @@ h1, h2, h3, h4, h5, ol, ul, li, p {
   .menuPosition {
     right: 512px;
   }
+}
+
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
 }

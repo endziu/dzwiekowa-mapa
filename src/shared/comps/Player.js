@@ -88,7 +88,7 @@ class Player extends Component {
               }}
             />
             <img
-              className='relative bottom-3 h3 w-100 bg-black-20'
+              className='relative bottom-4 h3 w-100 bg-black-20'
               src={selectedSound.waveform_url}
               alt='waveform'
             />

@@ -19,16 +19,14 @@ class SoundMap extends Component {
       <Gmaps
         ref={'mapa'}
         width={'100%'}
-        height={'100%'}
+        className='flex justify-end-ns w-100 vh-40 vh-100-ns fadeIn animated ph1 pt1 fadeIn animated'
         lat={current.GPS.lat}
         lng={current.GPS.lng}
         zoom={17}
         params={{ v: '3', key: 'AIzaSyB7GQAjLtFuxLYjfSQq3PLX3o0mX6qT-CU' }}
         onMapCreated={this.onMapCreated}
       >
-
         <Marker lat={current.GPS.lat} lng={current.GPS.lng} />
-
       </Gmaps>
     )
   }

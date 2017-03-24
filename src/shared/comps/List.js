@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router'
+import { Link } from 'react-router-dom'
 import { asNumber } from '../helpers/index.js'
 
 const List = ({ currentId, sounds, onClick }) => (

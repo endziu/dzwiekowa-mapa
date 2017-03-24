@@ -1,7 +1,7 @@
 import React from 'react'
-import { Link } from 'react-router'
+import { Link } from 'react-router-dom'
 
-const Welcome = ({ message }) => <header className='h-100 w-100'>
+const Welcome = () => <header className='vh-100 w-100'>
   <div className='bg-near-white h-100'>
     <div className='tc-l ph3'>
       <h1 className='baskerville f2 f1-m f-headline-l fw2 black-90 mb0 lh-title'>dźwiękowa mapa Wrocławia</h1>
