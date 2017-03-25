@@ -11,9 +11,9 @@ export default (req, res) => {
     <App sounds={data} />
   </Router>
 
-  const matchHome = matchPath(req.url, '/', { exact:true }).isExact
-  const matchSound = matchPath(req.url, '/rec/:id', { exact:false })
-  
+  const matchHome = matchPath(req.url, { path: '/', exact: true })
+  const matchSound = matchPath(req.url, { path: '/rec/:id' })
+
   if (matchHome || matchSound) {
     readFile('./src/shared/assets/tracks.json')
       .then(file => JSON.parse(file.toString()))
@@ -21,7 +21,7 @@ export default (req, res) => {
         res.status(200).send(render(appWithRouter(sounds), sounds))
       }).catch(err => {
         console.error(err)
-        res.status(500).send(render(<Error />))
+        res.status(500).send(render(<Error message={err}/>))
       })
   } else {
     res.status(404).send(render(<NoMatch />))
