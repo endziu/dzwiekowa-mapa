@@ -47,7 +47,6 @@ class App extends Component {
         <Switch>
           <Route exact path='/' component={Welcome} />
           <Route
-            exact
             path='/rec/:id'
             render={({ match }) =>
               <div className='App flex-auto flex-ns flex-row-ns justify-end f6 black-80 bg-white'>
@@ -58,12 +57,15 @@ class App extends Component {
                     currentSound={getSoundById(match.params.id, this.props.sounds)}
                     onEnded={this.onEnded}
                     playClick={this.playClick}
-                    isPlaying={this.state.isPlaying} />
+                    isPlaying={this.state.isPlaying}
+                  />
 
                   <List
                     onClick={this.listClick}
                     sounds={this.props.sounds}
-                    currentId={match.params.id} />
+                    currentId={match.params.id}
+                  />
+                  <Menu id={match.params.id}/>
                 </div>
               </div>
             }
@@ -76,4 +78,3 @@ class App extends Component {
 }
 
 export default App
-
