@@ -1,1 +1,1 @@
-export default (req, res) => res.status(200).send({'bibi': 'boo'})
+export default (req, res) => res.status(200).send({'message': 'Hej Szipupi'})
