@@ -16,7 +16,7 @@ export default (app, data) => {
       </head>
       <body>
         <div id="app">${appString}</div>
-        ${data 
+        ${data
             ? `<script>${dataString}</script>
               <script src="/static/client.js"></script>`
             : ''}

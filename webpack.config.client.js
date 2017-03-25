@@ -15,7 +15,7 @@ module.exports = {
     filename: '[name].js',
     publicPath: '/'
   },
-  target: "web",
+  target: 'web',
   resolve: {
     modules: ['node_modules', 'src'],
     extensions: ['*', '.js', '.json']
