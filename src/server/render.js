@@ -20,7 +20,7 @@ export default (req, res) => {
     readFile('./src/shared/assets/tracks.json')
       .then(file => JSON.parse(file.toString()))
       .then(sounds => {
-        res.status(200).send(template(appWithRouter(sounds), sounds))
+        res.status(200).send(template(appWithRouter, sounds))
       }).catch(err => {
         console.error(err)
         res.status(500).send(template(<Error message={err}/>))
