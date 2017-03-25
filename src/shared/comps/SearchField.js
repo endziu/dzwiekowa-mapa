@@ -4,7 +4,7 @@ const SearchField = () => {
   return (
     <form className=''>
       <input
-        className='input-reset bn pl1 pv2 dn-sh mr1'
+        className='input-reset pl2 pv2 bn'
         id='search'
         placeholder='🔎 Szukaj dźwięków...'
         type='text' />
