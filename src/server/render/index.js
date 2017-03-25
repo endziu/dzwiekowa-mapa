@@ -1,9 +1,9 @@
 import React from 'react'
 import { StaticRouter as Router, matchPath } from 'react-router'
 import readFile from 'fs-readfile-promise'
-import App from '../shared/App'
-import Error from '../shared/comps/Error'
-import NoMatch from '../shared/comps/NoMatch'
+import App from '../../shared/App'
+import Error from '../../shared/comps/Error'
+import NoMatch from '../../shared/comps/NoMatch'
 import template from './template'
 
 export default (req, res) => {
