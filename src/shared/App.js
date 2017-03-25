@@ -4,6 +4,7 @@ import Mapa from './comps/Mapa.js'
 import List from './comps/List.js'
 import Menu from './comps/Menu.js'
 import Welcome from './comps/Welcome.js'
+import Search from './comps/SearchField'
 import Sound from './comps/Sound.js'
 import NoMatch from './comps/NoMatch.js'
 import { getSoundById } from './helpers/'
@@ -53,6 +54,8 @@ class App extends Component {
                 <Mapa currentSound={getSoundById(match.params.id, this.props.sounds)} />
                 <div className='flex flex-column vh-60 vh-100-ns w-100 mw6-ns ph1 bl-m bl-l fadeIn animated'>
                   <Menu id={match.params.id} />
+                  
+                  <Search />
                   <Sound
                     ref={ref => this.Sound = ref}
                     currentSound={getSoundById(match.params.id, this.props.sounds)}

@@ -2,9 +2,9 @@ import React from 'react'
 
 const SearchField = () => {
   return (
-    <form className='pv1'>
+    <form className=''>
       <input
-        className='input-reset bn pl2 pv2 dn-sh'
+        className='input-reset bn pl1 pv2 dn-sh mr1'
         id='search'
         placeholder='🔎 Szukaj dźwięków...'
         type='text' />
