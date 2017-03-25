@@ -13,10 +13,10 @@ export default (appWithRouterAndData, data) => `
     </head>
     <body>
         <div id="app">${renderToString(appWithRouterAndData)}</div>
-        ${data ? `
-            <script>window.__sounds__ = ${JSON.stringify(data)};</script>
-            <script src="/static/client.js"></script>
-        ` : ''}
+        ${data 
+            ? `<script>window.__sounds__ = ${JSON.stringify(data)}</script>
+               <script src="/static/client.js"></script>`
+            : ''}
     </body>
 </html>
 `
