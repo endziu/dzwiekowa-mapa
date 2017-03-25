@@ -2,7 +2,7 @@ import React from 'react'
 
 const SearchField = () => {
   return (
-    <form className='absolute onTop'>
+    <form className='ma1 absolute onTop'>
       <input
         className='input-reset pl2 pv2 bn'
         id='search'
