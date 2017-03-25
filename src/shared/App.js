@@ -42,6 +42,13 @@ class App extends Component {
     this.setState({isPlaying: false})
   }
 
+  componentDidMount() {
+    fetch('/api')
+      .then((res) => res.json())
+      .then((res) => console.log(res))
+      .catch((err)=>console.log(err))
+  }
+
   render () {
     return (
       <div>
