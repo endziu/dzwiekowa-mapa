@@ -45,10 +45,11 @@ class App extends Component {
     return (
       <div>
         <Switch>
-          <Route exact={true} path='/' component={Welcome} />
-          <Route 
-            path='/rec/:id' 
-            render={ ({ match }) =>
+          <Route exact path='/' component={Welcome} />
+          <Route
+            exact
+            path='/rec/:id'
+            render={({ match }) =>
               <div className='App flex-auto flex-ns flex-row-ns justify-end f6 black-80 bg-white'>
                 <Mapa currentSound={getSoundById(match.params.id, this.props.sounds)} />
                 <div className='flex flex-column vh-60 vh-100-ns w-100 mw6-ns ph1 bl-m bl-l fadeIn animated'>
@@ -75,5 +76,4 @@ class App extends Component {
 }
 
 export default App
-
 
