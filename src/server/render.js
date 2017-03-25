@@ -18,16 +18,12 @@ export default (req, res) => {
 
   if (matchHome || matchSound) {
     readFile('./src/shared/assets/tracks.json')
-      .then(file => JSON.parse(file.toString()))
-      .then(sounds => {
-        res.status(200).send(template(appWithRouter, sounds))
-      }).catch(err => {
-        console.error(err)
-        res.status(500).send(template(<Error message={err}/>))
-      })
+      .then( file => JSON.parse(file.toString()) )
+      .then( sounds => res.status(200).send(template(appWithRouter, sounds)) )
+      .catch( err => res.status(500).send(template(<Error message={err}/>)) )
   } else {
     res.status(404).send(template(<NoMatch />))
     return
   }
-  
+
 }
