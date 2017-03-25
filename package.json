@@ -23,6 +23,7 @@
   },
   "homepage": "http://devmap.now.sh",
   "dependencies": {
+    "compression": "^1.6.2",
     "express": "^4.14.1",
     "express-favicon": "^2.0.0",
     "fs-readfile-promise": "^3.0.0",
