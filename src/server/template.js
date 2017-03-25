@@ -1,7 +1,7 @@
 import { renderToString } from 'react-dom/server'
 import React from 'react'
 
-export default (appWithRouterAndData, data) => `
+export default (app, data) => `
 <!DOCTYPE html>
 <html lang="pl">
     <head>
@@ -12,7 +12,7 @@ export default (appWithRouterAndData, data) => `
         <title>dzwiekowamapa.pl</title>
     </head>
     <body>
-        <div id="app">${renderToString(appWithRouterAndData)}</div>
+        <div id="app">${renderToString(app)}</div>
         ${data 
             ? `<script>window.__sounds__ = ${JSON.stringify(data)}</script>
                <script src="/static/client.js"></script>`
