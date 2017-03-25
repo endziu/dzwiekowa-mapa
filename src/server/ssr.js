@@ -6,20 +6,13 @@ import { StaticRouter as Router, matchPath } from 'react-router'
 import render from './render'
 import readFile from 'fs-readfile-promise'
 
-const routes = [
-  '/',
-  '/rec/:id'
-]
-
 export default (req, res) => {
   const appWithRouter = (data) => <Router context={{}} location={req.url}>
     <App sounds={data} />
   </Router>
 
-  const matchHome = matchPath(req.url, routes[0], {exact:true}).isExact
-  const matchSound = matchPath(req.url, routes[1], {exact:false})
-
-  console.log(matchHome, matchSound)
+  const matchHome = matchPath(req.url, '/', { exact:true }).isExact
+  const matchSound = matchPath(req.url, '/rec/:id', { exact:false })
   
   if (matchHome || matchSound) {
     readFile('./src/shared/assets/tracks.json')
@@ -31,7 +24,6 @@ export default (req, res) => {
         res.status(500).send(render(<Error />))
       })
   } else {
-    console.log('oh noo!')
     res.status(404).send(render(<NoMatch />))
     return
   }
