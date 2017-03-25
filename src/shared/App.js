@@ -51,11 +51,10 @@ class App extends Component {
             path='/rec/:id'
             render={({ match }) =>
               <div className='App flex-auto flex-ns flex-row-ns justify-end f6 black-80 bg-white'>
+                <Search />
                 <Mapa currentSound={getSoundById(match.params.id, this.props.sounds)} />
                 <div className='flex flex-column vh-60 vh-100-ns w-100 mw6-ns ph1 bl-m bl-l fadeIn animated'>
                   <Menu id={match.params.id} />
-                  
-                  <Search />
                   <Sound
                     ref={ref => this.Sound = ref}
                     currentSound={getSoundById(match.params.id, this.props.sounds)}
