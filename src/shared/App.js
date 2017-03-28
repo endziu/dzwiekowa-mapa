@@ -47,15 +47,16 @@ class App extends Component {
   }
 
   searchChange(e) {
-    this.setState({filter: e.target.value.toLowerCase()})
+    const s = this.props.sounds
+    this.setState({
+      filter: e.target.value.toLowerCase(),
+      sounds: s.filter(i => i.description.toLowerCase().search(this.state.filter) !== -1)
+    })
   }
 
   searchSubmit(e) {
     e.preventDefault()
-    this.setState({
-      filter: '',
-      sounds: this.state.sounds.filter(s => s.description.toLowerCase().search(this.state.filter) !== -1)
-    })
+    this.setState({filter: ''})
   }
 
   componentDidMount() {
