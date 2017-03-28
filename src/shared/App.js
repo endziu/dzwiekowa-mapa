@@ -17,11 +17,15 @@ class App extends Component {
   constructor () {
     super()
     this.state = {
-      isPlaying: false
+      isPlaying: false,
+      filter: '',
+      sounds: []
     }
     this.playClick = this.playClick.bind(this)
     this.listClick = this.listClick.bind(this)
     this.onEnded = this.onEnded.bind(this)
+    this.searchChange = this.searchChange.bind(this)
+    this.searchSubmit = this.searchSubmit.bind(this)
   }
 
   onEnded (e) {
@@ -42,11 +46,25 @@ class App extends Component {
     this.setState({isPlaying: false})
   }
 
+  searchChange(e) {
+    const filter = 
+    this.setState({filter: e.target.value.toLowerCase()})
+  }
+
+  searchSubmit(e) {
+    e.preventDefault()
+    this.setState({
+      filter: '',
+      sounds: this.state.sounds.filter(s => s.description.toLowerCase().search(this.state.filter) !== -1)
+    })
+  }
+
   componentDidMount() {
+    this.setState({sounds: this.props.sounds})
     fetch('/api')
       .then((res) => res.json())
       .then((res) => console.log(res))
-      .catch((err)=>console.log(err))
+      .catch((err) => console.log(err))
   }
 
   render () {
@@ -58,10 +76,19 @@ class App extends Component {
             path='/rec/:id'
             render={({ match }) =>
               <div className='App flex-auto flex-ns flex-row-ns justify-end f6 black-80 bg-white'>
-                <Search />
+                
+                <Search
+                  filter={this.state.filter}
+                  handleSubmit={this.searchSubmit}
+                  handleChange={this.searchChange}
+                />
+
+                <Menu id={match.params.id} />
+
                 <Mapa currentSound={getSoundById(match.params.id, this.props.sounds)} />
+
                 <div className='flex flex-column vh-60 vh-100-ns w-100 mw6-ns ph1 bl-m bl-l fadeIn animated'>
-                  <Menu id={match.params.id} />
+                  
                   <Sound
                     ref={ref => this.Sound = ref}
                     currentSound={getSoundById(match.params.id, this.props.sounds)}
@@ -72,10 +99,12 @@ class App extends Component {
 
                   <List
                     onClick={this.listClick}
-                    sounds={this.props.sounds}
+                    sounds={this.state.sounds}
                     currentId={match.params.id}
                   />
+
                 </div>
+
               </div>
             }
           />
