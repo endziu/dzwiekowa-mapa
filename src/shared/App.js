@@ -56,7 +56,7 @@ class App extends Component {
 
   searchSubmit(e) {
     e.preventDefault()
-    this.setState({filter: ''})
+    this.setState({filter: '', sounds: this.props.sounds})
   }
 
   componentDidMount() {
