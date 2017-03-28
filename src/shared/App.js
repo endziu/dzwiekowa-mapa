@@ -47,7 +47,6 @@ class App extends Component {
   }
 
   searchChange(e) {
-    const filter = 
     this.setState({filter: e.target.value.toLowerCase()})
   }
 
