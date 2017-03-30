@@ -1,9 +1,9 @@
 import { renderToString } from 'react-dom/server'
-import React from 'react'
 
 export default (app, data) => {
   const appString = renderToString(app(data))
   const dataString = `window.__sounds__ = ${JSON.stringify(data)}`
+  
   return `
     <!DOCTYPE html>
     <html lang="pl">
