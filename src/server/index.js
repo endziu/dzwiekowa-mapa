@@ -11,7 +11,7 @@ sourceMapSupport.install()
 const app = express()
 app.use(helmet())
 app.use(compression({filter: (req) => req.headers['x-no-compression'] ? true : false}))
-app.use(favicon(__dirname + '/src/shared/assets/favicon.png'))
+app.use(favicon(__dirname + './src/shared/assets/favicon.png'))
 app.use(
   morgan(
     (tokens, req, res) => [
