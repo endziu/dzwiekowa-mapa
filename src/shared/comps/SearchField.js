@@ -4,7 +4,7 @@ const SearchField = ({handleSubmit, handleChange, filter}) => {
   return (
     <form 
       onSubmit={handleSubmit}
-      className='ml1 mt1 ma0-ns absolute onTop'>
+      className='ml1 mt1 ma0-ns absolute onTop searchPos'>
       <input
         value={filter}
         onChange={handleChange}
