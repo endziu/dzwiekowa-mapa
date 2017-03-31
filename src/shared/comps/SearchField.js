@@ -10,7 +10,7 @@ const SearchField = ({handleSubmit, handleChange, filter}) => {
         onChange={handleChange}
         className='input-reset pv2 bn'
         id='search'
-        placeholder='🔎'
+        placeholder='🔎 Szukaj dźwięków'
         type='text' />
     </form>
   )
