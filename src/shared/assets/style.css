@@ -64,6 +64,10 @@ h1, h2, h3, h4, h5, ol, ul, li, p {
   transition: width 500ms;
 }
 
+.searchPos input:hover {
+  width: 145px;
+}
+
 .searchPos input:focus {
   width: 145px;
 }
