@@ -27,8 +27,8 @@ class SoundMap extends Component {
         params={{ v: '3', key: 'AIzaSyB7GQAjLtFuxLYjfSQq3PLX3o0mX6qT-CU' }}
         onMapCreated={this.onMapCreated}
       >
-        {this.props.sounds.map((sound,index) => {
-          return <Marker key={index} lat={sound.GPS.lat} lng={sound.GPS.lng} />  
+        {this.props.sounds.map((sound, index) => {
+          return <Marker key={index} lat={sound.GPS.lat} lng={sound.GPS.lng} />
         })}
       </Gmaps>
     )

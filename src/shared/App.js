@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import { Route, Switch } from 'react-router-dom'
 import Mapa from './comps/Mapa.js'
 import List from './comps/List.js'
 import Menu from './comps/Menu.js'
@@ -46,7 +46,7 @@ class App extends Component {
     this.setState({isPlaying: false})
   }
 
-  searchChange(e) {
+  searchChange (e) {
     const s = this.props.sounds
     this.setState({
       filter: e.target.value.toLowerCase(),
@@ -54,12 +54,12 @@ class App extends Component {
     })
   }
 
-  searchSubmit(e) {
+  searchSubmit (e) {
     e.preventDefault()
     this.setState({filter: '', sounds: this.props.sounds})
   }
 
-  componentDidMount() {
+  componentDidMount () {
     this.setState({sounds: this.props.sounds})
     fetch('/api')
       .then((res) => res.json())
@@ -76,7 +76,7 @@ class App extends Component {
             path='/rec/:id'
             render={({ match }) =>
               <div className='App flex-auto flex-ns flex-row-ns justify-end f6 black-80 bg-white'>
-                
+
                 <Search
                   filter={this.state.filter}
                   handleSubmit={this.searchSubmit}
@@ -87,13 +87,13 @@ class App extends Component {
 
                 <Mapa
                   sounds={this.state.sounds}
-                  currentSound={getSoundById(match.params.id, this.props.sounds)} 
+                  currentSound={getSoundById(match.params.id, this.props.sounds)}
                 />
 
                 <div className='flex flex-column vh-60 vh-100-ns w-100 mw6-ns ph1 bl-m bl-l fadeIn animated'>
-                  
+
                   <Sound
-                    ref={ref => this.Sound = ref}
+                    ref={ref => (this.Sound = ref)}
                     currentSound={getSoundById(match.params.id, this.props.sounds)}
                     onEnded={this.onEnded}
                     playClick={this.playClick}
