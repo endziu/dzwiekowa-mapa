@@ -85,7 +85,10 @@ class App extends Component {
 
                 <Menu id={match.params.id} />
 
-                <Mapa currentSound={getSoundById(match.params.id, this.props.sounds)} />
+                <Mapa
+                  sounds={this.state.sounds}
+                  currentSound={getSoundById(match.params.id, this.props.sounds)} 
+                />
 
                 <div className='flex flex-column vh-60 vh-100-ns w-100 mw6-ns ph1 bl-m bl-l fadeIn animated'>
                   
