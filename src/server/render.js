@@ -13,7 +13,7 @@ export default (req, res) => {
   const routerApp = (data) => <Router context={{}} location={req.url}><App sounds={data} /></Router>
 
   if (matchHome || matchSound) {
-    readFile('./src/shared/assets/tracks.json', 'utf-8')
+    return readFile('./src/shared/assets/tracks.json', 'utf-8')
       .then(file => JSON.parse(file))
       .then(data => {
         return readFile('./src/index.html', 'utf-8')
