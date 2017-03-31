@@ -8,9 +8,9 @@ const SearchField = ({handleSubmit, handleChange, filter}) => {
       <input
         value={filter}
         onChange={handleChange}
-        className='input-reset pv2 bn'
+        className='input-reset bn'
         id='search'
-        placeholder='🔎 Szukaj dźwięków'
+        placeholder='🔎  Szukaj dźwięków'
         type='text' />
     </form>
   )
