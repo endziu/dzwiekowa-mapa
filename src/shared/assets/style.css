@@ -45,12 +45,24 @@ h1, h2, h3, h4, h5, ol, ul, li, p {
   }
 }
 
+.searchPos {
+  position: absolute;
+  z-index: 99999;
+}
+
 @media(min-width: 880px) {
   .searchPos {
-    right: 516px;
+    right: 515px;
     top: 70px;
   }
 }
+
+.searchPos input {
+  padding-left: 5px;
+  width: 29px;
+  height: 29px;
+}
+
 .animated {
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
