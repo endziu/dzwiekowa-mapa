@@ -3,9 +3,15 @@ import { Link } from 'react-router-dom'
 
 const Welcome = () => <header className='vh-100 w-100'>
   <div className='bg-near-white h-100'>
-    <div className='tc-l ph3'>
+    <div className='tc-ns ph3'>
       <h1 className='baskerville f2 f1-m f-headline-l fw2 black-90 mb0 lh-title'>dźwiękowa mapa Wrocławia</h1>
       <h2 className='fw1 f2-l f3 black-80 mt2 mb2'>stylish subheadline with extra info</h2>
+      <section className="mw8 center bg-light-gray pa3">
+        <h3 className="mt0">co słychać?</h3>
+        <p className="center-ns">
+          Detailed info about news and happenings in and around fieldrecording in Wrocław.
+        </p>
+      </section>
       <Link
         to={'/rec/235266599'}
         className='f5 no-underline black bg-white bg-animate hover-bg-black hover-white inline-flex items-center pa2 ba border-box mr1'>
