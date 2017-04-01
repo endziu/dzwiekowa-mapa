@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom'
 
 const Welcome = () => <header className='vh-100 w-100'>
   <div className='bg-near-white h-100'>
-    <div className='tc-ns ph3'>
-      <h1 className='baskerville f2 f1-m f-headline-l fw2 black-90 mb0 lh-title'>dźwiękowa mapa Wrocławia</h1>
+    <div className='tc-ns pa3'>
+      <h1 className='f2 f1-m f-headline-l fw2 black ma0 lh-title'>dźwiękowa mapa Wrocławia</h1>
       <h2 className='fw1 f2-l f3 black-80 mt2 mb2'>stylish subheadline with extra info</h2>
       <Link
         to={'/rec/235266599'}
@@ -15,16 +15,16 @@ const Welcome = () => <header className='vh-100 w-100'>
         </svg>
         <span className='pl1'>Mapa</span>
       </Link>
-      <section className="mw8 center pa3">
-        <h3 className="mt0">co słychać?</h3>
-        <div className="fl w-100 w-50-m w-25-l pa3-m pa4-l">
+      <section className="mw8 center mt3">
+        <h2 className="fw1 f2-l f3 black-80 mt2 mb2">co słychać?</h2>
+        <div className="fl w-100 w-50-m w-25-l pa3-m pa4-l mb2">
           <p className="f6 lh-copy measure">
             Perfect typography depends on perfect harmony between all of its elements. 
             Harmony is determined by relationships
             or proportions. Proportions are hidden everywhere. words themselves. 
           </p>
         </div>
-        <div className="fl w-100 w-50-m w-25-l pa3-m pa4-l">
+        <div className="fl w-100 w-50-m w-25-l pa3-m pa4-l mb2">
           <p className="f6 lh-copy measure">
             True book design, therefore, is a matter of tact (tempo, rhythm,
             touch) alone. It flows from something rarely appreciated today:
@@ -35,7 +35,7 @@ const Welcome = () => <header className='vh-100 w-100'>
             advertising value at all. 
           </p>
         </div>
-        <div className="fl w-100 w-50-m w-25-l pa3-m pa4-l">
+        <div className="fl w-100 w-50-m w-25-l pa3-m pa4-l mb2">
           <p className="f6 lh-copy measure">
             In a masterpiece of typography, the artist's signature has been
             eliminated. What some may praise as personal styles are in reality
@@ -43,7 +43,7 @@ const Welcome = () => <header className='vh-100 w-100'>
             as innovations. 
           </p>
         </div>
-        <div className="fl w-100 w-50-m w-25-l pa3-m pa4-l">
+        <div className="fl w-100 w-50-m w-25-l pa3-m pa4-l mb2">
           <p className="f6 lh-copy measure">
             Only through constant practice and strictest self-criticism may we
             develop a sense for a perfect piece of work. Unfortunately, most
