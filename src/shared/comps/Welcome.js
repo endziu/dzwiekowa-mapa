@@ -7,7 +7,7 @@ const Welcome = () => <header className='vh-100 w-100'>
       <h1 className='f2 f1-m f-headline-l fw2 black ma0 lh-title'>dźwiękowa mapa Wrocławia</h1>
       <h2 className='fw1 f2-l f3 black-80 mt2 mb2'>stylish subheadline with extra info</h2>
       <Link
-        to={'/rec/235266599'}
+        to={'/rec/313303431'}
         className='f5 no-underline black bg-white bg-animate hover-bg-black hover-white inline-flex items-center pa2 ba border-box mr1'>
         <svg className='w1' viewBox='0 0 24 24' style={{fill: 'currentcolor'}}>
           <title>Map icon</title>
