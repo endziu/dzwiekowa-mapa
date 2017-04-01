@@ -23,6 +23,7 @@ class App extends Component {
     }
     this.playClick = this.playClick.bind(this)
     this.listClick = this.listClick.bind(this)
+    this.markerClick = this.markerClick.bind(this)
     this.onEnded = this.onEnded.bind(this)
     this.searchChange = this.searchChange.bind(this)
     this.searchSubmit = this.searchSubmit.bind(this)
@@ -40,6 +41,11 @@ class App extends Component {
       audioElem.play()
     }
     this.setState({ isPlaying: !this.state.isPlaying })
+  }
+
+  markerClick (val) {
+    const pathToRedirect = `/rec/${this.state.sounds[val].id}`
+    console.log(`redirect to: ${pathToRedirect}`)
   }
 
   listClick (e) {
@@ -86,6 +92,7 @@ class App extends Component {
                 <Menu id={match.params.id} />
 
                 <Mapa
+                  onClick={this.markerClick}
                   sounds={this.state.sounds}
                   currentSound={getSoundById(match.params.id, this.props.sounds)}
                 />
