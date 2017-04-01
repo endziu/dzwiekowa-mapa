@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Route, Switch } from 'react-router-dom'
+import { Route, Switch, Redirect } from 'react-router-dom'
 import Mapa from './comps/Mapa.js'
 import List from './comps/List.js'
 import Menu from './comps/Menu.js'
@@ -19,7 +19,8 @@ class App extends Component {
     this.state = {
       isPlaying: false,
       filter: '',
-      sounds: []
+      sounds: [],
+      redirectPath: ''
     }
     this.playClick = this.playClick.bind(this)
     this.listClick = this.listClick.bind(this)
@@ -44,8 +45,12 @@ class App extends Component {
   }
 
   markerClick (val) {
+    const currentSound = document.getElementById('snd' + val)
+    currentSound.scrollIntoView()
+    
     const pathToRedirect = `/rec/${this.state.sounds[val].id}`
-    console.log(`redirect to: ${pathToRedirect}`)
+    this.setState({redirectPath: pathToRedirect})
+    this.setState({redirectPath: ''})
   }
 
   listClick (e) {
@@ -76,6 +81,7 @@ class App extends Component {
   render () {
     return (
       <div>
+        {this.state.redirectPath ? <Redirect to={this.state.redirectPath}/> : null}
         <Switch>
           <Route exact path='/' component={Welcome} />
           <Route
