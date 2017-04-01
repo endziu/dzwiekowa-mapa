@@ -3,6 +3,13 @@
   "version": "3.0.0",
   "description": "dzwiękowa mapa wrocławia",
   "main": "./src/server/index.js",
+  "now": {
+    "name": "dzwiekowa-mapa",
+    "alias": "dzwiekowa-mapa",
+    "engines": {
+      "node": "7.4.0"
+    }
+  },
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "set NODE_ENV=production && webpack -p --config webpack.config.server.js && webpack -p --config webpack.config.client.js",
