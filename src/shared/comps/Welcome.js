@@ -15,36 +15,36 @@ const Welcome = () => <header className='vh-100 w-100'>
         </svg>
         <span className='pl1'>Mapa</span>
       </Link>
-      <section className="mw8 center mt3">
-        <h2 className="fw1 f2-l f3 black-80 mt2 mb2">co słychać?</h2>
-        <div className="fl w-100 w-50-m w-25-l pa3-m pa4-l mb2">
-          <p className="f6 lh-copy measure">
-            Perfect typography depends on perfect harmony between all of its elements. 
+      <section className='mw8 center mt3'>
+        <h2 className='fw1 f2-l f3 black-80 mt2 mb2'>co słychać?</h2>
+        <div className='fl w-100 w-50-m w-25-l pa3-m pa4-l mb2'>
+          <p className='f6 lh-copy measure'>
+            Perfect typography depends on perfect harmony between all of its elements.
             Harmony is determined by relationships
-            or proportions. Proportions are hidden everywhere. words themselves. 
+            or proportions. Proportions are hidden everywhere. words themselves.
           </p>
         </div>
-        <div className="fl w-100 w-50-m w-25-l pa3-m pa4-l mb2">
-          <p className="f6 lh-copy measure">
+        <div className='fl w-100 w-50-m w-25-l pa3-m pa4-l mb2'>
+          <p className='f6 lh-copy measure'>
             True book design, therefore, is a matter of tact (tempo, rhythm,
             touch) alone. It flows from something rarely appreciated today:
             good taste. The book designer strives for perfection; yet every
             perfect thing lives somewhere in the neighborhood of dullness and
             is frequently mistaken for it by the insensitive. In a time that
             hungers for tangible novelties, dull perfection holds no
-            advertising value at all. 
+            advertising value at all.
           </p>
         </div>
-        <div className="fl w-100 w-50-m w-25-l pa3-m pa4-l mb2">
-          <p className="f6 lh-copy measure">
+        <div className='fl w-100 w-50-m w-25-l pa3-m pa4-l mb2'>
+          <p className='f6 lh-copy measure'>
             In a masterpiece of typography, the artist's signature has been
             eliminated. What some may praise as personal styles are in reality
             small and empty peculiarities, frequently damaging, that masquerade
-            as innovations. 
+            as innovations.
           </p>
         </div>
-        <div className="fl w-100 w-50-m w-25-l pa3-m pa4-l mb2">
-          <p className="f6 lh-copy measure">
+        <div className='fl w-100 w-50-m w-25-l pa3-m pa4-l mb2'>
+          <p className='f6 lh-copy measure'>
             Only through constant practice and strictest self-criticism may we
             develop a sense for a perfect piece of work. Unfortunately, most
             seem content with a middling performance. Careful spacing of words

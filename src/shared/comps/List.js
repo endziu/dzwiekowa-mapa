@@ -7,7 +7,7 @@ const List = ({ currentId, sounds, onClick }) => (
     {sounds.map((elem, index) => (
       <Link className='link' key={index} to={`/rec/${elem.id}`}>
         <li
-          id={'snd'+index}
+          id={'snd' + index}
           onClick={onClick}
           className={
             asNumber(currentId) === asNumber(elem.id)

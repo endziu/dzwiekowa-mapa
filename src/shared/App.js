@@ -47,7 +47,7 @@ class App extends Component {
   markerClick (val) {
     const currentSound = document.getElementById('snd' + val)
     currentSound.scrollIntoView()
-    
+
     const pathToRedirect = `/rec/${this.state.sounds[val].id}`
     this.setState({redirectPath: pathToRedirect})
     this.setState({redirectPath: ''})
@@ -71,23 +71,24 @@ class App extends Component {
   }
 
   componentDidMount () {
-    this.setState({sounds: this.props.sounds})
     fetch('/api')
       .then((res) => res.json())
       .then((res) => console.log(res))
       .catch((err) => console.log(err))
+    this.setState({sounds: this.props.sounds})
   }
 
   render () {
     return (
       <div>
-        {this.state.redirectPath ? <Redirect to={this.state.redirectPath}/> : null}
         <Switch>
           <Route exact path='/' component={Welcome} />
           <Route
             path='/rec/:id'
             render={({ match }) =>
               <div className='App flex-auto flex-ns flex-row-ns justify-end f6 black-80 bg-white'>
+
+                {this.state.redirectPath ? <Redirect to={this.state.redirectPath} /> : null}
 
                 <Search
                   filter={this.state.filter}
