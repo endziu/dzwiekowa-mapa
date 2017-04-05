@@ -13,7 +13,6 @@ import './assets/tachyons.min.css'
 import './assets/style.css'
 
 class App extends Component {
-
   constructor () {
     super()
     this.state = {
