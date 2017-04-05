@@ -72,6 +72,17 @@ h1, h2, h3, h4, h5, ol, ul, li, p {
   width: 145px;
 }
 
+.infoSize {
+  height: 40vh;
+}
+
+@media(min-width: 880px) {
+  .infoSize {
+    height: 100vh;
+  }
+}
+
+
 .animated {
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
