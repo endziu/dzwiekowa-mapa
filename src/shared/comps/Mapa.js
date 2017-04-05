@@ -32,7 +32,7 @@ class SoundMap extends Component {
         onMapCreated={this.onMapCreated}
       >
         {this.props.sounds.map((sound, index) => {
-          return <Marker 
+          return <Marker
             animation={current.id === sound.id ? 1 : 0}
             lat={sound.GPS.lat}
             lng={sound.GPS.lng}

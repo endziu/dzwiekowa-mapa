@@ -10,9 +10,11 @@ import NoMatch from '../shared/comps/NoMatch'
 export default (req, res, next) => {
   const matchHome = matchPath(req.url, { path: '/', exact: true })
   const matchSound = matchPath(req.url, { path: '/rec/:id' })
+  const matchInfo = matchPath(req.url, { path: '/info/:id' })
+
   const routerApp = (data) => <StaticRouter context={{}} location={req.url}><App sounds={data} /></StaticRouter>
 
-  if (matchHome || matchSound) {
+  if (matchHome || matchSound || matchInfo) {
     return readFile('./src/shared/assets/tracks.json', 'utf-8')
       .then(file => JSON.parse(file))
       .then(data => {
