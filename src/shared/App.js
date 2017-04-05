@@ -44,6 +44,7 @@ class App extends Component {
   }
 
   markerClick (val) {
+    this.setState({isPlaying: false})
     const currentSound = document.getElementById('snd' + val)
     currentSound.scrollIntoView()
 
