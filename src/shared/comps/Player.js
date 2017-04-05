@@ -100,7 +100,7 @@ class Player extends Component {
             {`${selectedSound.title}`}
           </span>
 
-          <span className='white bg-black-60 ph2 pt1 br2'>
+          <span className='white bg-black-60 pa1 br2'>
             { `${prettyTime(this.state.currentTime)}/${prettyTime(this.state.duration)}` }
           </span>
         </div>
