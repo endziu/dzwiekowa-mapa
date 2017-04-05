@@ -103,9 +103,9 @@ class App extends Component {
                 {match.url.search('info') === 1
                   ? <Info />
                   : <Mapa
-                    onClick={this.markerClick}
-                    sounds={this.state.sounds}
-                    currentSound={getSoundById(match.params.id, this.props.sounds)}
+                      onClick={this.markerClick}
+                      sounds={this.state.sounds}
+                      currentSound={getSoundById(match.params.id, this.props.sounds)}
                     />
                 }
 
