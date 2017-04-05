@@ -32,7 +32,13 @@ class SoundMap extends Component {
         onMapCreated={this.onMapCreated}
       >
         {this.props.sounds.map((sound, index) => {
-          return <Marker onClick={this.onMarkerClick.bind(this, index)} key={index} lat={sound.GPS.lat} lng={sound.GPS.lng} animation={current.id === sound.id ? 1 : 0} />
+          return <Marker 
+            animation={current.id === sound.id ? 1 : 0}
+            lat={sound.GPS.lat}
+            lng={sound.GPS.lng}
+            onClick={this.onMarkerClick.bind(this, index)}
+            key={index}
+          />
         })}
       </Gmaps>
     )

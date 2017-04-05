@@ -43,14 +43,15 @@ class App extends Component {
     this.setState({ isPlaying: !this.state.isPlaying })
   }
 
-  markerClick (val) {
+  markerClick (index) {
     this.setState({isPlaying: false})
-    const currentSound = document.getElementById('snd' + val)
+    this.setState({redirectPath: ''})
+    
+    const currentSound = document.getElementById('snd' + index)
     currentSound.scrollIntoView()
 
-    const pathToRedirect = `/rec/${this.state.sounds[val].id}`
+    const pathToRedirect = `/rec/${this.state.sounds[index].id}`
     this.setState({redirectPath: pathToRedirect})
-    this.setState({redirectPath: ''})
   }
 
   listClick (e) {
@@ -74,7 +75,7 @@ class App extends Component {
     fetch('/api')
       .then((res) => res.json())
       .then((res) => console.log(res))
-      .catch((err) => console.log(err))
+      .catch((err) => console.log(err))    
     this.setState({sounds: this.props.sounds})
   }
 
