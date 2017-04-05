@@ -16,7 +16,7 @@ const Welcome = () => <header className='vh-100 w-100'>
         <span className='pl1'>Wejdź</span>
       </Link>
       <footer className='absolute bottom-0 right-0 f6 pa2 bg-white'>
-        made with ❤️️ by: <a href='https://endziu.xyz' className='link black-80 hover-bg-black-60 hover-white'>endziu.xyz</a>
+        built with ❤️️ by: <a href='https://endziu.xyz' className='link black-80 hover-bg-black-60 hover-white'>endziu.xyz</a>
       </footer>
     </div>
   </div>
