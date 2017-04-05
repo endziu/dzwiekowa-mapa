@@ -13,7 +13,7 @@ const Welcome = () => <header className='vh-100 w-100'>
           <title>Map icon</title>
           <path d='M20.5 3l-.16.03L15 5.1 9 3 3.36 4.9c-.21.07-.36.25-.36.48V20.5c0 .28.22.5.5.5l.16-.03L9 18.9l6 2.1 5.64-1.9c.21-.07.36-.25.36-.48V3.5c0-.28-.22-.5-.5-.5zM15 19l-6-2.11V5l6 2.11V19z' />
         </svg>
-        <span className='pl1'>Wejdź</span>
+        <span className='pl1'>Posłuchaj</span>
       </Link>
       <footer className='absolute bottom-0 right-0 f6 pa2 bg-white'>
         built with ❤️️ by: <a href='https://endziu.xyz' className='link black-80 hover-bg-black-60 hover-white'>endziu.xyz</a>
