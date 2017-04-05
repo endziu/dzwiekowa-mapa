@@ -95,10 +95,12 @@ class Player extends Component {
           </div>
         </div>
         <div className='flex flex-row justify-between pt1'>
-          <div className='black-80 truncate'>
-            <span className='link dim pointer'>{`${selectedSound.title}`}</span>
-          </div>
-          <span className='white bg-black-60'>
+ 
+          <span className='link black truncate dim f5 pa1 pointer'>
+            {`${selectedSound.title}`}
+          </span>
+
+          <span className='white bg-black-60 pa1 br3'>
             { `${prettyTime(this.state.currentTime)}/${prettyTime(this.state.duration)}` }
           </span>
         </div>
