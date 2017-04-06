@@ -1,14 +1,20 @@
+const webpack = require('webpack')
 const path = require('path')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const srcPath = path.resolve(__dirname, 'src')
 const distPath = path.resolve(__dirname, 'dist')
+
+const VENDOR_LIBS = [
+  'react', 'react-dom', 'react-gmaps', 'react-router', 'react-router-dom'
+]
 
 module.exports = {
   context: srcPath,
   target: 'web',
 
   entry: {
-    client: './client/index.js'
+    client: './client/index.js',
+    vendor: VENDOR_LIBS
   },
   output: {
     path: distPath,
@@ -35,7 +41,10 @@ module.exports = {
     ]
   },
   plugins: [
-    new ExtractTextPlugin('style.css')
+    new ExtractTextPlugin('style.css'),
+    new webpack.optimize.CommonsChunkPlugin({
+      name: 'vendor'
+    })
   ],
   devtool: 'source-map'
 }
