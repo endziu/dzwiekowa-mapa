@@ -12,8 +12,8 @@ const List = ({ currentId, sounds, onClick }) => (
             onClick={onClick}
             className={
               asNumber(currentId) === asNumber(elem.id)
-                ? 'white bg-black-60 truncate pv1 pv2-ns'
-                : 'black-80 hover-near-white bg-animate hover-bg-black-60 truncate pv1 pv2-ns'
+                ? 'white bg-black-60 truncate pv1'
+                : 'black-80 hover-near-white bg-animate hover-bg-black-60 truncate pv1'
             }
           >
             <span>

@@ -55,7 +55,7 @@ class Player extends Component {
     const { isPlaying, selectedSound } = this.props
     // const url = `https://soundcloud.com/${selectedSound.userName}/${selectedSound.permalink}`
     return (
-      <div className='App-Player bg-near-white pb1 pt1 pl1'>
+      <div className='App-Player bg-near-white pt1 pl1'>
         <audio
           onTimeUpdate={this.onTimeUpdate}
           onEnded={this.onEnded}
@@ -96,12 +96,12 @@ class Player extends Component {
         </div>
         <div className='flex flex-row justify-between'>
 
-          <span className='link black truncate dim f6 pointer pa1'>
+          <span className='link black truncate pointer pa1 fw6'>
             {`${selectedSound.title}`}
           </span>
 
-          <span className='white bg-black-60 br1 pa1'>
-            { `${prettyTime(this.state.currentTime)}/${prettyTime(this.state.duration)}` }
+          <span className='black-80 br1 pa1 fw6'>
+            { `${prettyTime(this.state.currentTime)}|${prettyTime(this.state.duration)}` }
           </span>
         </div>
       </div>
