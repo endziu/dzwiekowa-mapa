@@ -12,7 +12,7 @@ module.exports = {
   },
   output: {
     path: distPath,
-    filename: '[name].js'
+    filename: 'server.js'
   },
   target: 'node',
   node: {

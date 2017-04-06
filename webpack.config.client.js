@@ -1,5 +1,5 @@
-const webpack = require('webpack')
 const path = require('path')
+const webpack = require('webpack')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const srcPath = path.resolve(__dirname, 'src')
 const distPath = path.resolve(__dirname, 'dist')
@@ -11,7 +11,6 @@ const VENDOR_LIBS = [
 module.exports = {
   context: srcPath,
   target: 'web',
-
   entry: {
     client: './client/index.js',
     vendor: VENDOR_LIBS
