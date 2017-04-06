@@ -95,7 +95,7 @@ class Player extends Component {
           </div>
         </div>
         <div className='flex flex-row justify-between'>
- 
+
           <span className='link black truncate dim f6 pointer pa1'>
             {`${selectedSound.title}`}
           </span>

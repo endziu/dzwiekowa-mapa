@@ -20,7 +20,7 @@ const List = ({ currentId, sounds, onClick }) => (
               {elem.title}
             </span>
           </li>
-        </Link>      
+        </Link>
       )
     })}
   </ul>
