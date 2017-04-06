@@ -16,7 +16,7 @@ const Welcome = () => <header className='vh-100 w-100'>
       <h2 className='fw1 f2-l f3 black-60 mv3'>kolekcja nagrań audiosfery miasta</h2>
       <Link
         to={'/rec/313303431'}
-        className='v-mid f5 no-underline white bg-black-80 bg-animate hover-bg-white hover-black inline-flex items-center pa2 ba border-box mv3'>
+        className='v-mid f5 no-underline black bg-white bg-animate hover-bg-black hover-white inline-flex items-center pa2 ba border-box mv3'>
         <svg className='w1' viewBox='0 0 24 24' style={{fill: 'currentcolor'}}>
           <title>Map icon</title>
           <path d='M20.5 3l-.16.03L15 5.1 9 3 3.36 4.9c-.21.07-.36.25-.36.48V20.5c0 .28.22.5.5.5l.16-.03L9 18.9l6 2.1 5.64-1.9c.21-.07.36-.25.36-.48V3.5c0-.28-.22-.5-.5-.5zM15 19l-6-2.11V5l6 2.11V19z' />
