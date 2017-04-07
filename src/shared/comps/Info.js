@@ -14,19 +14,26 @@ export default ({ currentSound }) => {
         <h2 className="f4 mb2">{currentSound.userName}</h2>
         <h3 className="f6 fw4 gray mt0">{currentSound.title}</h3>     
       </div>
-      <div className='pa3'>
+      <div className='tc pa3'>
         <p className='pb1'>
           {desc
             .map(s => s.toLowerCase())
-            .filter(s => s.search('gps:') !== -1)
-            .map(s => s.substring(5))[0]
+            .filter(s => s.search('autor nagrania:') !== -1)
+            .map(s => s.substring(15))[0]
           }
-        </p>
+        </p>        
         <p className='pb1'>
           {desc
             .map(s => s.toLowerCase())
             .filter(s => s.search('lokalizacja:') !== -1)
             .map(s => s.substring(12))[0]
+          }
+        </p>
+        <p className='pb1'>
+          {desc
+            .map(s => s.toLowerCase())
+            .filter(s => s.search('gps:') !== -1)
+            .map(s => s.substring(5))[0]
           }
         </p>
         <p className='pb1'>
@@ -39,8 +46,7 @@ export default ({ currentSound }) => {
         <p className='pb1'>
           {desc
             .map(s => s.toLowerCase())
-            .filter(s => s.search('czas:') !== -1)
-            .map(s => s.substring(5))[0]
+            .filter(s => s.search('czas:') !== -1)[0]
           }
         </p>
         <p className='pb1'>
@@ -50,13 +56,6 @@ export default ({ currentSound }) => {
             .map(s => s.substring(5))[0]
           }
         </p>
-        <p className='pb1'>
-          {desc
-            .map(s => s.toLowerCase())
-            .filter(s => s.search('autor nagrania:') !== -1)
-            .map(s => s.substring(15))[0]
-          }
-        </p>        
       </div>
     </div>
   )
