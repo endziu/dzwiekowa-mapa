@@ -1,11 +1,15 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
+const urlBase = 'https://images.unsplash.com/photo-1470326032834-47d8a3054bb4'
+const urlParams = '?dpr=1&auto=compress,format&fit=crop&w=1920&h=1080&q=60&cs=tinysrgb&crop=&bg='
+const unsplashUrl = `${urlBase}${urlParams}`
+
 const Welcome = () => <header className='vh-100 w-100'>
   <div
     className='bg-near-white h-100'
     style={{
-      backgroundImage: 'url("https://images.unsplash.com/photo-1470326032834-47d8a3054bb4?dpr=1&auto=compress,format&fit=crop&w=1920&h=1080&q=60&cs=tinysrgb&crop=&bg=")',
+      backgroundImage: `url(${unsplashUrl})`,
       backgroundSize: 'cover',
       backgroundPosition: 'left',
       backgroundRepeat: 'no-repeat'
@@ -13,7 +17,9 @@ const Welcome = () => <header className='vh-100 w-100'>
   >
 
     <div className='pa3'>
-      <h1 className='f2 f1-m f-headline-l fw2 black-80 mt2 mb3 lh-title'><a className='link'>dźwiękowa mapa Wrocławia</a></h1>
+      <h1 className='f2 f1-m f-headline-l fw2 black-80 mt2 mb3 lh-title'>
+        <a className='link'>dźwiękowa mapa Wrocławia</a>
+      </h1>
       <h2 className='fw1 f2-l f3 black-60 mv3'>kolekcja nagrań audiosfery miasta</h2>
       <Link
         to={'/rec/313303431'}

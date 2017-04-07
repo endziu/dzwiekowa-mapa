@@ -12,7 +12,9 @@ export default (req, res, next) => {
   const matchSound = matchPath(req.url, { path: '/rec/:id' })
   const matchInfo = matchPath(req.url, { path: '/info/:id' })
 
-  const routerApp = (data) => <StaticRouter context={{}} location={req.url}><App sounds={data} /></StaticRouter>
+  const routerApp = (data) => <StaticRouter context={{}} location={req.url}>
+    <App sounds={data} />
+  </StaticRouter>
 
   if (matchHome || matchSound || matchInfo) {
     return readFile('./src/shared/assets/tracks.json', 'utf-8')
