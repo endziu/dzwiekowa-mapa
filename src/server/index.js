@@ -18,9 +18,9 @@ const log = morgan((tokens, req, res) =>
 
 const app = express()
 app.use(helmet())
-app.use(compression({filter: (req) => !!req.headers['x-no-compression']}))
-app.use(favicon(__dirname + './src/shared/assets/favicon.png'))
+app.use(compression())
 app.use(log)
+app.use(favicon(__dirname + './src/shared/assets/favicon.png'))
 app.use('/static', express.static('./dist'))
 app.use('/api', api)
 app.use(['/', '/rec/:id', '/info/:id'], renderApp)
