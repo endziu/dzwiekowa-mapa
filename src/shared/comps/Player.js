@@ -101,7 +101,7 @@ class Player extends Component {
           </span>
 
           <span className='black br1 pv1'>
-            { `${prettyTime(this.state.currentTime)}|${prettyTime(this.state.duration)}` }
+            { `${prettyTime(this.state.currentTime)}/${prettyTime(this.state.duration)}` }
           </span>
         </div>
       </div>
