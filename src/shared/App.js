@@ -101,7 +101,7 @@ class App extends Component {
                 <Menu id={match.params.id} />
 
                 {match.url.search('info') === 1
-                  ? <Info />
+                  ? <Info currentSound={getSoundById(match.params.id, this.props.sounds)} />
                   : <Mapa
                       onClick={this.markerClick}
                       sounds={this.state.sounds}
