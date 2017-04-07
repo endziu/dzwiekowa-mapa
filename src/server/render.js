@@ -19,7 +19,6 @@ export default (req, res, next) => {
   if (matchHome || matchSound || matchInfo) {
     return readFile('./src/shared/assets/tracks.json', 'utf-8')
       .then(file => JSON.parse(file))
-      .then(data => data.sort(() => 0.5 - Math.random()))
       .then(data => {
         return readFile('./dist/index.html', 'utf-8')
           .then((s) => s.replace('{{APP}}', renderToString(routerApp(data))))
