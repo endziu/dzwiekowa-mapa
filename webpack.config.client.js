@@ -43,7 +43,7 @@ module.exports = {
   plugins: [
     new ExtractTextPlugin('style.css'),
     new webpack.optimize.CommonsChunkPlugin({
-      name: 'vendor'
+      names: ['vendor', 'manifest']
     }),
     new HtmlWebpackPlugin({
       template: 'index.html',
