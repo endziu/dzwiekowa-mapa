@@ -23,7 +23,7 @@
   "bugs": {
     "url": "https://github.com/endziu/dzwiekowa-mapa/issues"
   },
-  "homepage": "http://devmap.now.sh",
+  "homepage": "https://dzwiekowa-mapa.now.sh/",
   "dependencies": {
     "compression": "^1.6.2",
     "express": "^4.14.1",
