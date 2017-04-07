@@ -48,6 +48,8 @@ h1, h2, h3, h4, h5, ol, ul, li, p {
 .searchPos {
   position: absolute;
   z-index: 99999;
+  right: 3px;
+  top: 98px;
 }
 
 @media(min-width: 880px) {
