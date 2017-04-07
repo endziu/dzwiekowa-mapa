@@ -19,7 +19,7 @@ export default (req, res, next) => {
       .then(file => JSON.parse(file))
       .then(data => data.sort(() => 0.5 - Math.random()))
       .then(data => {
-        return readFile('./src/index.html', 'utf-8')
+        return readFile('./dist/index.html', 'utf-8')
           .then((s) => s.replace('{{APP}}', renderToString(routerApp(data))))
           .then((s) => s.replace('{{DATA}}', `window.__sounds__ = ${JSON.stringify(data)}`))
       })
