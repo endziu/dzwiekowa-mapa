@@ -2,7 +2,13 @@ import React from 'react'
 
 export default ({ currentSound }) => {
   const desc = currentSound.description.split('\n')
-  console.log(desc)
+
+  const makeDescriptionItem = (name, description) => <span>
+    {description
+      .map(s => s.toLowerCase())
+      .filter(i => i.search(name) !== -1)[0]}
+  </span>
+
   return (
     <div className="center pa3 pa4-ns w-100 vh-40 vh-100-ns overflow-auto">
       <div className="flex mb3">
@@ -18,34 +24,22 @@ export default ({ currentSound }) => {
       </div>
       <div className='flex flex-column'>
         <p className='pb1'>
-          {desc
-            .map(s => s.toLowerCase())
-            .filter(s => s.search('autor nagrania:') !== -1)[0]}
+          {makeDescriptionItem('autor nagrania:', desc)}
         </p>        
         <p className='pb1'>
-          {desc
-            .map(s => s.toLowerCase())
-            .filter(s => s.search('lokalizacja:') !== -1)[0]}
+          {makeDescriptionItem('lokalizacja:', desc)}
         </p>
         <p className='pb1'>
-          {desc
-            .map(s => s.toLowerCase())
-            .filter(s => s.search('gps:') !== -1)[0]}
+          {makeDescriptionItem('gps:', desc)}
         </p>
         <p className='pb1'>
-          {desc
-            .map(s => s.toLowerCase())
-            .filter(s => s.search('rekorder, mikrofon:') !== -1)[0]}
+          {makeDescriptionItem('rekorder, mikrofon:', desc)}
         </p>
         <p className='pb1'>
-          {desc
-            .map(s => s.toLowerCase())
-            .filter(s => s.search('czas:') !== -1)[0]}
+          {makeDescriptionItem('czas:', desc)}
         </p>
         <p className='pb1'>
-          {desc
-            .map(s => s.toLowerCase())
-            .filter(s => s.search('data:') !== -1)[0]}
+          {makeDescriptionItem('data:', desc)}
         </p>
       </div>
     </div>
