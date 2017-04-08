@@ -118,7 +118,7 @@ class App extends Component {
                     />
                 }
 
-                <div className='flex flex-column vh-60 vh-100-ns w-100 mw6-ns ph1 bl-m bl-l fadeIn animated'>
+                <div className='flex flex-column sideBar vh-60 vh-100-ns w-100 mw6-ns ph1 bl-m bl-l fadeIn animated'>
 
                   <Sound
                     ref={ref => (this.Sound = ref)}
