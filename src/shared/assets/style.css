@@ -52,10 +52,17 @@ h1, h2, h3, h4, h5, ol, ul, li, p {
   top: 98px;
 }
 
+.sideBar {
+  
+}
+
 @media(min-width: 880px) {
   .searchPos {
     right: 515px;
     top: 102px;
+  }
+  .sideBar {
+    min-width: 512px;
   }
 }
 
