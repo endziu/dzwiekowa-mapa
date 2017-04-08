@@ -4,7 +4,7 @@ export default ({ currentSound }) => {
 
   return (
     <div className="center pa3 pa4-ns w-100 vh-40 vh-100-ns overflow-auto">
-      <div className="flex mb3">
+      <div className="flex mb2">
         <img
           title="user avatar"
           className="br-100 h3 w3 dib ba b--black-05 pa1"
@@ -17,7 +17,7 @@ export default ({ currentSound }) => {
       </div>
       <div className='flex flex-column measure lh-copy'>
         <p>
-          <b>autor: </b>{currentSound.info.author}
+          <b>autor nagrania: </b>{currentSound.info.author}
         </p>        
         <p>
           <b>lokalizacja: </b>{currentSound.info.localization}
@@ -33,13 +33,14 @@ export default ({ currentSound }) => {
         </p>
         <p>
           <b>czas: </b>{currentSound.info.time}
-        </p>
-        <p>
-          <b>opis: </b>{currentSound.info.opis}
-        </p>        
+        </p>     
       </div>
-      <div>
-
+      <div className='flex flex-wrap'>
+        <img className='pa2 grow dim' src='http://lorempixel.com/50/50/' alt='random photo'/>
+        <img className='pa2 grow dim' src='http://lorempixel.com/50/50/' alt='random photo'/>
+        <img className='pa2 grow dim' src='http://lorempixel.com/50/50/' alt='random photo'/>
+        <img className='pa2 grow dim' src='http://lorempixel.com/50/50/' alt='random photo'/>
+        <img className='pa2 grow dim' src='http://lorempixel.com/50/50/' alt='random photo'/>
       </div>
     </div>
   )
