@@ -62,7 +62,7 @@ class Player extends Component {
           onLoadedMetadata={this.recReady}
           // eslint-disable-next-line
           ref={ref => this.audioEl = ref}
-          preload={`none`}
+          preload={`metadata`}
           src={selectedSound.stream_url + '?client_id=33c73dacce84dddddbc15117e071b6ce'}
         />
 
