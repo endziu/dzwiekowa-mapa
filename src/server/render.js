@@ -19,10 +19,10 @@ export default (req, res, next) => {
   if (matchHome || matchSound || matchInfo) {
     return readFile('./src/shared/assets/tracks.json', 'utf-8')
       .then(file => JSON.parse(file))
-      .then(data => {
+      .then(jsonData => {
         return readFile('./dist/index.html', 'utf-8')
-          .then((s) => s.replace('{{APP}}', renderToString(routerApp(data))))
-          .then((s) => s.replace('{{DATA}}', `window.__sounds__ = ${JSON.stringify(data)}`))
+          .then((s) => s.replace('{{APP}}', renderToString(routerApp(jsonData))))
+          .then((s) => s.replace('{{DATA}}', `window.__sounds__ = ${JSON.stringify(jsonData)}`))
       })
       .then((html) => {
         res.status(200).send(html)
