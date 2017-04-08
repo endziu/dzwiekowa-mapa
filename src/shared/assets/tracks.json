@@ -69,6 +69,7 @@
       "localization": "krzyki",
       "gear": "sony pcm d50, mic rode nt4, fel bma preamplifier.",
       "time": "21.02, 30.06.2016",
+      "date": "30.06.2016",
       "opis": "zarejestrowane na ulicy ciepłej. reakcja na gol roberta lewandowskiego. dzięki chłopaki !!!",
       "gps": {
         "lat": "51.092648",
@@ -3229,6 +3230,7 @@
     "userPic": "https://i1.sndcdn.com/avatars-000201156519-3ntqez-large.jpg",
     "userID": 55089,
     "info": {
+      "author": "olga kaniewska",
       "title": "śląsk wrocław - lechia gdańsk",
       "localization": "fabryczna, maślice, al. śląska",
       "gear": "sd 702, sanken css5",
@@ -3254,6 +3256,7 @@
     "userPic": "https://i1.sndcdn.com/avatars-000201156519-3ntqez-large.jpg",
     "userID": 55089,
     "info": {
+      "author": "olga kaniewska",
       "title": "dzwony - kościół rzymskokatolicki św. henryka",
       "localization": "krzyki, gaj, ul. gliniana",
       "gear": "sd 702, rode nt4",
@@ -3279,6 +3282,7 @@
     "userPic": "https://i1.sndcdn.com/avatars-000201156519-3ntqez-large.jpg",
     "userID": 55089,
     "info": {
+      "author": "olga kaniewska",
       "title": "dzwony - kościół miłosierdzia bożego",
       "localization": "fabryczna, gądów, ul. ludwika idzikowskiego",
       "gear": "sd 702, rode nt4",
@@ -3304,6 +3308,7 @@
     "userPic": "https://i1.sndcdn.com/avatars-000201156519-3ntqez-large.jpg",
     "userID": 55089,
     "info": {
+      "author": "olga kaniewska",
       "title": "dzwony - archikatedra św. jana chrzciciela",
       "localization": "stare miasto, osrtów tumski, plac katedralny",
       "gear": "sd 702, rode nt4",
@@ -3329,6 +3334,7 @@
     "userPic": "https://i1.sndcdn.com/avatars-000201156519-3ntqez-large.jpg",
     "userID": 55089,
     "info": {
+      "author": "olga kaniewska",
       "title": "śląsk wrocław - ruch chorzów",
       "localization": "fabryczna, maślice, al. śląska",
       "gear": "sd 702, sanken css5",
@@ -3744,6 +3750,7 @@
     "userPic": "https://i1.sndcdn.com/avatars-000201156519-3ntqez-large.jpg",
     "userID": 55089,
     "info": {
+      "author": "olga kaniewska",
       "title": "super rally 2013 parada motocykli harley davidson",
       "localization": "stare miasto, most uniwersytecki.",
       "gear": "sd 702, sanken css5",
@@ -3800,6 +3807,7 @@
       "localization": "biskupin, kożuchowska",
       "gear": "sony pcm d50, mic rode nt4, fel bma preamplifier.",
       "time": "05 lipiec  2016, 10.00.",
+      "date": "05.07.2016",
       "opis": "nagranie podczas czyszczenia kurnika na terenie uniwersytetu przyrodniczego. kaczki, kaczory, kury, koguty i",
       "gps": {
         "lat": "51.098776",
