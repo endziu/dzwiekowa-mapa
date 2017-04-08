@@ -15,25 +15,31 @@ export default ({ currentSound }) => {
           <h3 className="f6 fw4 gray mt0">{currentSound.title}</h3>     
         </div>
       </div>
-      <div className='flex flex-column'>
-        <p className='pb1'>
+      <div className='flex flex-column measure lh-copy'>
+        <p>
           <b>autor: </b>{currentSound.info.author}
         </p>        
-        <p className='pb1'>
+        <p>
           <b>lokalizacja: </b>{currentSound.info.localization}
         </p>
-        <p className='pb1'>
+        <p>
           <b>gps: </b>{`${currentSound.info.gps.lat} - ${currentSound.info.gps.lng}`}
         </p>
-        <p className='pb1'>
+        <p>
           <b>sprzęt: </b>{currentSound.info.gear}
         </p>
-        <p className='pb1'>
-          <b>czas: </b>{currentSound.info.time}
-        </p>
-        <p className='pb1'>
+        <p>
           <b>data: </b>{currentSound.info.date}
         </p>
+        <p>
+          <b>czas: </b>{currentSound.info.time}
+        </p>
+        <p>
+          <b>opis: </b>{currentSound.info.opis}
+        </p>        
+      </div>
+      <div>
+
       </div>
     </div>
   )
