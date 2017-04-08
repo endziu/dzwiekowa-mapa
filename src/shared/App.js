@@ -63,7 +63,16 @@ class App extends Component {
     const s = this.props.sounds
     this.setState({
       filter: e.target.value.toLowerCase(),
-      sounds: s.filter(i => i.description.toLowerCase().search(this.state.filter) !== -1)
+      sounds: s.filter(
+        (i) =>
+          (i.info.opis.toLowerCase().search(this.state.filter) !== -1) ||
+          (i.info.author.toLowerCase().search(this.state.filter) !== -1) ||
+          (i.userName.toLowerCase().search(this.state.filter) !== -1) ||
+          (i.title.toLowerCase().search(this.state.filter) !== -1) ||
+          (i.info.localization.toLowerCase().search(this.state.filter) !== -1) ||
+          (i.info.date.toLowerCase().search(this.state.filter) !== -1) ||
+          (i.info.gear.toLowerCase().search(this.state.filter) !== -1)
+      )
     })
   }
 
