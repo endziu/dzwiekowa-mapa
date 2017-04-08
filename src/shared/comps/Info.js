@@ -41,6 +41,7 @@ export default ({ currentSound }) => {
         <img className='pa1 grow dim' src='http://lorempixel.com/140/90/' alt='random photo'/>
         <img className='pa1 grow dim' src='http://lorempixel.com/140/90/' alt='random photo'/>
         <img className='pa1 grow dim' src='http://lorempixel.com/140/90/' alt='random photo'/>
+        <img className='pa1 grow dim' src='http://lorempixel.com/140/90/' alt='random photo'/>
       </div>
     </div>
   )
