@@ -122,6 +122,7 @@ class App extends Component {
 
                   <Sound
                     ref={ref => (this.Sound = ref)}
+                    showDesc={match.url.search('info') === -1}
                     currentSound={getSoundById(match.params.id, this.props.sounds)}
                     onEnded={this.onEnded}
                     playClick={this.playClick}

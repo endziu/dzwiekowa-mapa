@@ -4,7 +4,7 @@ import Description from './Description.js'
 
 class Sound extends Component {
   render () {
-    const { currentSound } = this.props
+    const { currentSound, showDesc } = this.props
     return (
       currentSound
         ? <div className='fadeIn animated pt1'>
@@ -16,7 +16,7 @@ class Sound extends Component {
               selectedSound={currentSound}
               isPlaying={this.props.isPlaying}
             />
-            <Description selectedSound={currentSound} />
+            {showDesc ? <Description selectedSound={currentSound} /> : null}
           </div>
         : null
     )
