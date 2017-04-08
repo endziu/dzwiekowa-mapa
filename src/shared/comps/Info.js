@@ -3,7 +3,7 @@ import React from 'react'
 export default ({ currentSound }) => {
 
   return (
-    <div className="center pa3 pa4-ns w-100 vh-40 vh-100-ns overflow-auto">
+    <div className="center pa2 mt5-ns w-100 h-100-ns vh-40 mw6-ns bg-near-white overflow-auto">
       <div className="flex mb2">
         <img
           title="user avatar"
@@ -35,12 +35,12 @@ export default ({ currentSound }) => {
           <b>czas: </b>{currentSound.info.time}
         </p>     
       </div>
-      <div className='flex flex-wrap'>
-        <img className='pr1 grow dim' src='http://lorempixel.com/50/50/' alt='random photo'/>
-        <img className='pr1 grow dim' src='http://lorempixel.com/50/50/' alt='random photo'/>
-        <img className='pr1 grow dim' src='http://lorempixel.com/50/50/' alt='random photo'/>
-        <img className='pr1 grow dim' src='http://lorempixel.com/50/50/' alt='random photo'/>
-        <img className='pr1 grow dim' src='http://lorempixel.com/50/50/' alt='random photo'/>
+      <div className='flex flex-wrap mt3'>
+        <img className='pa1 grow dim' src='http://lorempixel.com/140/90/' alt='random photo'/>
+        <img className='pa1 grow dim' src='http://lorempixel.com/140/90/' alt='random photo'/>
+        <img className='pa1 grow dim' src='http://lorempixel.com/140/90/' alt='random photo'/>
+        <img className='pa1 grow dim' src='http://lorempixel.com/140/90/' alt='random photo'/>
+        <img className='pa1 grow dim' src='http://lorempixel.com/140/90/' alt='random photo'/>
       </div>
     </div>
   )
