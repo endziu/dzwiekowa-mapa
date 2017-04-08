@@ -42,7 +42,8 @@
       "title": "park skowroni",
       "localization": "krzyki",
       "gear": "sony pcm d50, mic rode nt4, fel bma preamplifier, rode boompole",
-      "time": "o6 june 2016, 6 pm.",
+      "time": "06 june 2016, 6 pm.",
+      "date": "06.06.2016",
       "opis": "birds in skowroni park (wroclaw, poland): birds, dogs, runners, segways.",
       "gps": {
         "lat": "51.080049",
@@ -2895,6 +2896,7 @@
       "localization": "stare miasto, rynek",
       "gear": "sony pcm d50, mic rode nt4, fel bma preamplifier.",
       "time": "11:57, 3.05.2016",
+      "date": "3.05.2016",
       "opis": "zarejestrowane w południe na bulwarze xawerego dunikowskiego, naprzeciw mostu piaskowego.",
       "gps": {
         "lat": "51.113120",
@@ -2916,6 +2918,8 @@
     "userID": 14036234,
     "info": {
       "author": "digital sensorium",
+      "title": "Wroclaw Redzin frogs in the pond (and motorway)",
+      "localization": "rędzin",
       "gear": "zoom h4",
       "time": "19:40",
       "date": "2016-05-10",
