@@ -36,11 +36,11 @@ export default ({ currentSound }) => {
         </p>     
       </div>
       <div className='flex flex-wrap'>
-        <img className='pa2 grow dim' src='http://lorempixel.com/50/50/' alt='random photo'/>
-        <img className='pa2 grow dim' src='http://lorempixel.com/50/50/' alt='random photo'/>
-        <img className='pa2 grow dim' src='http://lorempixel.com/50/50/' alt='random photo'/>
-        <img className='pa2 grow dim' src='http://lorempixel.com/50/50/' alt='random photo'/>
-        <img className='pa2 grow dim' src='http://lorempixel.com/50/50/' alt='random photo'/>
+        <img className='pr1 grow dim' src='http://lorempixel.com/50/50/' alt='random photo'/>
+        <img className='pr1 grow dim' src='http://lorempixel.com/50/50/' alt='random photo'/>
+        <img className='pr1 grow dim' src='http://lorempixel.com/50/50/' alt='random photo'/>
+        <img className='pr1 grow dim' src='http://lorempixel.com/50/50/' alt='random photo'/>
+        <img className='pr1 grow dim' src='http://lorempixel.com/50/50/' alt='random photo'/>
       </div>
     </div>
   )

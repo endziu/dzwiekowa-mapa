@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { asNumber } from '../helpers/index.js'
 
 const List = ({ currentId, sounds, onClick }) => (
-  <ul className='bg-near-white f5-ns overflow-auto mt1'>
+  <ul className='bg-near-white f6 f5-l overflow-auto mt1'>
     {sounds.map((elem, index) => {
       return (
         <Link className='link' key={index} to={`/rec/${elem.id}`}>
