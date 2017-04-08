@@ -11,9 +11,7 @@ const Description = ({ selectedSound }) => (
     />
     <div className='overflow-auto pl2'>
       <p className='infoHeight lh-copy'>
-        {takeFirst(
-          selectedSound.description.split('\n').filter(s => s.includes('Opis'))
-        ).substring(5)}
+        {selectedSound.info.opis}
       </p>
     </div>
   </div>

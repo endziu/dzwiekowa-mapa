@@ -25,8 +25,8 @@ class SoundMap extends Component {
         ref={'mapa'}
         width={'100%'}
         className='flex justify-end-ns w-100 vh-40 vh-100-ns fadeIn animated ph1 pt1 fadeIn animated'
-        lat={current.GPS.lat}
-        lng={current.GPS.lng}
+        lat={current.info.gps.lat}
+        lng={current.info.gps.lng}
         zoom={17}
         params={{ v: '3', key: 'AIzaSyB7GQAjLtFuxLYjfSQq3PLX3o0mX6qT-CU' }}
         onMapCreated={this.onMapCreated}
@@ -34,8 +34,8 @@ class SoundMap extends Component {
         {this.props.sounds.map((sound, index) => {
           return <Marker
             animation={current.id === sound.id ? 1 : 0}
-            lat={sound.GPS.lat}
-            lng={sound.GPS.lng}
+            lat={sound.info.gps.lat}
+            lng={sound.info.gps.lng}
             onClick={this.onMarkerClick.bind(this, index)}
             key={index}
           />

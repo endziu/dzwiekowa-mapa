@@ -1,13 +1,6 @@
 import React from 'react'
 
 export default ({ currentSound }) => {
-  const desc = currentSound.description.split('\n')
-
-  const makeDescriptionItem = (name, description) => <span>
-    {description
-      .map(s => s.toLowerCase())
-      .filter(i => i.search(name) !== -1)[0]}
-  </span>
 
   return (
     <div className="center pa3 pa4-ns w-100 vh-40 vh-100-ns overflow-auto">
@@ -24,22 +17,22 @@ export default ({ currentSound }) => {
       </div>
       <div className='flex flex-column'>
         <p className='pb1'>
-          {makeDescriptionItem('autor nagrania:', desc)}
+          <b>autor: </b>{currentSound.info.author}
         </p>        
         <p className='pb1'>
-          {makeDescriptionItem('lokalizacja:', desc)}
+          <b>lokalizacja: </b>{currentSound.info.localization}
         </p>
         <p className='pb1'>
-          {makeDescriptionItem('gps:', desc)}
+          <b>gps: </b>{`${currentSound.info.gps.lat} - ${currentSound.info.gps.lng}`}
         </p>
         <p className='pb1'>
-          {makeDescriptionItem('rekorder, mikrofon:', desc)}
+          <b>sprzęt: </b>{currentSound.info.gear}
         </p>
         <p className='pb1'>
-          {makeDescriptionItem('czas:', desc)}
+          <b>czas: </b>{currentSound.info.time}
         </p>
         <p className='pb1'>
-          {makeDescriptionItem('data:', desc)}
+          <b>data: </b>{currentSound.info.date}
         </p>
       </div>
     </div>
