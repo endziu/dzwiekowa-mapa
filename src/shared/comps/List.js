@@ -2,11 +2,11 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { asNumber } from '../helpers/index.js'
 
-const List = ({ currentId, sounds, onClick }) => (
+const List = ({ currentId, sounds, onClick, linkTo }) => (
   <ul className='bg-near-white overflow-auto mt1'>
     {sounds.map((elem, index) => {
       return (
-        <Link className='link' key={index} to={`/rec/${elem.id}`}>
+        <Link className='link' key={index} to={`/${elem.id}/${linkTo || 'info'}`}>
           <li
             id={'snd' + index}
             onClick={onClick}
