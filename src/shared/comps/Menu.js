@@ -16,7 +16,7 @@ const Menu = ({id}) => {
         </Link>
 
         <Link
-          to={`/info/${id}`}
+          to={`/${id}/info`}
           title={'Wiecej Informacji'}
           className='f5 w1-8 no-underline black bg-white bg-animate hover-bg-black hover-white inline-flex items-center pa1 ba border-box mb1 mr1'>
           <svg className='w1-8' viewBox='0 0 24 24' fill='currentcolor'>
@@ -25,7 +25,7 @@ const Menu = ({id}) => {
         </Link>
 
         <Link
-          to={`/rec/${id}`}
+          to={`/${id}/map`}
           title={'Mapa'}
           className='f5 w1-8 no-underline black bg-white bg-animate hover-bg-black hover-white inline-flex items-center pa1 ba border-box mb1 mr1'>
           <svg className='w1-8' viewBox='0 0 24 24' fill='currentcolor'>

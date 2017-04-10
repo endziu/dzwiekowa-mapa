@@ -51,7 +51,7 @@ class App extends Component {
     const currentSound = document.getElementById('snd' + index)
     currentSound.scrollIntoView()
 
-    const pathToRedirect = `/rec/${this.state.sounds[index].id}`
+    const pathToRedirect = `/${this.state.sounds[index].id}/map`
     this.setState({redirectPath: pathToRedirect})
   }
 
@@ -95,7 +95,8 @@ class App extends Component {
         <Switch>
           <Route exact path='/' component={Welcome} />
           <Route
-            path='/(rec|info)/:id'
+            exact
+            path='/:id/:sub'
             render={({ match }) =>
               <div className='App flex flex-column flex-row-ns f6 black-80 bg-white'>
 
@@ -109,12 +110,12 @@ class App extends Component {
 
                 <Menu id={match.params.id} />
 
-                {match.url.search('info') === 1
+                {match.params.sub === 'info'
                   ? <Info currentSound={getSoundById(match.params.id, this.props.sounds)} />
                   : <Mapa
-                      onClick={this.markerClick}
-                      sounds={this.state.sounds}
-                      currentSound={getSoundById(match.params.id, this.props.sounds)}
+                    onClick={this.markerClick}
+                    sounds={this.state.sounds}
+                    currentSound={getSoundById(match.params.id, this.props.sounds)}
                     />
                 }
 
@@ -122,7 +123,7 @@ class App extends Component {
 
                   <Sound
                     ref={ref => (this.Sound = ref)}
-                    showDesc={match.url.search('info') === -1}
+                    showDesc={match.params.sub === 'map'}
                     currentSound={getSoundById(match.params.id, this.props.sounds)}
                     onEnded={this.onEnded}
                     playClick={this.playClick}
@@ -133,6 +134,7 @@ class App extends Component {
                     onClick={this.listClick}
                     sounds={this.state.sounds}
                     currentId={match.params.id}
+                    linkTo={match.params.sub === 'info' ? 'info' : 'map'}
                   />
 
                 </div>
@@ -140,7 +142,7 @@ class App extends Component {
               </div>
             }
           />
-          <Route path='/info/:id' component={Info} />
+          <Route path='/:id/info' component={Info} />
           <Route path='*' component={NoMatch} />
         </Switch>
       </div>
