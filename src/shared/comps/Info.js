@@ -38,11 +38,13 @@ export default ({ currentSound }) => {
         </p>
       </div>
       <div className='flex flex-wrap mt3'>
-        <img className='pr1 pb1 grow dim' src='http://lorempixel.com/160/90/' alt='random photo' />
-        <img className='pr1 pb1 grow dim' src='http://lorempixel.com/160/90/' alt='random photo' />
-        <img className='pr1 pb1 grow dim' src='http://lorempixel.com/160/90/' alt='random photo' />
-        <img className='pr1 pb1 grow dim' src='http://lorempixel.com/160/90/' alt='random photo' />
-        <img className='pr1 pb1 grow dim' src='http://lorempixel.com/160/90/' alt='random photo' />
+        <img className='pr2 pb1 grow dim' src='http://lorempixel.com/50/50' alt='random photo' />
+        <img className='pr2 pb1 grow dim' src='http://lorempixel.com/50/50' alt='random photo' />
+        <img className='pr2 pb1 grow dim' src='http://lorempixel.com/50/50' alt='random photo' />
+        <img className='pr2 pb1 grow dim' src='http://lorempixel.com/50/50' alt='random photo' />
+        <img className='pr2 pb1 grow dim' src='http://lorempixel.com/50/50' alt='random photo' />
+        <img className='pr2 pb1 grow dim' src='http://lorempixel.com/50/50' alt='random photo' />
+        <img className='pr2 pb1 grow dim' src='http://lorempixel.com/50/50' alt='random photo' />     
       </div>
     </div>
   )
