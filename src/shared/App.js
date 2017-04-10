@@ -28,6 +28,7 @@ class App extends Component {
     this.onEnded = this.onEnded.bind(this)
     this.searchChange = this.searchChange.bind(this)
     this.searchSubmit = this.searchSubmit.bind(this)
+    this.onZoom = this.onZoom.bind(this)
   }
 
   onEnded (e) {
@@ -81,6 +82,10 @@ class App extends Component {
     this.setState({filter: '', sounds: this.props.sounds})
   }
 
+  onZoom (val) {
+    this.setState({currentZoom: val})
+  }
+
   componentDidMount () {
     fetch('/api')
       .then((res) => res.json())
@@ -113,9 +118,11 @@ class App extends Component {
                 {match.params.sub === 'info'
                   ? <Info currentSound={getSoundById(match.params.id, this.props.sounds)} />
                   : <Mapa
-                    onClick={this.markerClick}
-                    sounds={this.state.sounds}
-                    currentSound={getSoundById(match.params.id, this.props.sounds)}
+                      onClick={this.markerClick}
+                      sounds={this.state.sounds}
+                      currentSound={getSoundById(match.params.id, this.props.sounds)}
+                      onZoom={this.onZoom}
+                      zoom={this.state.currentZoom}
                     />
                 }
 
