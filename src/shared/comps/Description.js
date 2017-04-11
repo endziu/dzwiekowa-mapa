@@ -10,7 +10,7 @@ const Description = ({ selectedSound }) => (
       alt='artwork'
     />
     <div className='overflow-auto pl2'>
-      <p className='infoHeight lh-copy'>
+      <p className='infoHeight lh-title'>
         {selectedSound.info.opis}
       </p>
     </div>
