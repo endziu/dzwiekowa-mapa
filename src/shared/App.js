@@ -103,7 +103,7 @@ class App extends Component {
             exact
             path='/:id/:sub'
             render={({ match }) =>
-              <div className='App flex flex-column flex-row-ns f6 black-80 bg-white'>
+              <div className='App flex flex-column flex-row-ns f5 black-80 bg-white'>
 
                 {this.state.redirectPath ? <Redirect to={this.state.redirectPath} /> : null}
 
