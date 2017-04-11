@@ -12,9 +12,11 @@ export default (req, res, next) => {
   const matchMap = matchPath(req.url, { path: '/:id/map', exact: true })
   const matchInfo = matchPath(req.url, { path: '/:id/info', exact: true })
 
-  const routerApp = (data) => <StaticRouter context={{}} location={req.url}>
-    <App sounds={data} />
-  </StaticRouter>
+  const routerApp =
+    (data) =>
+      <StaticRouter context={{}} location={req.url}>
+        <App sounds={data} />
+      </StaticRouter>
 
   if (matchHome || matchMap || matchInfo) {
     return readFile('./src/shared/assets/tracks.json', 'utf-8')
