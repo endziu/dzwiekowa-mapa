@@ -9,9 +9,9 @@ const style = {
 export default ({message}) => (
   <div style={style}>
     <h1>Sorry!</h1>
-    <p>Something went horribly wrong…</p>
-    <p>
-      You better go <a href="/">home</a>
-    </p>
+    <h2>This id does Not match any of our sounds</h2>
+    <h3>
+      try <a href="/88640153/info">this</a>
+    </h3>
   </div>
 )
