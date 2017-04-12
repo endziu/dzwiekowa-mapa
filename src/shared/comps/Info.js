@@ -10,11 +10,11 @@ export default ({ currentSound }) => {
           src={currentSound.userPic}
         />
         <div className='flex flex-column pt4-l pl4-l pt2 pl2'>
-          <h2 className='f4 f3-l mb2'>{currentSound.userName}</h2>
+          <h2 className='f3-ns f4 mb1'>{currentSound.userName}</h2>
           <h3 className='f5 f4-l fw4 gray mt0'>{currentSound.title}</h3>
         </div>
       </div>
-      <div className='flex flex-column f5 measure lh-copy'>
+      <div className='flex flex-column measure lh-copy'>
         <p>
           <b>autor nagrania: </b>{currentSound.info.author}
         </p>
