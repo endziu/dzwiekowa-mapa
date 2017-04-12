@@ -56,11 +56,14 @@ const getSoundById = (id, sounds) => {
   return item
 }
 
+const isNum = (s) => /^\d+$/.test(s)
+
 export {
   randomizeList,
   prettyTime,
   takeFirst,
   asNumber,
   copyTextToClipboard,
-  getSoundById
+  getSoundById,
+  isNum
 }
