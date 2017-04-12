@@ -98,9 +98,9 @@ class App extends Component {
     return (
       <div>
         <Switch>
-          <Route exact path='/' component={Welcome} />
+          <Route exact={true} path='/' component={Welcome} />
           <Route
-            exact
+            exact={true}
             path='/:id/:sub'
             render={({ match }) =>
               <div className='App flex flex-column flex-row-ns f5 black-80 bg-white'>
@@ -149,7 +149,7 @@ class App extends Component {
               </div>
             }
           />
-          <Route path='/:id/info' component={Info} />
+          <Route exact={true} path='/:id/info' component={Info} />
           <Route path='*' component={NoMatch} />
         </Switch>
       </div>
