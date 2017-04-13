@@ -56,7 +56,7 @@ const getSoundById = (id, sounds) => {
   return item
 }
 
-const isNum = (s) => /^\d+$/.test(s)
+const isDigitOnly = (s) => /^\d+$/.test(s)
 
 export {
   randomizeList,
@@ -65,5 +65,5 @@ export {
   asNumber,
   copyTextToClipboard,
   getSoundById,
-  isNum
+  isDigitOnly
 }
