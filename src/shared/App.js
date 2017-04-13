@@ -99,6 +99,22 @@ class App extends Component {
       <div>
         <Switch>
           <Route exact={true} path='/' component={Welcome} />
+          <Route 
+            exact={true}
+            path='/:id'
+            render={({match}) =>
+              <div className='center mw8 pa3'>
+                  <Sound
+                    ref={ref => (this.Sound = ref)}
+                    showDesc={true}
+                    currentSound={getSoundById(match.params.id, this.props.sounds)}
+                    onEnded={this.onEnded}
+                    playClick={this.playClick}
+                    isPlaying={this.state.isPlaying}
+                  />
+              </div>
+            }
+          />
           <Route
             exact={true}
             path='/:id/:sub'
@@ -123,8 +139,7 @@ class App extends Component {
                       currentSound={getSoundById(match.params.id, this.props.sounds)}
                       onZoom={this.onZoom}
                       zoom={this.state.currentZoom}
-                    />
-                }
+                    />}
 
                 <div className='flex flex-column sideBar vh-60 vh-100-ns w-100 mw6-ns ph1 bl-m bl-l fadeIn animated'>
 

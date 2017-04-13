@@ -6,8 +6,8 @@ import { StaticRouter, matchPath } from 'react-router'
 
 import App from '../shared/App'
 import Error from '../shared/comps/Error'
-import { asNumber, isNum } from '../shared/helpers'
 import NoMatch from '../shared/comps/NoMatch'
+import { asNumber, isDigitOnly } from '../shared/helpers'
 
 export default (req, res, next) => {
   const matchHome = matchPath(req.url, { path: '/', exact: true })
@@ -15,9 +15,7 @@ export default (req, res, next) => {
   const matchInfo = matchPath(req.url, { path: '/:id/info', exact: true })
   const matchMap = matchPath(req.url, { path: '/:id/map', exact: true })
 
-  const ID = path.parse(req.url).dir.substring(1)
-
-  if (matchHome || (isNum(ID) && (matchInfo || matchMap || matchSound))) {
+  if (matchHome || matchSound || matchInfo || matchMap) {
     
     const routerApp = (data) => <StaticRouter context={{}} location={req.url}>
       <App sounds={data} />
