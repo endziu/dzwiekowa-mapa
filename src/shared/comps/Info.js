@@ -45,9 +45,14 @@ export default ({ currentSound }) => {
         <img className='mr2 mb2 w3 h3 grow dim' src='http://res.cloudinary.com/endziu/image/upload/w_64,h_64,c_thumb,c_fill/mapa/1369665982.jpg' alt='random photo' />
         <img className='mr2 mb2 w3 h3 grow dim' src='http://res.cloudinary.com/endziu/image/upload/w_64,h_64,c_thumb,c_fill/mapa/1369665972.jpg' alt='random photo' />
         <img className='mr2 mb2 w3 h3 grow dim' src='http://res.cloudinary.com/endziu/image/upload/w_64,h_64,c_thumb,c_fill/mapa/1369665972.jpg' alt='random photo' />
+        <img className='mr2 mb2 w3 h3 grow dim' src='http://res.cloudinary.com/endziu/image/upload/w_64,h_64,c_thumb,c_fill/mapa/1369665965.jpg' alt='random photo' />
+        <img className='mr2 mb2 w3 h3 grow dim' src='http://res.cloudinary.com/endziu/image/upload/w_64,h_64,c_thumb,c_fill/mapa/1369665989.jpg' alt='random photo' />
+        <img className='mr2 mb2 w3 h3 grow dim' src='http://res.cloudinary.com/endziu/image/upload/w_64,h_64,c_thumb,c_fill/mapa/1369665999.jpg' alt='random photo' />
+        <img className='mr2 mb2 w3 h3 grow dim' src='http://res.cloudinary.com/endziu/image/upload/w_64,h_64,c_thumb,c_fill/mapa/1369665982.jpg' alt='random photo' />
+        <img className='mr2 mb2 w3 h3 grow dim' src='http://res.cloudinary.com/endziu/image/upload/w_64,h_64,c_thumb,c_fill/mapa/1369665972.jpg' alt='random photo' />
       </div>
-      <div className='mw6'>
-        <img className='pr2 pb2' src='http://res.cloudinary.com/endziu/image/upload/w_512/mapa/1369665994.jpg' alt='random photo' />
+      <div className=''>
+        <img className='pr2 pb2 w-100' src='http://res.cloudinary.com/endziu/image/upload/mapa/1369665994.jpg' alt='random photo' />
       </div>
     </div>
   )
