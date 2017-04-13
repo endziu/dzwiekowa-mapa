@@ -38,13 +38,16 @@ export default ({ currentSound }) => {
         </p>
       </div>
       <div className='flex flex-wrap mt3'>
-        <img className='pr2 pb2 grow dim' src='http://res.cloudinary.com/endziu/image/upload/w_64,h_64,c_thumb,c_fill/v1492025805/mapa/1369666005.jpg' alt='random photo' />
-        <img className='pr2 pb2 grow dim' src='http://res.cloudinary.com/endziu/image/upload/w_64,h_64,c_thumb,c_fill/v1492025805/mapa/1369665982.jpg' alt='random photo' />
-        <img className='pr2 pb2 grow dim' src='http://res.cloudinary.com/endziu/image/upload/w_64,h_64,c_thumb,c_fill/v1492025805/mapa/1369665965.jpg' alt='random photo' />
-        <img className='pr2 pb2 grow dim' src='http://res.cloudinary.com/endziu/image/upload/w_64,h_64,c_thumb,c_fill/v1492025805/mapa/1369665989.jpg' alt='random photo' />
-        <img className='pr2 pb2 grow dim' src='http://res.cloudinary.com/endziu/image/upload/w_64,h_64,c_thumb,c_fill/v1492025805/mapa/1369665999.jpg' alt='random photo' />
-        <img className='pr2 pb2 grow dim' src='http://res.cloudinary.com/endziu/image/upload/w_64,h_64,c_thumb,c_fill/v1492025804/mapa/1369665972.jpg' alt='random photo' />
-        <img className='pr2 pb2 grow dim' src='http://res.cloudinary.com/endziu/image/upload/w_64,h_64,c_thumb,c_fill/v1492025804/mapa/1369665994.jpg' alt='random photo' />
+        <img className='mr2 mb2 w3 h3 grow dim ba bw2 b--green' src='http://res.cloudinary.com/endziu/image/upload/w_64,h_64,c_thumb,c_fill/mapa/1369666005.jpg' alt='random photo' />
+        <img className='mr2 mb2 w3 h3 grow dim' src='http://res.cloudinary.com/endziu/image/upload/w_64,h_64,c_thumb,c_fill/mapa/1369665965.jpg' alt='random photo' />
+        <img className='mr2 mb2 w3 h3 grow dim' src='http://res.cloudinary.com/endziu/image/upload/w_64,h_64,c_thumb,c_fill/mapa/1369665989.jpg' alt='random photo' />
+        <img className='mr2 mb2 w3 h3 grow dim' src='http://res.cloudinary.com/endziu/image/upload/w_64,h_64,c_thumb,c_fill/mapa/1369665999.jpg' alt='random photo' />
+        <img className='mr2 mb2 w3 h3 grow dim' src='http://res.cloudinary.com/endziu/image/upload/w_64,h_64,c_thumb,c_fill/mapa/1369665982.jpg' alt='random photo' />
+        <img className='mr2 mb2 w3 h3 grow dim' src='http://res.cloudinary.com/endziu/image/upload/w_64,h_64,c_thumb,c_fill/mapa/1369665972.jpg' alt='random photo' />
+        <img className='mr2 mb2 w3 h3 grow dim' src='http://res.cloudinary.com/endziu/image/upload/w_64,h_64,c_thumb,c_fill/mapa/1369665972.jpg' alt='random photo' />
+      </div>
+      <div className='mw6'>
+        <img className='pr2 pb2' src='http://res.cloudinary.com/endziu/image/upload/w_512/mapa/1369665994.jpg' alt='random photo' />
       </div>
     </div>
   )
