@@ -2,7 +2,7 @@ import React from 'react'
 
 export default ({ currentSound }) => {
   return (
-    <div className='center pa3 pa4-m pa5-l mt6-l w-100 h-100-ns vh-40 mw7-m mw8-l bg-near-white overflow-auto'>
+    <div className='center pa3 pa4-m pa5-l w-100 vh-100-ns vh-40 mw7-m mw8-l bg-near-white overflow-auto'>
       <div className='flex mb2'>
         <img
           title='user avatar'
@@ -38,14 +38,16 @@ export default ({ currentSound }) => {
         </p>
       </div>
       <div className='flex flex-wrap mt3'>
-        <img className='pr2 pb1 grow dim' src='http://lorempixel.com/50/50' alt='random photo' />
-        <img className='pr2 pb1 grow dim' src='http://lorempixel.com/50/50' alt='random photo' />
-        <img className='pr2 pb1 grow dim' src='http://lorempixel.com/50/50' alt='random photo' />
-        <img className='pr2 pb1 grow dim' src='http://lorempixel.com/50/50' alt='random photo' />
-        <img className='pr2 pb1 grow dim' src='http://lorempixel.com/50/50' alt='random photo' />
-        <img className='pr2 pb1 grow dim' src='http://lorempixel.com/50/50' alt='random photo' />
-        <img className='pr2 pb1 grow dim' src='http://lorempixel.com/50/50' alt='random photo' />     
+        <img className='pr2 pb2 grow dim' src='http://res.cloudinary.com/endziu/image/upload/w_64,h_64,c_thumb,c_fill/v1492025805/mapa/1369666005.jpg' alt='random photo' />
+        <img className='pr2 pb2 grow dim' src='http://res.cloudinary.com/endziu/image/upload/w_64,h_64,c_thumb,c_fill/v1492025805/mapa/1369665982.jpg' alt='random photo' />
+        <img className='pr2 pb2 grow dim' src='http://res.cloudinary.com/endziu/image/upload/w_64,h_64,c_thumb,c_fill/v1492025805/mapa/1369665965.jpg' alt='random photo' />
+        <img className='pr2 pb2 grow dim' src='http://res.cloudinary.com/endziu/image/upload/w_64,h_64,c_thumb,c_fill/v1492025805/mapa/1369665989.jpg' alt='random photo' />
+        <img className='pr2 pb2 grow dim' src='http://res.cloudinary.com/endziu/image/upload/w_64,h_64,c_thumb,c_fill/v1492025805/mapa/1369665999.jpg' alt='random photo' />
+        <img className='pr2 pb2 grow dim' src='http://res.cloudinary.com/endziu/image/upload/w_64,h_64,c_thumb,c_fill/v1492025804/mapa/1369665972.jpg' alt='random photo' />
+        <img className='pr2 pb2 grow dim' src='http://res.cloudinary.com/endziu/image/upload/w_64,h_64,c_thumb,c_fill/v1492025804/mapa/1369665994.jpg' alt='random photo' />
       </div>
     </div>
   )
 }
+
+
