@@ -149,7 +149,6 @@ class App extends Component {
               </div>
             }
           />
-          <Route exact={true} path='/:id/info' component={Info} />
           <Route path='*' component={NoMatch} />
         </Switch>
       </div>
