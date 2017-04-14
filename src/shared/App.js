@@ -70,8 +70,6 @@ class App extends Component {
           (i.info.author.toLowerCase().search(this.state.filter) !== -1) ||
           (i.userName.toLowerCase().search(this.state.filter) !== -1) ||
           (i.title.toLowerCase().search(this.state.filter) !== -1) ||
-          (i.info.localization.toLowerCase().search(this.state.filter) !== -1) ||
-          (i.info.date.toLowerCase().search(this.state.filter) !== -1) ||
           (i.info.gear.toLowerCase().search(this.state.filter) !== -1)
       )
     })
