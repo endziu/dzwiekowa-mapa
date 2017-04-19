@@ -6,6 +6,7 @@ import Menu from './comps/Menu.js'
 import Welcome from './comps/Welcome.js'
 import Search from './comps/SearchField'
 import Sound from './comps/Sound.js'
+import Photos from './comps/Photos.js'
 import Info from './comps/Info.js'
 import NoMatch from './comps/NoMatch.js'
 import { getSoundById } from './helpers/'
@@ -97,22 +98,8 @@ class App extends Component {
       <div>
         <Switch>
           <Route exact={true} path='/' component={Welcome} />
-          <Route 
-            exact={true}
-            path='/:id'
-            render={({match}) =>
-              <div className='center mw8 pa3'>
-                  <Sound
-                    ref={ref => (this.Sound = ref)}
-                    showDesc={true}
-                    currentSound={getSoundById(match.params.id, this.props.sounds)}
-                    onEnded={this.onEnded}
-                    playClick={this.playClick}
-                    isPlaying={this.state.isPlaying}
-                  />
-              </div>
-            }
-          />
+          <Route exact={true} path='/:id/photos' component={Photos} />
+
           <Route
             exact={true}
             path='/:id/:sub'

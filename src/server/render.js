@@ -14,8 +14,9 @@ export default (req, res, next) => {
   const matchSound = matchPath(req.url, { path: '/:id', exact: true })
   const matchInfo = matchPath(req.url, { path: '/:id/info', exact: true })
   const matchMap = matchPath(req.url, { path: '/:id/map', exact: true })
+  const matchPhotos = matchPath(req.url, { path: '/:id/photos', exact: true })
 
-  if (matchHome || matchSound || matchInfo || matchMap) {
+  if (matchHome || matchSound || matchInfo || matchMap || matchPhotos) {
     
     const routerApp = (data) => <StaticRouter context={{}} location={req.url}>
       <App sounds={data} />
