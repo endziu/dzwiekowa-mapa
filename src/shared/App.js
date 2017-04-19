@@ -77,7 +77,7 @@ class App extends Component {
 
   searchSubmit (e) {
     e.preventDefault()
-    this.setState({filter: '', sounds: this.props.sounds})
+    this.setState({filter: '', sounds: this.state.sounds})
   }
 
   onZoom (val) {
