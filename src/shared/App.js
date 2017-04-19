@@ -21,6 +21,7 @@ class App extends Component {
       isPlaying: false,
       filter: '',
       sounds: [],
+      currentSound: null,
       redirectPath: ''
     }
     this.playClick = this.playClick.bind(this)
@@ -100,55 +101,59 @@ class App extends Component {
           <Route exact path='/' component={Welcome} />
           <Route exact
             path='/:id/:sub'
-            render={({ match }) =>
-              <div className='App flex flex-column flex-row-ns f5 f4-l black-80 bg-white'>
+            render={({ match }) => {
+              const snd = getSoundById(match.params.id, this.props.sounds)
+              return(
+                <div className='App flex flex-column flex-row-ns f5 f4-l black-80 bg-white'>
 
-                {this.state.redirectPath ? <Redirect to={this.state.redirectPath} /> : null}
+                  {this.state.redirectPath ? <Redirect to={this.state.redirectPath} /> : null}
 
-                <Search
-                  filter={this.state.filter}
-                  handleSubmit={this.searchSubmit}
-                  handleChange={this.searchChange}
-                />
+                  <Search
+                    filter={this.state.filter}
+                    handleSubmit={this.searchSubmit}
+                    handleChange={this.searchChange}
+                  />
 
-                <Menu id={match.params.id} />
+                  <Menu id={match.params.id} />
 
-                {match.params.sub === 'photos'
-                  ? <Photos id={match.params.id} images={getSoundById(match.params.id, this.props.sounds).images}/>
-                  : null}                  
-                {match.params.sub === 'info'
-                  ? <Info currentSound={getSoundById(match.params.id, this.props.sounds)} />
-                  : null}
-                {match.params.sub === 'map'
-                  ? <Mapa
-                      onClick={this.markerClick}
+                  {match.params.sub === 'photos'
+                    ? <Photos id={match.params.id} defaultPic={snd.artwork_url || snd.userPic} images={snd.images}/>
+                    : null}                  
+                  {match.params.sub === 'info'
+                    ? <Info currentSound={snd} />
+                    : null}
+                  {match.params.sub === 'map'
+                    ? <Mapa
+                        onClick={this.markerClick}
+                        sounds={this.state.sounds}
+                        currentSound={snd}
+                        onZoom={this.onZoom}
+                        zoom={this.state.currentZoom} />
+                    : null}                    
+
+                  <div className='flex flex-column sideBar vh-60 vh-100-ns w-100 mw6-ns ph1 bl-m bl-l fadeIn animated'>
+
+                    <Sound
+                      ref={ref => (this.Sound = ref)}
+                      showDesc={match.params.sub === 'map' || match.params.sub === 'photos'}
+                      currentSound={snd}
+                      onEnded={this.onEnded}
+                      playClick={this.playClick}
+                      isPlaying={this.state.isPlaying}
+                    />
+
+                    <List
+                      onClick={this.listClick}
                       sounds={this.state.sounds}
-                      currentSound={getSoundById(match.params.id, this.props.sounds)}
-                      onZoom={this.onZoom}
-                      zoom={this.state.currentZoom} />
-                  : null}                    
+                      currentId={match.params.id}
+                      linkTo={match.params.sub}
+                    />
 
-                <div className='flex flex-column sideBar vh-60 vh-100-ns w-100 mw6-ns ph1 bl-m bl-l fadeIn animated'>
-
-                  <Sound
-                    ref={ref => (this.Sound = ref)}
-                    showDesc={match.params.sub === 'map' || match.params.sub === 'photos'}
-                    currentSound={getSoundById(match.params.id, this.props.sounds)}
-                    onEnded={this.onEnded}
-                    playClick={this.playClick}
-                    isPlaying={this.state.isPlaying}
-                  />
-
-                  <List
-                    onClick={this.listClick}
-                    sounds={this.state.sounds}
-                    currentId={match.params.id}
-                    linkTo={match.params.sub}
-                  />
+                  </div>
 
                 </div>
-
-              </div>
+              )
+            }
             }
           />
           <Route path='*' component={NoMatch} />
