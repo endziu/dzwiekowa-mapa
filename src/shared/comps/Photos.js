@@ -6,15 +6,9 @@ export default class Photos extends React.Component {
   constructor(props) {
     super(props)
     this.state ={
-      images: [],
       selected: 0
     }
     this.imageClick = this.imageClick.bind(this)
-  }
-
-  componentDidMount() {
-    const snds = window.__sounds__ 
-    this.setState({images: getSoundById(this.props.match.params.id, snds).images})
   }
 
   imageClick (e) {
@@ -24,8 +18,8 @@ export default class Photos extends React.Component {
   render() {
     return (
       <div className='center pa3 pa4-m pa5-l w-100 vh-100-ns vh-40 mw7-m mw8-l bg-near-white overflow-auto'>
-        {this.state.images[0] && <div className='flex flex-wrap mt3' onClick={this.imageClick}>
-          {this.state.images.map((item,index) => {
+        {this.props.images[0] && <div className='flex flex-wrap mt3' onClick={this.imageClick}>
+          {this.props.images.map((item,index) => {
             return (
               <img
                 key={index}

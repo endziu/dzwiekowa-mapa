@@ -97,11 +97,8 @@ class App extends Component {
     return (
       <div>
         <Switch>
-          <Route exact={true} path='/' component={Welcome} />
-          <Route exact={true} path='/:id/photos' component={Photos} />
-
-          <Route
-            exact={true}
+          <Route exact path='/' component={Welcome} />
+          <Route exact
             path='/:id/:sub'
             render={({ match }) =>
               <div className='App flex flex-column flex-row-ns f5 f4-l black-80 bg-white'>
@@ -116,21 +113,26 @@ class App extends Component {
 
                 <Menu id={match.params.id} />
 
+                {match.params.sub === 'photos'
+                  ? <Photos id={match.params.id} images={getSoundById(match.params.id, this.props.sounds).images}/>
+                  : null}                  
                 {match.params.sub === 'info'
                   ? <Info currentSound={getSoundById(match.params.id, this.props.sounds)} />
-                  : <Mapa
+                  : null}
+                {match.params.sub === 'map'
+                  ? <Mapa
                       onClick={this.markerClick}
                       sounds={this.state.sounds}
                       currentSound={getSoundById(match.params.id, this.props.sounds)}
                       onZoom={this.onZoom}
-                      zoom={this.state.currentZoom}
-                    />}
+                      zoom={this.state.currentZoom} />
+                  : null}                    
 
                 <div className='flex flex-column sideBar vh-60 vh-100-ns w-100 mw6-ns ph1 bl-m bl-l fadeIn animated'>
 
                   <Sound
                     ref={ref => (this.Sound = ref)}
-                    showDesc={match.params.sub === 'map'}
+                    showDesc={match.params.sub === 'map' || match.params.sub === 'photos'}
                     currentSound={getSoundById(match.params.id, this.props.sounds)}
                     onEnded={this.onEnded}
                     playClick={this.playClick}
@@ -141,7 +143,7 @@ class App extends Component {
                     onClick={this.listClick}
                     sounds={this.state.sounds}
                     currentId={match.params.id}
-                    linkTo={match.params.sub === 'info' ? 'info' : 'map'}
+                    linkTo={match.params.sub}
                   />
 
                 </div>

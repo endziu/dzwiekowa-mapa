@@ -25,6 +25,15 @@ const Menu = ({id}) => {
         </Link>
 
         <Link
+          to={`/${id}/photos`}
+          title={'Zdjęcia'}
+          className='f5 w1-8 no-underline black bg-white bg-animate hover-bg-black hover-white inline-flex items-center pa1 ba border-box mb1 mr1'>
+          <svg className='w1-8' viewBox='0 0 24 24' fill='currentcolor'>
+            <path d='M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z' />
+          </svg>
+        </Link>
+
+        <Link
           to={`/${id}/map`}
           title={'Mapa'}
           className='f5 w1-8 no-underline black bg-white bg-animate hover-bg-black hover-white inline-flex items-center pa1 ba border-box mb1 mr1'>
