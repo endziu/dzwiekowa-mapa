@@ -49,7 +49,7 @@ h1, h2, h3, h4, h5, ol, ul, li, p {
   position: absolute;
   z-index: 99999;
   right: 3px;
-  top: 98px;
+  top: 134px;
 }
 
 .sideBar {
@@ -59,7 +59,7 @@ h1, h2, h3, h4, h5, ol, ul, li, p {
 @media(min-width: 880px) {
   .searchPos {
     right: 515px;
-    top: 102px;
+    top: 134px;
   }
   .sideBar {
     min-width: 512px;
