@@ -24,8 +24,8 @@ export default class Photos extends React.Component {
   render() {
     return (
       <div className='center pa3 pa4-m pa5-l w-100 vh-100-ns vh-40 mw7-m mw8-l bg-near-white overflow-auto'>
-        <div className='flex flex-wrap mt3' onClick={this.imageClick}>
-          {this.state.images && this.state.images.map((item,index) => {
+        {this.state.images[0] && <div className='flex flex-wrap mt3' onClick={this.imageClick}>
+          {this.state.images.map((item,index) => {
             return (
               <img
                 key={index}
@@ -37,7 +37,7 @@ export default class Photos extends React.Component {
             )
           }
           )}
-        </div>
+        </div>}
       </div>
     )
   }

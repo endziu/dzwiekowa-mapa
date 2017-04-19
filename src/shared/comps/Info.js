@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 export default ({ currentSound }) => {
   return (
@@ -37,6 +38,9 @@ export default ({ currentSound }) => {
           <b>opis: </b>{currentSound.info.opis}
         </p>
       </div>
+      <Link to={`/${currentSound.id}/photos`}>
+        <p><b>zdjęcia</b></p>
+      </Link>
     </div>
   )
 }
