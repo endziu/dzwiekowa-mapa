@@ -22,6 +22,7 @@ class App extends Component {
     this.state = {
       isPlaying: false,
       filter: '',
+      reset: false,
       sounds: [],
       currentSound: null,
       redirectPath: ''
@@ -32,6 +33,7 @@ class App extends Component {
     this.onEnded = this.onEnded.bind(this)
     this.searchChange = this.searchChange.bind(this)
     this.searchSubmit = this.searchSubmit.bind(this)
+    this.searchReset = this.searchReset.bind(this)
     this.onZoom = this.onZoom.bind(this)
   }
 
@@ -73,6 +75,12 @@ class App extends Component {
     e.preventDefault()
     this.setState({filter: ''})
     this.setState((prevState) => ({sounds: prevState.sounds}))
+    this.setState({reset: true})
+  }
+
+  searchReset (e) {
+    this.setState({reset: false})
+    this.setState(filterList)
   }
 
   onZoom (val) {
@@ -105,6 +113,8 @@ class App extends Component {
                     filter={this.state.filter}
                     handleSubmit={this.searchSubmit}
                     handleChange={this.searchChange}
+                    handleReset={this.searchReset}
+                    reset={this.state.reset}
                   />
 
                   <Menu id={match.params.id} />

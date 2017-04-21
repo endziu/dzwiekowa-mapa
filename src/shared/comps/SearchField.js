@@ -1,6 +1,6 @@
 import React from 'react'
 
-const SearchField = ({handleSubmit, handleChange, filter}) => {
+const SearchField = ({handleSubmit, handleChange, handleReset, filter, reset}) => {
   return (
     <form
       onSubmit={handleSubmit}
@@ -8,9 +8,10 @@ const SearchField = ({handleSubmit, handleChange, filter}) => {
       <input
         value={filter}
         onChange={handleChange}
+        onMouseEnter={handleReset}
         className='input-reset bn'
         id='search'
-        placeholder='🔎  Szukaj dźwięków'
+        placeholder={reset ? '❌' : '🔎  Szukaj dźwięków'}
         type='text' />
     </form>
   )
