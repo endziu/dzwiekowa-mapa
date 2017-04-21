@@ -9,31 +9,10 @@ import Sound from './comps/Sound.js'
 import Photos from './comps/Photos.js'
 import Info from './comps/Info.js'
 import NoMatch from './comps/NoMatch.js'
-import { getSoundById } from './helpers/'
+import { getSoundById, filterList } from './helpers/'
 
 import './assets/tachyons.min.css'
 import './assets/style.css'
-
-
-const filterList = (prevState, props) => {
-
-  const isFilterInItem = (filter) => (item) => (item.toLowerCase().search(filter) !== -1)
-  const isNotIn = isFilterInItem(prevState.filter)
-
-  const filteredSounds = props.sounds.filter(
-    (item) =>
-      isNotIn(item.info.opis) ||
-      isNotIn(item.info.author) ||
-      isNotIn(item.userName) ||
-      isNotIn(item.title) ||
-      isNotIn(item.info.gear)
-  )
-
-  return {
-    sounds: filteredSounds
-  }
-
-}
   
 
 

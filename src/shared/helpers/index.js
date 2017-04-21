@@ -58,6 +58,26 @@ const getSoundById = (id, sounds) => {
 
 const isDigitOnly = (s) => /^\d+$/.test(s)
 
+const filterList = (prevState, props) => {
+
+  const isFilterInItem = (filter) => (item) => (item.toLowerCase().search(filter) !== -1)
+  const isNotIn = isFilterInItem(prevState.filter)
+
+  const filteredSounds = props.sounds.filter(
+    (item) =>
+      isNotIn(item.info.opis) ||
+      isNotIn(item.info.author) ||
+      isNotIn(item.userName) ||
+      isNotIn(item.title) ||
+      isNotIn(item.info.gear)
+  )
+
+  return {
+    sounds: filteredSounds
+  }
+
+}
+
 export {
   randomizeList,
   prettyTime,
@@ -65,5 +85,6 @@ export {
   asNumber,
   copyTextToClipboard,
   getSoundById,
-  isDigitOnly
+  isDigitOnly,
+  filterList
 }
