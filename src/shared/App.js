@@ -44,7 +44,7 @@ class App extends Component {
     } else {
       audioElem.play()
     }
-    this.setState({ isPlaying: !this.state.isPlaying })
+    this.setState((prevState) => ({ isPlaying: !prevState.isPlaying }))
   }
 
   markerClick (index) {
@@ -79,7 +79,7 @@ class App extends Component {
 
   searchSubmit (e) {
     e.preventDefault()
-    this.setState({filter: '', sounds: this.state.sounds})
+    this.setState((prevState) => ({filter: '', sounds: prevState.sounds}))
   }
 
   onZoom (val) {
