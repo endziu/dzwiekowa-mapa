@@ -14,6 +14,29 @@ import { getSoundById } from './helpers/'
 import './assets/tachyons.min.css'
 import './assets/style.css'
 
+
+const filterList = (prevState, props) => {
+
+  const isFilterInItem = (filter) => (item) => (item.toLowerCase().search(filter) !== -1)
+  const isNotIn = isFilterInItem(prevState.filter)
+
+  const filteredSounds = props.sounds.filter(
+    (item) =>
+      isNotIn(item.info.opis) ||
+      isNotIn(item.info.author) ||
+      isNotIn(item.userName) ||
+      isNotIn(item.title) ||
+      isNotIn(item.info.gear)
+  )
+
+  return {
+    sounds: filteredSounds
+  }
+
+}
+  
+
+
 class App extends Component {
   constructor () {
     super()
@@ -63,23 +86,14 @@ class App extends Component {
   }
 
   searchChange (e) {
-    const s = this.props.sounds
-    this.setState({
-      filter: e.target.value.toLowerCase(),
-      sounds: s.filter(
-        (i) =>
-          (i.info.opis.toLowerCase().search(this.state.filter) !== -1) ||
-          (i.info.author.toLowerCase().search(this.state.filter) !== -1) ||
-          (i.userName.toLowerCase().search(this.state.filter) !== -1) ||
-          (i.title.toLowerCase().search(this.state.filter) !== -1) ||
-          (i.info.gear.toLowerCase().search(this.state.filter) !== -1)
-      )
-    })
+    this.setState({filter: e.target.value.toLowerCase()})
+    this.setState(filterList)
   }
 
   searchSubmit (e) {
     e.preventDefault()
-    this.setState((prevState) => ({filter: '', sounds: prevState.sounds}))
+    this.setState({filter: ''})
+    this.setState((prevState) => ({sounds: prevState.sounds}))
   }
 
   onZoom (val) {
@@ -91,7 +105,7 @@ class App extends Component {
       .then((res) => res.json())
       .then((res) => console.log(res))
       .catch((err) => console.log(err))
-    this.setState({sounds: this.props.sounds})
+    this.setState((prevState, props) => ({sounds: props.sounds}))
   }
 
   render () {
