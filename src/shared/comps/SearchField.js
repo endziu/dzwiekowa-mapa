@@ -11,7 +11,7 @@ const SearchField = ({handleSubmit, handleChange, handleReset, filter, reset}) =
         onClick={handleReset}
         className='input-reset bn'
         id='search'
-        placeholder={reset ? '❌' : '🔎  Szukaj dźwięków'}
+        placeholder={reset ? '❌  Pokaż wszystkie' : '🔎  Szukaj dźwięków'}
         type='text' />
     </form>
   )
