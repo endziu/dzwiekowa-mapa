@@ -16,7 +16,7 @@ class Sound extends Component {
               selectedSound={currentSound}
               isPlaying={this.props.isPlaying}
             />
-            {showDesc ? <Description selectedSound={currentSound} /> : null}
+            <Description selectedSound={currentSound} />
           </div>
         : null
     )
