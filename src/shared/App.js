@@ -67,15 +67,16 @@ class App extends Component {
   }
 
   searchChange (e) {
+    this.setState({reset: true})
     this.setState({filter: e.target.value.toLowerCase()})
     this.setState(filterList)
   }
 
   searchSubmit (e) {
     e.preventDefault()
+    this.setState({reset: true})
     this.setState({filter: ''})
     this.setState((prevState) => ({sounds: prevState.sounds}))
-    this.setState({reset: true})
   }
 
   searchReset (e) {

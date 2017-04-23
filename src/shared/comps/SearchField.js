@@ -4,7 +4,7 @@ const SearchField = ({handleSubmit, handleChange, handleReset, filter, reset}) =
   return (
     <form
       onSubmit={handleSubmit}
-      className='ml1 mt1 ma0-ns ba f6 b-black-80 pointer searchPos'>
+      className='ml1 mt1 ma0-ns ba f6 flex pointer searchPos'>
       <input
         value={filter}
         onChange={handleChange}
