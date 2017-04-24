@@ -9,7 +9,7 @@ import NoMatch from '../shared/comps/NoMatch'
 
 export default (req, res, next) => {
   const routes = ['/', '/:id', '/:id/info', '/:id/map', '/:id/photos']
-  const checkRoutes = (routes) => routes.filter((i) => matchPath(req.url, { path: i, exact: true }))
+  const checkRoutes = (routes) => routes.filter((r) => matchPath(req.url, { path: r, exact: true }))
   const routeMatches = checkRoutes(routes).length !== 0
 
   const generateHtml = (data) => {
@@ -28,7 +28,7 @@ export default (req, res, next) => {
   if (routeMatches) {
     readFile('./src/shared/assets/tracks.json', 'utf-8')
       .then((file) => JSON.parse(file))
-      .then(generateHtml)
+      .then((data) => generateHtml(data))
       .then((html) => res.status(200).send(html))
       .catch((err) => res.status(500).send(renderToString(<Error message={err} />)))
   } else {
