@@ -4,7 +4,7 @@ import { Gmaps, Marker } from 'react-gmaps'
 const params = { v: '3', key: 'AIzaSyB7GQAjLtFuxLYjfSQq3PLX3o0mX6qT-CU', language: 'pl', region: 'PL' }
 
 class SoundMap extends Component {
-  constructor() {
+  constructor () {
     super()
     this.state = {
       currentZoom: 15

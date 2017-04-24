@@ -8,6 +8,6 @@ const style = {
 export default ({message}) => (
   <div style={style}>
     <h1>This request does NOT match any resource!</h1>
-    <a href="/">home</a>
+    <a href='/'>home</a>
   </div>
 )

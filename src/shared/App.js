@@ -13,8 +13,6 @@ import { getSoundById, filterList } from './helpers/'
 
 import './assets/tachyons.min.css'
 import './assets/style.css'
-  
-
 
 class App extends Component {
   constructor () {
@@ -105,7 +103,7 @@ class App extends Component {
             path='/:id/:sub'
             render={({ match }) => {
               const snd = getSoundById(match.params.id, this.props.sounds)
-              return(
+              return (
                 <div className='App flex flex-column flex-row-ns f5 f4-l black-80 bg-white'>
 
                   {this.state.redirectPath ? <Redirect to={this.state.redirectPath} /> : null}
@@ -121,19 +119,19 @@ class App extends Component {
                   <Menu id={match.params.id} />
 
                   {match.params.sub === 'photos'
-                    ? <Photos id={match.params.id} defaultPic={snd.artwork_url || snd.userPic} images={snd.images}/>
-                    : null}                  
+                    ? <Photos id={match.params.id} defaultPic={snd.artwork_url || snd.userPic} images={snd.images} />
+                    : null}
                   {match.params.sub === 'info'
                     ? <Info currentSound={snd} />
                     : null}
                   {match.params.sub === 'map'
                     ? <Mapa
-                        onClick={this.markerClick}
-                        sounds={this.state.sounds}
-                        currentSound={snd}
-                        onZoom={this.onZoom}
-                        zoom={this.state.currentZoom} />
-                    : null}                    
+                      onClick={this.markerClick}
+                      sounds={this.state.sounds}
+                      currentSound={snd}
+                      onZoom={this.onZoom}
+                      zoom={this.state.currentZoom} />
+                    : null}
 
                   <div className='flex flex-column sideBar vh-60 vh-100-ns w-100 mw6-ns ph1 bl-m bl-l fadeIn animated'>
 

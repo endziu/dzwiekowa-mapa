@@ -59,7 +59,6 @@ const getSoundById = (id, sounds) => {
 const isDigitOnly = (s) => /^\d+$/.test(s)
 
 const filterList = (prevState, props) => {
-
   const isFilterInItem = (filter) => (item) => (item.toLowerCase().search(filter) !== -1)
   const isNotIn = isFilterInItem(prevState.filter)
 
@@ -75,7 +74,6 @@ const filterList = (prevState, props) => {
   return {
     sounds: filteredSounds
   }
-
 }
 
 export {

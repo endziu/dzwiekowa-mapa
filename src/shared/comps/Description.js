@@ -1,5 +1,4 @@
 import React from 'react'
-import { takeFirst } from '../helpers/'
 
 const Description = ({ selectedSound }) => (
   <div className='flex flex-row justify-start items-start dn-sh mt1 bg-near-white'>
