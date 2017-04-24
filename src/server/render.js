@@ -19,10 +19,10 @@ export default (req, res, next) => {
       </StaticRouter>
     )
     const dataString = JSON.stringify(data)
-
-    return readFile('./dist/index.html', 'utf-8')
+    const html = readFile('./dist/index.html', 'utf-8')
       .then((s) => s.replace('{{APP}}', appString))
       .then((s) => s.replace('{{DATA}}', `window.__sounds__ = ${dataString}`))
+    return html
   }
 
   if (routeMatches) {
