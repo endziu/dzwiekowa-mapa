@@ -14,7 +14,7 @@ export default ({ currentSound }) => {
           <h3 className='f5 f4-l fw4 gray mt0'>{currentSound.title}</h3>
         </div>
       </div>
-      <div className='flex flex-column measure lh-copy'>
+      <div className='flex flex-column measure lh-copy w-90 w-100-l'>
         <p>
           <b>autor nagrania: </b>{currentSound.info.author}
         </p>
