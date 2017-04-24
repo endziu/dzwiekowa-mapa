@@ -12,7 +12,6 @@ export default (req, res, next) => {
   const checkRoutes = (routes) => routes.filter((i) => matchPath(req.url, { path: i, exact: true }))
   const routeMatches = checkRoutes(routes).length !== 0
 
-  const parseJson = (file) => JSON.parse(file)
   const generateHtml = (data) => {
     const appString = renderToString(
       <StaticRouter context={{}} location={req.url}>
@@ -26,25 +25,13 @@ export default (req, res, next) => {
       .then((s) => s.replace('{{DATA}}', `window.__sounds__ = ${dataString}`))
   }
 
-  const sendHtml = (html) => {
-    res.status(200).send(html)
-  }
-
-  const handleErrors = (err) => {
-    res.status(500).send(renderToString(<Error message={err} />))
-  }
-
-  const handleUnMatchedRequests = () => {
-    res.status(404).send(renderToString(<NoMatch />))
-  }
-
   if (routeMatches) {
     readFile('./src/shared/assets/tracks.json', 'utf-8')
-      .then(parseJson)
+      .then((file) => JSON.parse(file))
       .then(generateHtml)
-      .then(sendHtml)
-      .catch(handleErrors)
+      .then((html) => res.status(200).send(html))
+      .catch((err) => res.status(500).send(renderToString(<Error message={err} />)))
   } else {
-    handleUnMatchedRequests()
+    res.status(404).send(renderToString(<NoMatch />))
   }
 }
