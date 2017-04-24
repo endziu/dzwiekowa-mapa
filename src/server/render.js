@@ -27,8 +27,8 @@ export default (req, res, next) => {
 
   if (routeMatches) {
     readFile('./src/shared/assets/tracks.json', 'utf-8')
-      .then((file) => JSON.parse(file))
-      .then((data) => generateHtml(data))
+      .then(JSON.parse)
+      .then(generateHtml)
       .then((html) => res.status(200).send(html))
       .catch(() => res.status(500).send(renderToString(<Error />)))
   } else {
