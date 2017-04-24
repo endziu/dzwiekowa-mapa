@@ -30,7 +30,7 @@ export default (req, res, next) => {
       .then((file) => JSON.parse(file))
       .then((data) => generateHtml(data))
       .then((html) => res.status(200).send(html))
-      .catch((err) => res.status(500).send(renderToString(<Error message={err} />)))
+      .catch(() => res.status(500).send(renderToString(<Error />)))
   } else {
     res.status(404).send(renderToString(<NoMatch />))
   }
