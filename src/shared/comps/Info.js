@@ -2,8 +2,8 @@ import React from 'react'
 
 export default ({ currentSound }) => {
   return (
-    <div className='center pa3 pa4-m pa5-l w-100 vh-100-ns vh-40 mw7-m mw8-l bg-white overflow-auto'>
-      <div className='flex mb2'>
+    <div className='center pa2 pa4-m pa5-l vh-100-ns vh-40 mw7-m mw8-l bg-white overflow-auto'>
+      <div className='flex mb2 w-90 w-100-ns'>
         <img
           title='user avatar'
           className='br-100 h3 w3 h4-l w4-l dib ba b--black-05 pa1'
