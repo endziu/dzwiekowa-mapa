@@ -23,13 +23,13 @@ export default class Photos extends React.Component {
                 <img
                   key={index}
                   id={index}
-                  className={this.state.selected === index ? 'mr2 mb2 w2 h2 w3-ns h3-ns dim ba bw2 b--green' : 'mr2 mb2 w2 h2 h2 w3-ns h3-ns dim'}
+                  className={this.state.selected === index ? 'mr2 mb2 w2 h2 w3-l h3-l dim ba bw2 b--green' : 'mr2 mb2 w2 h2 h2 w3-l h3-l dim'}
                   src={`https://res.cloudinary.com/endziu/image/upload/w_64,h_64,c_thumb,c_fill/mapa/${item}`}
                   alt={`image${index}`} />
               )}
             </div>
           : <div className='flex flex-wrap mt3' onClick={this.imageClick}>
-              <img id='avatar' className='mr2 mb2 w2 h2 w3-ns h3-ns dim' src={this.props.defaultPic} alt='avatar'/>
+              <img id='avatar' className='mr2 mb2 w2 h2 w3-l h3-l dim' src={this.props.defaultPic} alt='avatar'/>
             </div>}
 
           {this.props.images[this.state.selected]
