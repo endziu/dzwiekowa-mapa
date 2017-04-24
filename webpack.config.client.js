@@ -42,6 +42,10 @@ module.exports = {
     ]
   },
   plugins: [
+    new HtmlWebpackPlugin({
+      template: 'index.html',
+      inject: 'body'
+    }),
     new ExtractTextPlugin('style.css'),
     new webpack.DefinePlugin({
       'process.env': {
@@ -54,10 +58,6 @@ module.exports = {
     new webpack.optimize.OccurrenceOrderPlugin(),
     new webpack.optimize.UglifyJsPlugin({
       sourceMap: false
-    }),
-    new HtmlWebpackPlugin({
-      template: 'index.html',
-      inject: 'body'
     }),
     new CompressionPlugin({
       asset: '[path].gz[query]',
