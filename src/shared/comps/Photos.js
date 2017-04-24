@@ -33,8 +33,8 @@ export default class Photos extends React.Component {
           </div>}
 
         {this.props.images[this.state.selected]
-            ? <img src={`https://res.cloudinary.com/endziu/image/upload/mapa/${this.props.images[this.state.selected]}` || this.props.defaultPic} alt='big picture' />
-            : <img src={this.props.defaultPic.substring(0, this.props.defaultPic.indexOf('-large.jpg')).concat('-t500x500.jpg')} alt='big picture' />}
+            ? <img className='w-90 w-100-l' src={`https://res.cloudinary.com/endziu/image/upload/mapa/${this.props.images[this.state.selected]}` || this.props.defaultPic} alt='big picture' />
+            : <img className='w-90 w-100-l' src={this.props.defaultPic.substring(0, this.props.defaultPic.indexOf('-large.jpg')).concat('-t500x500.jpg')} alt='big picture' />}
       </div>
     )
   }
