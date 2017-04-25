@@ -34,7 +34,7 @@ export default class Photos extends React.Component {
                 )}
             </div>
           : <div className='flex flex-wrap' onClick={this.imageClick}>
-              <Img id='avatar' className='mr2 mb2 w2 h2 w3-l h3-l dim' src={this.props.defaultPic} alt='avatar' />
+              <Img loader={<LoaderSmall />} id='avatar' className='mr2 mb2 w2 h2 w3-l h3-l dim' src={this.props.defaultPic} alt='avatar' />
             </div>}
 
         {this.props.images[this.state.selected]
