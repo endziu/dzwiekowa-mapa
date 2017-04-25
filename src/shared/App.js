@@ -114,6 +114,7 @@ class App extends Component {
                     reset={this.state.reset}
                   />
                   <Menu id={match.params.id} />
+
                   {match.params.sub === 'photos'
                     ? <Photos id={match.params.id} defaultPic={snd.artwork_url || snd.userPic} images={snd.images} />
                     : null}
@@ -122,16 +123,16 @@ class App extends Component {
                     : null}
                   {match.params.sub === 'map'
                     ? <Mapa
-                      onClick={this.markerClick}
-                      sounds={this.state.sounds}
-                      currentSound={snd}
-                      onZoom={this.onZoom}
-                      zoom={this.state.currentZoom} />
+                        onClick={this.markerClick}
+                        sounds={this.state.sounds}
+                        currentSound={snd}
+                        onZoom={this.onZoom}
+                        zoom={this.state.currentZoom}
+                      />
                     : null}
                   <div className='flex flex-column sideBar vh-60 vh-100-ns w-100 mw6-ns ph1 bl-m bl-l fadeIn animated'>
                     <Sound
                       ref={ref => (this.Sound = ref)}
-                      showDesc={match.params.sub === 'map' || match.params.sub === 'photos'}
                       currentSound={snd}
                       onEnded={this.onEnded}
                       playClick={this.playClick}
@@ -146,8 +147,7 @@ class App extends Component {
                   </div>
                 </div>
               )
-            }
-            }
+            }}
           />
           <Route path='*' component={NoMatch} />
         </Switch>
