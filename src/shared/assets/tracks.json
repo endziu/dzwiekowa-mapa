@@ -15,10 +15,11 @@
     "info": {
       "author": "bartosz grzyb",
       "title": "uniwersytet przyrodniczy, krzyk drobiu nieświeży.",
-      "localization": "biskupin, kożuchowska",
-      "gear": "sony pcm d50, mic rode nt4, fel bma preamplifier.",
-      "time": "05 lipiec  2016, 10.00.",
-      "opis": "nagranie podczas czyszczenia kurnika na terenie uniwersytetu przyrodniczego. kaczki, kaczory, kury, koguty i",
+      "localization": "biskupin, ul. kożuchowska",
+      "gear": "sony pcm d50, mic rode nt4, fel bma preamplifier",
+      "time": "10.00",
+      "date": "05 lipiec  2016",
+      "opis": "nagranie podczas czyszczenia kurnika na terenie uniwersytetu przyrodniczego. kaczki, kaczory, kury, koguty",
       "gps": {
         "lat": "51.098776",
         "lng": "17.095565"
@@ -27,7 +28,7 @@
   },
   {
     "id": 235266599,
-    "title": "Jarmark Bożonarodzeniowy we Wroclawiu 28.XI.2015",
+    "title": "Jarmark Bożonarodzeniowy we Wroclawiu 28 XI 2015",
     "permalink": "151128-jarmark-bozonarodzeniowy-we-wroclawiu",
     "uri": "https://api.soundcloud.com/tracks/235266599",
     "artwork_url": "https://i1.sndcdn.com/artworks-000137800251-usph0b-large.jpg",
@@ -42,7 +43,7 @@
       "author": "bartosz grzyb",
       "title": "jarmark bożonarodzeniowy we wrocławiu (2015)",
       "localization": "stare miasto, rynek",
-      "gear": "sony pcm d50.",
+      "gear": "sony pcm d50",
       "time": "16:53",
       "date": "28.11.2015 r.",
       "opis": "jarmark świąteczny: wielotysięczny gwar, dźwięki pozytywek, stukot kopyt dorożki, rozmowy kupujacych ze sprzedawcami, warsztaty rzeźbienia w lodzie, świąteczne piosenki, pochód hare krishna.",
@@ -70,7 +71,8 @@
       "title": "park skowroni",
       "localization": "krzyki",
       "gear": "sony pcm d50, mic rode nt4, fel bma preamplifier, rode boompole",
-      "time": "6 june 2016, 6 pm.",
+      "time": "6 pm.",
+      "date": "6 june 2016",
       "opis": "birds in skowroni park (wroclaw, poland): birds, dogs, runners, segways.",
       "gps": {
         "lat": "51.080049",
@@ -95,8 +97,9 @@
       "author": "bartosz grzyb",
       "title": "mecz polska portugalia",
       "localization": "krzyki",
-      "gear": "sony pcm d50, mic rode nt4, fel bma preamplifier.",
-      "time": "21.02, 30.06.2016",
+      "gear": "sony pcm d50, mic rode nt4, fel bma preamplifier",
+      "time": "21.02",
+      "date": "30.06.2016",
       "opis": "zarejestrowane na ulicy ciepłej. reakcja na gol roberta lewandowskiego. dzięki chłopaki !!!",
       "gps": {
         "lat": "51.092648",
@@ -157,7 +160,7 @@
       "gear": "sd 702, rode nt 4",
       "time": "12:00",
       "date": "04.08.2011 r.",
-      "opis": "wietrzne ciepłe południe. w tle dzwony w archikatedy św. jana chrzciciela, oraz dzwony kościoła św. krzyża. szum drzew. kroki, rozmowy ludzi, przejeżdżający samochód, rowerzysta, przechodząca grupa turystów.",
+      "opis": "wietrzne ciepłe południe. w tle dzwony archikatedy św. jana chrzciciela, oraz kościoła św. krzyża. szum drzew. kroki, rozmowy ludzi, przejeżdżający samochód, rowerzysta, przechodząca grupa turystów.",
       "gps": {
         "lat": "51.1141231",
         "lng": "17.0455918"
@@ -270,7 +273,7 @@
       "gear": "sd 702, rode nt4",
       "time": "13:00",
       "date": "31.05.2011 r.",
-      "opis": "przy brzegu rzeki odry. przepływajaca motorówka, ptaki, pogotowie ratunkowe w oddali, szczekający pies przepływający kajak.",
+      "opis": "przy brzegu rzeki odry. przepływajaca motorówka, ptaki, sygnał pogotowia ratunkowego w oddali, szczekający pies, przepływający kajak.",
       "gps": {
         "lat": "51.095823",
         "lng": "17.112899"
@@ -302,7 +305,7 @@
       "gear": "sd 702, rode nt4",
       "time": "18:40",
       "date": "30.04.2011 r.",
-      "opis": "pod mostem, przy brzegu rzeki odry w kierunku grobli kozanowskiej. stukot przejeżdżających samochodów, w oddali pociąg.",
+      "opis": "pod mostem, przy brzegu rzeki odry w kierunku grobli kozanowskiej. stukot przejeżdżających samochodów po moście, w oddali pociąg.",
       "gps": {
         "lat": "51.132778",
         "lng": "16.991262"
@@ -369,7 +372,7 @@
       "gear": "sd 702, rode nt4",
       "time": "14:30",
       "date": "20.05.2011 r.",
-      "opis": "podziemie. rower, skoki na deskorolce, kroki, głosy ludzi, ruch uliczny - samochody, trmawaje.",
+      "opis": "podziemie. rower, skoki na deskorolce, kroki, głosy ludzi, ruch uliczny - samochody, tramwaje.",
       "gps": {
         "lat": "51.107591",
         "lng": "17.032308"
@@ -400,7 +403,7 @@
       "gear": "sd 702, rode nt4",
       "time": "13.00",
       "date": "20.05.2011 r.",
-      "opis": "podziemie placu dominikańskiego od strony galerii. głosy ludzi, kroki, ruch uliczny - samochody, trmawaje.",
+      "opis": "podziemie placu dominikańskiego od strony galerii. głosy ludzi, kroki, ruch uliczny - samochody, tramwaje.",
       "gps": {
         "lat": "51.108083",
         "lng": "17.039105"
@@ -431,7 +434,7 @@
       "gear": "sd 702, rode nt4",
       "time": "12:00",
       "date": "20.05.2011 r.",
-      "opis": "podziemie placu dominikańskiego od strony galerii. głosy ludzi, kroki, ruch uliczny - samochody, trmawaje.",
+      "opis": "podziemie placu dominikańskiego od strony galerii. głosy ludzi, kroki, ruch uliczny - samochody, tramwaje.",
       "gps": {
         "lat": "51.108196",
         "lng": "17.038295"
@@ -452,7 +455,6 @@
     "userID": 1759469,
     "images": [
       "1338578831.jpg",
-      "1338578837.jpg",
       "1338578837.jpg"
     ],
     "info": {
@@ -461,7 +463,7 @@
       "localization": "stare miasto, plac dominikański",
       "gear": "sd 702, rode nt4",
       "time": "13:40",
-      "date": "03.03.2011 r.",
+      "date": "20.05.2011 r.",
       "opis": "podziemie od strony ulicy ks. piotra skargi. kroki, głosy ludzi, ruch uliczny - smochody, tramwaje.",
       "gps": {
         "lat": "51.107499",
@@ -488,7 +490,7 @@
       "localization": "stare miasto, ul. oławska",
       "gear": "sd 702, rode nt4",
       "time": "13:50",
-      "date": "10.05.2011 r.",
+      "date": "20.05.2011 r.",
       "opis": "dwóch romskich chłopców w tle przechodnie.",
       "gps": {
         "lat": "51.108767",
@@ -542,7 +544,8 @@
     "images": [
       "1338576401.jpg",
       "1338576408.jpg",
-      "1338576408.jpg",
+      "1338576415.jpg",
+      "1338576462.jpg",
       "1338576422.jpg",
       "1338576433.jpg",
       "1338576442.jpg",
@@ -582,7 +585,7 @@
       "gear": "sd 702, rode nt4",
       "time": "16:00",
       "date": "02.04.2011 r.",
-      "opis": "sygnał ostrzegawczy przy przejeździe kolejowym, przejazd koparki, lokomotywy, ruch uliczny stojące i ruszające samochody.",
+      "opis": "sygnał ostrzegawczy przy przejeździe kolejowym, przejazd koparki, lokomotywy, ruch uliczny.",
       "gps": {
         "lat": "51.139614",
         "lng": "16.937887"
@@ -608,11 +611,11 @@
     "info": {
       "author": "olga kaniewska",
       "title": "hala targowa",
-      "localization": "ul. piaskowa",
+      "localization": "stare miasto, ul. piaskowa",
       "gear": "sd 702, rode nt4",
       "time": "11:00",
       "date": "12.10.2010 r.",
-      "opis": "parter hali targowej od prawej strony, przy wejściu.",
+      "opis": "tłum. parter hali targowej od prawej strony, przy wejściu głównym.",
       "gps": {
         "lat": "51.112509",
         "lng": "17.039772"
@@ -663,7 +666,9 @@
     "userID": 1759469,
     "images": [
       "1338576496.jpg",
-      "1338576503.jpg"
+      "1338576503.jpg",
+      "1338576517.jpg",
+      "1338578054.jpg"
     ],
     "info": {
       "author": "andrzej koper",
@@ -692,8 +697,10 @@
     "userPic": "https://i1.sndcdn.com/avatars-000003754197-qxr8rw-large.jpg",
     "userID": 1759469,
     "images": [
+      "1338576558.jpg",
       "1338576668.jpg",
-      "1338576678.jpg"
+      "1338576678.jpg",
+      "1338576730.jpg"
     ],
     "info": {
       "author": "andrzej koper",
@@ -755,6 +762,7 @@
     "userPic": "https://i1.sndcdn.com/avatars-000003754197-qxr8rw-large.jpg",
     "userID": 1759469,
     "images": [
+      "1338578039.jpg",
       "1338576517.jpg",
       "1338576526.jpg",
       "1338576552.jpg"
@@ -815,8 +823,8 @@
     "images": [
       "1338573783.jpg",
       "1338573792.jpg",
-      "1338580062.jpg",
-      "1338580062.jpg"
+      "1338580023.jpg",
+      "1338580030.jpg"
     ],
     "info": {
       "author": "olga kaniewska",
@@ -1216,7 +1224,8 @@
       "1338583882.jpg",
       "1338583887.jpg",
       "1338583893.jpg",
-      "1338583898.jpg"
+      "1338583898.jpg",
+      "1338583907.jpg"
     ],
     "info": {
       "author": "andrzej koper",
@@ -1503,8 +1512,6 @@
     "userID": 1759469,
     "images": [
       "1366558625.jpg",
-      "1366558625.jpg",
-      "1366558625.jpg",
       "1366558641.jpg",
       "1366558646.jpg",
       "1366558652.jpg",
@@ -1514,9 +1521,6 @@
       "1366558686.jpg",
       "1366558693.jpg",
       "1366558703.jpg",
-      "1366558715.jpg",
-      "1366558715.jpg",
-      "1366558715.jpg",
       "1366558715.jpg"
     ],
     "info": {
@@ -1699,7 +1703,7 @@
       "1369670801.jpg",
       "1369670815.jpg",
       "1369670820.jpg",
-      "1369670820.jpg",
+      "1369670829.jpg",
       "1369670840.jpg",
       "1369670847.jpg",
       "1369670856.jpg"
@@ -1773,8 +1777,8 @@
       "1370884412.jpg",
       "1370884419.jpg",
       "1370884426.jpg",
-      "1370884426.jpg",
-      "1370884426.jpg",
+      "1370884431.jpg",
+      "1370884435.jpg",
       "1370884445.jpg"
     ],
     "info": {
@@ -1812,7 +1816,7 @@
       "1370901633.jpg",
       "1370901649.jpg",
       "1370901671.jpg",
-      "1370901671.jpg",
+      "1370901691.jpg",
       "1370901713.jpg",
       "1370901727.jpg",
       "1370901863.jpg"
@@ -1848,7 +1852,7 @@
       "1371301898.jpg",
       "1371301904.jpg",
       "1371301911.jpg",
-      "1371301916"
+      "1371301916.jpg"
     ],
     "info": {
       "author": "olga kaniewska",
@@ -1857,7 +1861,7 @@
       "gear": "sd 702, sanken css-5",
       "time": "6:08",
       "date": "13.06.2013 r.",
-      "opis": "wrocławski ogród zoologiczny. kea, w tle szum jazu szczytnickiego.",
+      "opis": "wrocławski ogród zoologiczny. nawoływanie kea, w tle szum jazu szczytnickiego.",
       "gps": {
         "lat": "51.104681",
         "lng": "17.069425"
@@ -1938,7 +1942,7 @@
       "gear": "zoom h4n, hydrofon h2a xlr",
       "time": "1:50",
       "date": "22.06.2013",
-      "opis": "hydrofon zanurzony nad brzegiem odry.",
+      "opis": "zanurzony mikrofon hydrofoniczny w Odrze, przy brzegu.",
       "gps": {
         "lat": "51.099288",
         "lng": "17.121237"
@@ -2876,24 +2880,7 @@
     "userName": "olga",
     "userPic": "https://i1.sndcdn.com/avatars-000201156519-3ntqez-large.jpg",
     "userID": 55089,
-    "images": [
-      "1438423080.jpg",
-      "1438423087.jpg",
-      "1438423093.jpg",
-      "1438423100.jpg",
-      "1438423106.jpg",
-      "1438423112.jpg",
-      "1438423119.jpg",
-      "1438423128.jpg",
-      "1438423134.jpg",
-      "1438423141.jpg",
-      "1438423154.jpg",
-      "1438423161.jpg",
-      "1438423168.jpg",
-      "1438423174.jpg",
-      "1438423189.jpg",
-      "1438423198.jpg"
-    ],
+    "images": [],
     "info": {
       "author": "olga kaniewska",
       "title": "targowisko na dworcu świebodzkim",
@@ -3562,7 +3549,22 @@
     "userName": "olga",
     "userPic": "https://i1.sndcdn.com/avatars-000201156519-3ntqez-large.jpg",
     "userID": 55089,
-    "images": [],
+    "images": [ "1438423080.jpg",
+      "1438423087.jpg",
+      "1438423093.jpg",
+      "1438423100.jpg",
+      "1438423106.jpg",
+      "1438423112.jpg",
+      "1438423119.jpg",
+      "1438423128.jpg",
+      "1438423134.jpg",
+      "1438423141.jpg",
+      "1438423154.jpg",
+      "1438423161.jpg",
+      "1438423168.jpg",
+      "1438423174.jpg",
+      "1438423189.jpg",
+      "1438423198.jpg"],
     "info": {
       "author": "olga kaniewska",
       "title": "bazar pod młynem",
@@ -3988,7 +3990,7 @@
       "1352493389.jpg",
       "1352493396.jpg",
       "1352493405.jpg",
-      "1352493405.jpg",
+      "1352493428.jpg",
       "1352493444.jpg"
     ],
     "info": {
@@ -4174,7 +4176,7 @@
       "1360158744.jpg",
       "1360158753.jpg",
       "1360158761.jpg",
-      "1360158761.jpg"
+      "1360158768.jpg"
     ],
     "info": {
       "author": "olga kaniewska, andrzej koper",
@@ -4434,10 +4436,10 @@
     "userID": 55089,
     "images": [
       "1369665965.jpg",
-      "1369665965.jpg",
-      "1369665965.jpg",
+      "1369665972.jpg",
+      "1369665976.jpg",
       "1369665982.jpg",
-      "1369665982.jpg",
+      "1369665989.jpg",
       "1369665994.jpg",
       "1369665999.jpg",
       "1369666005.jpg",
