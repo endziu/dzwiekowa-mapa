@@ -20,7 +20,7 @@ export default class Photos extends React.Component {
 
   render () {
     return (
-      <div className='center ph3 pt1 ph4-m pt3-m pa5-l w-100 vh-100-ns vh-40 mw7-m mw8-l bg-white overflow-auto'>
+      <div className='center ph3 pt1 ph4-m pt3-m pa5-l w-100 vh-100-ns vh-40 mw7-m mw8-l bg-near-white overflow-auto'>
         {this.props.images[0]
           ? <div className='flex flex-wrap' onClick={this.imageClick}>
               {this.props.images.map((item, index) =>
