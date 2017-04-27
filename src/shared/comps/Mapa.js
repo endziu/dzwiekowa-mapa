@@ -9,6 +9,8 @@ class SoundMap extends Component {
     this.state = {
       currentZoom: 15
     }
+    this.onZoom = this.onZoom.bind(this)
+    this.onMapCreated = this.onMapCreated.bind(this)
   }
 
   onMapCreated (map) {
@@ -29,7 +31,6 @@ class SoundMap extends Component {
 
   onZoom () {
     this.setState({currentZoom: this.refs.mapa.getMap().getZoom()})
-    this.props.onZoom(this.state.currentZoom)
   }
 
   render () {
@@ -44,7 +45,7 @@ class SoundMap extends Component {
         zoom={this.state.currentZoom}
         params={params}
         onMapCreated={this.onMapCreated}
-        onZoomChanged={this.onZoom.bind(this)}
+        onZoomChanged={this.onZoom}
       >
         {this.props.sounds.map((sound, index) => {
           return <Marker

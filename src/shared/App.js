@@ -32,7 +32,6 @@ class App extends Component {
     this.searchChange = this.searchChange.bind(this)
     this.searchSubmit = this.searchSubmit.bind(this)
     this.searchReset = this.searchReset.bind(this)
-    this.onZoom = this.onZoom.bind(this)
   }
 
   onEnded (e) {
@@ -82,10 +81,6 @@ class App extends Component {
     this.setState(filterList)
   }
 
-  onZoom (val) {
-    this.setState({currentZoom: val})
-  }
-
   componentDidMount () {
     fetch('/api')
       .then((res) => res.json())
@@ -126,8 +121,6 @@ class App extends Component {
                         onClick={this.markerClick}
                         sounds={this.state.sounds}
                         currentSound={snd}
-                        onZoom={this.onZoom}
-                        zoom={this.state.currentZoom}
                       />
                     : null}
                   <div className='flex flex-column sideBar vh-60 vh-100-ns w-100 mw6-ns ph1 bl-m bl-l fadeIn animated'>
