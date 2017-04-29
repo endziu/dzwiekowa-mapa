@@ -12,7 +12,8 @@
     "start": "node dist/server.js",
     "dev:server": "webpack --config webpack.config.server.js --watch",
     "dev:client": "webpack --config webpack.config.client.js --watch",
-    "dev:start": "nodemon dist/server.js --watch dist/server.js"
+    "dev:start": "nodemon dist/server.js --watch dist/server.js",
+    "dev": "concurrently \"yarn dev:server\" \"yarn dev:client\" \"yarn dev:start\""
   },
   "repository": {
     "type": "git",
@@ -42,6 +43,7 @@
     "whatwg-fetch": "^2.0.3"
   },
   "devDependencies": {
+    "concurrently": "^3.4.0",
     "babel-cli": "^6.22.2",
     "babel-loader": "^6.2.10",
     "babel-preset-latest": "^6.22.0",
