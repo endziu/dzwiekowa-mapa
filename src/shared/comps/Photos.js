@@ -18,6 +18,10 @@ export default class Photos extends React.Component {
     this.setState({selected: asNumber(e.target.id)})
   }
 
+  componentWillReceiveProps () {
+    this.setState({selected: 0})
+  }
+
   render () {
     return (
       <div className='center ph3 pt1 ph4-m pt3-m pa5-l w-100 vh-100-ns vh-40 mw7-m mw8-l bg-near-white overflow-auto'>
@@ -38,7 +42,7 @@ export default class Photos extends React.Component {
             </div>}
 
         {this.props.images[this.state.selected]
-            ? <Img loader={<Loader />} className='w-90 w-100-l' src={`https://res.cloudinary.com/endziu/image/upload/mapa/${this.props.images[this.state.selected]}` || this.props.defaultPic} alt='big picture' />
+            ? <Img loader={<Loader />} className='w-90 w-100-l' src={`https://res.cloudinary.com/endziu/image/upload/mapa/${this.props.images[this.state.selected]}`} alt='big picture' />
             : <Img loader={<Loader />} src={this.props.defaultPic.substring(0, this.props.defaultPic.indexOf('-large.jpg')).concat('-t500x500.jpg')} alt='artwork' />}
       </div>
     )
