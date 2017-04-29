@@ -22,7 +22,6 @@ class App extends Component {
       filter: '',
       reset: false,
       sounds: [],
-      currentSound: null,
       redirectPath: ''
     }
     this.playClick = this.playClick.bind(this)
