@@ -3,9 +3,6 @@
   "version": "3.0.0",
   "description": "dzwiękowa mapa wrocławia",
   "main": "./src/server/index.js",
-  "now": {
-    "alias": "dzwiekowa-mapa"
-  },
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "set NODE_ENV=production && webpack -p --config webpack.config.client.js && webpack -p --config webpack.config.server.js",
@@ -24,7 +21,7 @@
   "bugs": {
     "url": "https://github.com/endziu/dzwiekowa-mapa/issues"
   },
-  "homepage": "https://dzwiekowa-mapa.now.sh/",
+  "homepage": "https://dzwiekowamapa.pl",
   "dependencies": {
     "compression": "^1.6.2",
     "express": "^4.14.1",
