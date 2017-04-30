@@ -13,7 +13,7 @@ import renderApp from './render'
 const server = express()
 server.use(helmet())
 server.use(compression())
-server.use(favicon(__dirname + './src/shared/assets/favicon.png'))
+server.use(favicon(__dirname + './src/shared/assets/favicon.ico'))
 server.use(log)
 server.use('/static', express.static('./dist'))
 server.use('/api', api)
