@@ -1,3 +1,3 @@
-const routes = ['/', '/:id', '/:id/info', '/:id/map', '/:id/photos']
+const routes = ['/', '/:id/info', '/:id/map', '/:id/photos']
 
 export default routes
