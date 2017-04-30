@@ -6,7 +6,7 @@
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "set NODE_ENV=production && webpack -p --config webpack.config.client.js && webpack -p --config webpack.config.server.js",
-    "start": "node dist/server.js",
+    "start": "set PORT=10221 && pm2 start dist/server.js",
     "dev:server": "webpack --config webpack.config.server.js --watch",
     "dev:client": "webpack --config webpack.config.client.js --watch",
     "dev:start": "nodemon dist/server.js --watch dist/server.js",
