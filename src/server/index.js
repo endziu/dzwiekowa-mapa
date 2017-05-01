@@ -12,7 +12,6 @@ import renderApp from './render'
 const PORT = process.env.PORT || 3000
 
 const server = express()
-server.enable('trust proxy')
 server.use(helmet())
 server.use(compression())
 server.use(morgan(':status :method :url'))
