@@ -1,1 +1,1 @@
-export default (req, res) => res.status(200).send({'message': 'data from /api'})
+export default (req, res) => res.status(200).send({'message': 'hello there ;)'})

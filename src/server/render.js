@@ -3,10 +3,10 @@ import readFile from 'fs-readfile-promise'
 import { renderToString } from 'react-dom/server'
 import { StaticRouter, matchPath } from 'react-router'
 
-import routes from './routes'
 import App from '../shared/App'
 import Error from '../shared/comps/Error'
 import NoMatch from '../shared/comps/NoMatch'
+import routes from './routes'
 
 export default (req, res, next) => {
   const checkRoutes = (routes) => routes.filter((r) => matchPath(req.url, { path: r, exact: true }))
