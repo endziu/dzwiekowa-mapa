@@ -1,13 +1,13 @@
 const nodeExternals = require('webpack-node-externals')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const path = require('path')
-const srcPath = path.resolve(__dirname, 'src')
+const srcPath = path.resolve(__dirname, 'server')
 const distPath = path.resolve(__dirname, 'dist')
 
 module.exports = {
   context: srcPath,
   entry: {
-    server: './server/index.js'
+    server: './index.js'
   },
   output: {
     path: distPath,

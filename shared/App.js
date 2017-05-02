@@ -9,10 +9,10 @@ import Sound from './comps/Sound.js'
 import Photos from './comps/Photos.js'
 import Info from './comps/Info.js'
 import NoMatch from './comps/NoMatch.js'
-import { getSoundById, filterList, getSoundByTitle } from './helpers/'
+import { filterList, getSoundByTitle } from './helpers/'
 
-import './assets/tachyons.min.css'
-import './assets/style.css'
+import '../client/public/tachyons.min.css'
+import '../client/public/style.css'
 
 class App extends Component {
   constructor () {
