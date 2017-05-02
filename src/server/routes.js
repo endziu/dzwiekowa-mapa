@@ -1,1 +1,1 @@
-export default ['/', '/:id/info', '/:id/map', '/:id/photos']
+export default ['/', '/:permalink/info', '/:permalink/map', '/:permalink/photos']
