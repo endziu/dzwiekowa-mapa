@@ -14,7 +14,7 @@ const PORT = process.env.PORT || 3000
 const server = express()
 server.use(helmet())
 server.use(compression())
-server.use(morgan(':status :method :url'))
+server.use(morgan(':date[web] - :status :method :url - :res[content-length] - :response-time ms'))
 server.use('/api', api)
 server.use('/static', express.static('./dist'))
 server.use('/favicon.ico', express.static('public/favicon.ico'))
