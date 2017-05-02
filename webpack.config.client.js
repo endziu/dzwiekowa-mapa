@@ -3,6 +3,7 @@ const webpack = require('webpack')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CompressionPlugin = require('compression-webpack-plugin')
+const RobotstxtPlugin = require('robotstxt-webpack-plugin').default;
 const srcPath = path.resolve(__dirname, 'src')
 const distPath = path.resolve(__dirname, 'dist')
 
@@ -46,6 +47,7 @@ module.exports = {
       template: 'index.html',
       inject: 'body'
     }),
+    new RobotstxtPlugin(),
     new ExtractTextPlugin('style.css'),
     new webpack.DefinePlugin({
       'process.env': {
