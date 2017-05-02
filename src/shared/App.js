@@ -9,7 +9,7 @@ import Sound from './comps/Sound.js'
 import Photos from './comps/Photos.js'
 import Info from './comps/Info.js'
 import NoMatch from './comps/NoMatch.js'
-import { getSoundById, filterList } from './helpers/'
+import { getSoundById, filterList, getSoundByTitle } from './helpers/'
 
 import './assets/tachyons.min.css'
 import './assets/style.css'
@@ -54,7 +54,7 @@ class App extends Component {
     const currentSound = document.getElementById('snd' + index)
     currentSound.scrollIntoView()
 
-    const pathToRedirect = `/${this.state.sounds[index].id}/map`
+    const pathToRedirect = `/${this.state.sounds[index].permalink}/map`
     this.setState({redirectPath: pathToRedirect})
   }
 
@@ -94,9 +94,9 @@ class App extends Component {
         <Switch>
           <Route exact path='/' component={Welcome} />
           <Route exact
-            path='/:id/:sub'
+            path='/:permalink/:sub'
             render={({ match }) => {
-              const snd = getSoundById(match.params.id, this.props.sounds)
+              const snd = getSoundByTitle(match.params.permalink, this.props.sounds)
               return (
                 <div className='App flex flex-column flex-row-ns f5 f4-l black-80 bg-white'>
                   {this.state.redirectPath ? <Redirect to={this.state.redirectPath} /> : null}
@@ -107,10 +107,10 @@ class App extends Component {
                     handleReset={this.searchReset}
                     reset={this.state.reset}
                   />
-                  <Menu id={match.params.id} />
+                  <Menu id={match.params.permalink} />
 
                   {match.params.sub === 'photos'
-                    ? <Photos id={match.params.id} defaultPic={snd.artwork_url || snd.userPic} images={snd.images} />
+                    ? <Photos id={snd.id} defaultPic={snd.artwork_url || snd.userPic} images={snd.images} />
                     : null}
                   {match.params.sub === 'info'
                     ? <Info currentSound={snd} />
@@ -133,7 +133,7 @@ class App extends Component {
                     <List
                       onClick={this.listClick}
                       sounds={this.state.sounds}
-                      currentId={match.params.id}
+                      currentId={snd.id}
                       linkTo={match.params.sub}
                     />
                   </div>

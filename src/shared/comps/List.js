@@ -6,7 +6,7 @@ const List = ({ currentId, sounds, onClick, linkTo }) => (
   <ul className='bg-near-white overflow-auto mt1 z-1'>
     {sounds.map((elem, index) => {
       return (
-        <Link className='link' key={index} to={`/${elem.id}/${linkTo || 'info'}`}>
+        <Link className='link' key={index} to={`/${elem.permalink}/${linkTo || 'info'}`}>
           <li
             id={'snd' + index}
             onClick={onClick}

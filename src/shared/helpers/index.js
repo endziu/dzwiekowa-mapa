@@ -56,6 +56,12 @@ const getSoundById = (id, sounds) => {
   return item
 }
 
+const getSoundByTitle = (permalink, sounds) => {
+  const sameTitle = sound => sound.permalink === permalink
+  const item = takeFirst(sounds.filter(sameTitle))
+  return item
+}
+
 const isDigitOnly = (s) => /^\d+$/.test(s)
 
 const filterList = (prevState, props) => {
@@ -83,6 +89,7 @@ export {
   asNumber,
   copyTextToClipboard,
   getSoundById,
+  getSoundByTitle,
   isDigitOnly,
   filterList
 }

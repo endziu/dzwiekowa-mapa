@@ -22,7 +22,7 @@ const Welcome = () => <header className='vh-100 w-100'>
       </h1>
       <h2 className='fw1 f2-l f3 black-60 mv3'>kolekcja nagrań audiosfery miasta</h2>
       <Link
-        to={'/313303431/map'}
+        to={'/fontanna_rynek/map'}
         className='v-mid f5 no-underline black bg-white bg-animate hover-bg-black hover-white inline-flex items-center pa2 ba border-box mv3'>
         <svg className='w1' viewBox='0 0 24 24' style={{fill: 'currentcolor'}}>
           <title>Map icon</title>
