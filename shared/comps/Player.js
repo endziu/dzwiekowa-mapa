@@ -60,7 +60,6 @@ class Player extends Component {
           onTimeUpdate={this.onTimeUpdate}
           onEnded={this.onEnded}
           onLoadedMetadata={this.recReady}
-          // eslint-disable-next-line
           ref={ref => this.audioEl = ref}
           preload={`metadata`}
           src={selectedSound.stream_url + '?client_id=33c73dacce84dddddbc15117e071b6ce'}
