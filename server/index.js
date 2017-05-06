@@ -9,7 +9,7 @@ import api from './api'
 import routes from './routes'
 import renderApp from './render'
 
-morgan.token('ip', (req) => req.headers['x-forwarded=for'])
+morgan.token('ip', (req) => req.headers['x-forwarded-for'])
 
 const server = express()
 server.use(helmet())
