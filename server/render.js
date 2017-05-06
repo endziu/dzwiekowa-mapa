@@ -9,8 +9,6 @@ import NoMatch from '../shared/comps/NoMatch'
 import routes from './routes'
 
 export default (req, res, next) => {
-  console.log(`IP - remoteAdress: ${req.connection.remoteAddress}`)
-  console.log(`IP - headers[x-forwarded-for]: ${req.headers['x-forwarded-for']}`)
   const checkRoutes = (routes) => routes.filter((r) => matchPath(req.url, { path: r, exact: true }))
   const routeMatches = checkRoutes(routes).length !== 0
 
