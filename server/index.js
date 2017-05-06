@@ -10,6 +10,8 @@ import routes from './routes'
 import renderApp from './render'
 
 const PORT = process.env.PORT || 3000
+console.log(`all envs: ${process.env}`)
+console.log(`theport: ${PORT}`)
 
 const server = express()
 server.use(helmet())
@@ -18,6 +20,6 @@ server.use('/static', express.static('./dist'))
 server.use('/api', api)
 server.use('/favicon.ico', express.static('client/public/favicon.ico'))
 server.use('/robots.txt', express.static('dist/robots.txt'))
-server.use(morgan(':date[iso]| :status | :method | :url | :response-time ms'))
+server.use(morgan(':date[iso] | :status | :method | :url | :response-time ms'))
 server.use(routes, renderApp)
-server.listen(PORT, () => console.log(`dzwiekowa-mapa is listening on port ${PORT}`))
+server.listen(16661, () => console.log(`dzwiekowa-mapa is listening on port 16661`))
