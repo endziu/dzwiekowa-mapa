@@ -35,7 +35,7 @@
     "pm2": "^2.4.6",
     "react": "^15.5.3",
     "react-dom": "^15.5.3",
-    "react-gmaps": "^1.5.0",
+    "react-gmaps": "^1.6.0",
     "react-image": "^1.0.1",
     "react-router": "^4.0.0",
     "react-router-dom": "^4.0.0",
@@ -43,10 +43,10 @@
     "whatwg-fetch": "^2.0.3"
   },
   "devDependencies": {
-    "babel-cli": "^6.22.2",
-    "babel-loader": "^6.2.10",
-    "babel-preset-latest": "^6.22.0",
-    "babel-preset-react": "^6.22.0",
+    "babel-cli": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "babel-preset-latest": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
     "compression-webpack-plugin": "^0.4.0",
     "concurrently": "^3.4.0",
     "css-loader": "^0.28.0",
@@ -55,7 +55,7 @@
     "html-webpack-plugin": "^2.28.0",
     "rimraf": "^2.6.1",
     "robotstxt-webpack-plugin": "^1.0.1",
-    "style-loader": "^0.16.0",
+    "style-loader": "^0.17.0",
     "webpack": "^2.2.1",
     "webpack-node-externals": "^1.5.4"
   }
