@@ -100,6 +100,7 @@ class App extends Component {
               return (
                 <div className='App flex flex-column flex-row-ns f5 f4-l black-80 bg-white'>
                   {this.state.redirectPath ? <Redirect to={this.state.redirectPath} /> : null}
+                  
                   <Search
                     filter={this.state.filter}
                     handleSubmit={this.searchSubmit}
@@ -107,22 +108,15 @@ class App extends Component {
                     handleReset={this.searchReset}
                     reset={this.state.reset}
                   />
+
                   <Menu id={match.params.permalink} />
 
-                  {match.params.sub === 'photos'
-                    ? <Photos id={snd.id} defaultPic={snd.artwork_url || snd.userPic} images={snd.images} />
-                    : null}
-                  {match.params.sub === 'info'
-                    ? <Info currentSound={snd} />
-                    : null}
-                  {match.params.sub === 'map'
-                    ? <Mapa
-                        onClick={this.markerClick}
-                        sounds={this.state.sounds}
-                        currentSound={snd}
-                      />
-                    : null}
+                  {match.params.sub === 'photos' && <Photos currentSound={snd} />}
+                  {match.params.sub === 'info'   && <Info currentSound={snd} />}
+                  {match.params.sub === 'map'    && <Mapa currentSound={snd} sounds={this.state.sounds} onClick={this.markerClick} />}
+
                   <div className='flex flex-column sideBar vh-60 vh-100-ns w-100 mw6-ns ph1 bl-m bl-l fadeIn animated'>
+
                     <Sound
                       ref={ref => (this.Sound = ref)}
                       currentSound={snd}
@@ -130,13 +124,16 @@ class App extends Component {
                       playClick={this.playClick}
                       isPlaying={this.state.isPlaying}
                     />
+
                     <List
                       onClick={this.listClick}
                       sounds={this.state.sounds}
                       currentId={snd.id}
                       linkTo={match.params.sub}
                     />
+
                   </div>
+
                 </div>
               )
             }}

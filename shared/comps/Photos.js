@@ -23,11 +23,13 @@ export default class Photos extends React.Component {
   }
 
   render () {
+    const snd = this.props.currentSound
+    const defaultPic = snd.artwork_url || snd.userPic
     return (
       <div className='center ph3 pt1 ph4-m pt3-m pa5-l w-100 vh-100-ns vh-40 mw7-m mw8-l bg-near-white overflow-auto'>
-        {this.props.images[0]
+        {snd.images[0]
           ? <div className='flex flex-wrap' onClick={this.imageClick}>
-              {this.props.images.map((item, index) =>
+              {snd.images.map((item, index) =>
                 <Img
                   key={index}
                   id={index}
@@ -38,12 +40,12 @@ export default class Photos extends React.Component {
                 )}
             </div>
           : <div className='flex flex-wrap' onClick={this.imageClick}>
-              <Img loader={<LoaderSmall />} id='avatar' className={'mr2 mb2 w2 h2 w3-l h3-l dim ba bw2 b--green'} src={this.props.defaultPic} alt='avatar' />
+              <Img loader={<LoaderSmall />} id='avatar' className={'mr2 mb2 w2 h2 w3-l h3-l dim ba bw2 b--green'} src={defaultPic} alt='avatar' />
             </div>}
 
-        {this.props.images[this.state.selected]
-            ? <Img loader={<Loader />} className='w-90 w-100-l' src={`https://res.cloudinary.com/endziu/image/upload/mapa/${this.props.images[this.state.selected]}`} alt='big picture' />
-            : <Img loader={<Loader />} src={this.props.defaultPic.substring(0, this.props.defaultPic.indexOf('-large.jpg')).concat('-t500x500.jpg')} alt='artwork' />}
+        {snd.images[this.state.selected]
+            ? <Img loader={<Loader />} className='w-90 w-100-l' src={`https://res.cloudinary.com/endziu/image/upload/mapa/${snd.images[this.state.selected]}`} alt='big picture' />
+            : <Img loader={<Loader />} src={defaultPic.substring(0, defaultPic.indexOf('-large.jpg')).concat('-t500x500.jpg')} alt='artwork' />}
       </div>
     )
   }
