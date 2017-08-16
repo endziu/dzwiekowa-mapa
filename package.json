@@ -5,15 +5,15 @@
   "main": "./src/server/index.js",
   "scripts": {
     "prebuild": "rimraf dist",
-    "build": "export NODE_ENV=production && webpack -p --config webpack.config.client.js && webpack -p --config webpack.config.server.js",
-    "start": "export PORT=16661 && pm2 start dist/server.js --name=\"mapa\"",
+    "build": "set NODE_ENV=production && webpack -p --config webpack.config.client.js && webpack -p --config webpack.config.server.js",
+    "start": "set PORT=16661 && pm2 start dist/server.js --name=\"mapa\"",
     "deploy": "yarn build && yarn start",
     "stop": "pm2 stop mapa && pm2 delete mapa",
     "restart": "pm2 restart mapa",
     "dev:server": "webpack --config webpack.config.server.js --watch",
     "dev:client": "webpack --config webpack.config.client.js --watch",
-    "dev:start": "export PORT=16661 && pm2 start dist/server.js --watch dist/server.js",
-    "dev": "concurrently \"yarn dev:server\" \"yarn dev:client\" \"yarn dev:start\""
+    "dev:start": "set PORT=16661 && pm2 start dist/server.js --watch dist/server.js",
+    "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\" \"npm run dev:start\""
   },
   "repository": {
     "type": "git",
