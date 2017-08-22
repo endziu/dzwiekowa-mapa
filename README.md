@@ -7,5 +7,5 @@ $ npm install
 ```
 ## deploy
 ```
-$ yarn npm run deploy
+$ npm run deploy
 ```
