@@ -7,7 +7,7 @@
     "prebuild": "rimraf dist",
     "build": "export NODE_ENV=production && webpack -p --config webpack.config.client.js && webpack -p --config webpack.config.server.js",
     "start": "export PORT=16661 && pm2 start dist/server.js --name=\"mapa\"",
-    "deploy": "yarn build && yarn start",
+    "deploy": "npm run build && npm run start",
     "stop": "pm2 stop mapa && pm2 delete mapa",
     "restart": "pm2 restart mapa",
     "dev:server": "webpack --config webpack.config.server.js --watch",

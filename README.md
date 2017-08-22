@@ -3,9 +3,9 @@
 [![devDependencies Status](https://david-dm.org/endziu/dzwiekowa-mapa/dev-status.svg)](https://david-dm.org/endziu/dzwiekowa-mapa?type=dev)
 ## install
 ```
-$ yarn
+$ npm install
 ```
 ## deploy
 ```
-$ yarn deploy
+$ yarn npm run deploy
 ```
