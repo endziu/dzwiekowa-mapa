@@ -12,7 +12,7 @@
     "restart": "pm2 restart mapa",
     "dev:server": "webpack --config webpack.config.server.js --watch",
     "dev:client": "webpack --config webpack.config.client.js --watch",
-    "dev:start": "set PORT=16661 && pm2 start dist/server.js --watch dist/server.js",
+    "dev:start": "export PORT=16661 && pm2 start dist/server.js --watch dist/server.js",
     "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\" \"npm run dev:start\""
   },
   "repository": {

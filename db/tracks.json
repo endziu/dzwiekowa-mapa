@@ -1,5 +1,135 @@
 [
   {
+    "id": 345755476,
+    "title": "Budowa",
+    "permalink": "budowa",
+    "uri": "https://api.soundcloud.com/tracks/345755476",
+    "artwork_url": "https://i1.sndcdn.com/artworks-000245998343-nkiykh-large.jpg",
+    "waveform_url": "https://w1.sndcdn.com/CuUoKshSTMUP_m.png",
+    "duration": 153300,
+    "stream_url": "https://api.soundcloud.com/tracks/345755476/stream",
+    "userName": "champignonsdesbois",
+    "userPic": "https://i1.sndcdn.com/avatars-000048739118-kdh3w7-large.jpg",
+    "userID": 5485538,
+    "info": {
+        "author": "bartosz grzyb",
+        "title": "plan budowy",
+        "localization": "ślęza, klecina",
+        "gear": "sony pcm d50.",
+        "time": "16.30.",
+        "date": "03 październik 2017",
+        "gps": {
+            "lat": "51.069998",
+            "lng": "16.986384"
+        },
+        "opis": "odgłosy budowy, ptaki."
+    }
+},
+{
+    "id": 343940514,
+    "title": "Wroclaw in the rain",
+    "permalink": "wroclaw-in-the-rain",
+    "uri": "https://api.soundcloud.com/tracks/343940514",
+    "artwork_url": "https://i1.sndcdn.com/artworks-000244202695-ilzgmp-large.jpg",
+    "waveform_url": "https://w1.sndcdn.com/qW7l6eXGx5UN_m.png",
+    "duration": 89477,
+    "stream_url": "https://api.soundcloud.com/tracks/343940514/stream",
+    "userName": "champignonsdesbois",
+    "userPic": "https://i1.sndcdn.com/avatars-000048739118-kdh3w7-large.jpg",
+    "userID": 5485538,
+    "info": {
+        "author": "bartosz grzyb",
+        "title": "wroclaw in the rain",
+        "localization": "ul. ciepła, krzyki",
+        "gear": "sony pcm d50, mic rode nt4, fel bma preamplifier.",
+        "time": "18.30.",
+        "date": "11 sierpień  2017",
+        "gps": {
+            "lat": "51.092549",
+            "lng": "17.035451"
+        },
+        "opis": "deszcz."
+    }
+},
+{
+    "id": 343377377,
+    "title": "Gawrony nad Odrą",
+    "permalink": "gawrony-nad-odra",
+    "uri": "https://api.soundcloud.com/tracks/343377377",
+    "artwork_url": "https://i1.sndcdn.com/artworks-000243651051-t0tpr1-large.jpg",
+    "waveform_url": "https://w1.sndcdn.com/QrK3tRJinPsy_m.png",
+    "duration": 131851,
+    "stream_url": "https://api.soundcloud.com/tracks/343377377/stream",
+    "userName": "champignonsdesbois",
+    "userPic": "https://i1.sndcdn.com/avatars-000048739118-kdh3w7-large.jpg",
+    "userID": 5485538,
+    "info": {
+        "author": "bartosz grzyb",
+        "title": "gawrony nad odrą",
+        "localization": "psie pole",
+        "gear": "sony pcm d50, mic rode nt4, fel bma preamplifier",
+        "time": "17.30",
+        "date": "20 09 2017",
+        "gps": {
+            "lat": "51.132998",
+            "lng": "17.046448"
+        },
+        "opis": "nagrane w poblizu kanału miejskiego - na przeciw starego elewatora zbożowego. gawrony, odległy sygnał pociągu , przejeżdżające rowery."
+    }
+},
+{
+    "id": 343290992,
+    "title": "Przejazd pociagu po Moście Warszawskim (Kolejowym)",
+    "permalink": "przejazd-pociagu-po-moscie-warszawskim-kolejowym",
+    "uri": "https://api.soundcloud.com/tracks/343290992",
+    "artwork_url": "https://i1.sndcdn.com/artworks-000243556591-5gglkj-large.jpg",
+    "waveform_url": "https://w1.sndcdn.com/Md7x936EHav6_m.png",
+    "duration": 117979,
+    "stream_url": "https://api.soundcloud.com/tracks/343290992/stream",
+    "userName": "champignonsdesbois",
+    "userPic": "https://i1.sndcdn.com/avatars-000048739118-kdh3w7-large.jpg",
+    "userID": 5485538,
+    "info": {
+        "author": "bartosz grzyb",
+        "title": "przejazd pociągu po moście warszawskim (kolejowym)",
+        "localization": "psie pole",
+        "gear": "sony pcm d50, mic rode nt4, fel bma preamplifier",
+        "time": "16.05.",
+        "date": "20 09 2017",
+        "gps": {
+            "lat": "51.132051",
+            "lng": "17.056960"
+        },
+        "opis": "przechodnie, pociąg."
+    }
+},
+{
+    "id": 341141802,
+    "title": "Parowóz Hałabała",
+    "permalink": "parowoz-halabala",
+    "uri": "https://api.soundcloud.com/tracks/341141802",
+    "artwork_url": "https://i1.sndcdn.com/artworks-000241462841-5ajhfv-large.jpg",
+    "waveform_url": "https://w1.sndcdn.com/BtTqemRqRb0j_m.png",
+    "duration": 58310,
+    "stream_url": "https://api.soundcloud.com/tracks/341141802/stream",
+    "userName": "champignonsdesbois",
+    "userPic": "https://i1.sndcdn.com/avatars-000048739118-kdh3w7-large.jpg",
+    "userID": 5485538,
+    "info": {
+        "author": "bartosz grzyb",
+        "title": "odjazd parowozu hałabała",
+        "localization": "krzyki",
+        "gear": "sony pcm d50, rode nt4.",
+        "time": "14.20",
+        "date": "02 09 2017",
+        "gps": {
+            "lat": "51.097813",
+            "lng": "17.036027"
+        },
+        "opis": "odjazd parowozu hałabała. trasa wrocław główny- wrocław kuźniki."
+    }
+},  
+  {
     "id": 338096097,
     "title": "Promenada Staromiejska cz1",
     "permalink": "170814-01-promenada-staromiejska",
@@ -17,7 +147,8 @@
       "title": "kaczki i gołębie na promenadzie staromiejskiej cz.1",
       "localization": "stare miasto",
       "gear": "sony pcm d50, mic rode nt4, fel bma preamplifier",
-      "time": "15 08 2017, 16.00.",
+      "time": "16.00.",
+      "date": "15 08 2017",
       "opis": "kaczki i gołębie karmione przez przechodniów. odgłosy przejeżdżających samochodów i autobusów.",
       "gps": {
         "lat": "51.104443",
@@ -43,7 +174,8 @@
       "title": "kaczki i gołębie na promenadzie staromiejskiej cz.2",
       "localization": "stare miasto",
       "gear": "sony pcm d50, mic rode nt4, fel bma preamplifier",
-      "time": "15 08 2017, 16.00.",
+      "time": "16.00.",
+      "date": "15 08 2017",
       "opis": "kaczki i gołębie karmione przez przechodniów. odgłosy przejeżdżających samochodów i autobusów.",
       "gps": {
         "lat": "51.104443",
@@ -70,7 +202,7 @@
       "localization": "biskupin, ul. kożuchowska",
       "gear": "sony pcm d50, mic rode nt4, fel bma preamplifier",
       "time": "10.00",
-      "date": "05 lipiec  2016",
+      "date": "05 lipiec 2016",
       "opis": "nagranie podczas czyszczenia kurnika na terenie uniwersytetu przyrodniczego. kaczki, kaczory, kury, koguty",
       "gps": {
         "lat": "51.098776",
