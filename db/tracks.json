@@ -11,7 +11,11 @@
     "userName": "champignonsdesbois",
     "userPic": "https://i1.sndcdn.com/avatars-000048739118-kdh3w7-large.jpg",
     "userID": 5485538,
-    "images": [],
+    "images": [
+      "budowa1.jpg",
+      "budowa2.jpg",
+      "budowa3.jpg"
+    ],
     "info": {
       "author": "bartosz grzyb",
       "title": "plan budowy",
@@ -65,7 +69,13 @@
     "userName": "champignonsdesbois",
     "userPic": "https://i1.sndcdn.com/avatars-000048739118-kdh3w7-large.jpg",
     "userID": 5485538,
-    "images": [],
+    "images": [
+      "gawrony2.jpg",
+      "gawrony3.jpg",
+      "gawrony4.jpg",
+      "gawrony5.jpg",
+      "gawrony6.jpg"
+    ],
     "info": {
       "author": "bartosz grzyb",
       "title": "gawrony nad odrą",
@@ -92,7 +102,13 @@
     "userName": "champignonsdesbois",
     "userPic": "https://i1.sndcdn.com/avatars-000048739118-kdh3w7-large.jpg",
     "userID": 5485538,
-    "images": [],
+    "images": [
+      "most-kolejowy1.jpg",
+      "most-kolejowy2.jpg",
+      "most-kolejowy3.jpg",
+      "most-kolejowy4.jpg",
+      "most-kolejowy5.jpg"
+    ],
     "info": {
       "author": "bartosz grzyb",
       "title": "przejazd pociągu po moście warszawskim (kolejowym)",

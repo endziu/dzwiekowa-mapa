@@ -15,7 +15,7 @@ import '../client/public/tachyons.min.css'
 import '../client/public/style.css'
 
 class App extends Component {
-  constructor () {
+  constructor() {
     super()
     this.state = {
       isPlaying: false,
@@ -33,74 +33,80 @@ class App extends Component {
     this.searchReset = this.searchReset.bind(this)
   }
 
-  onEnded (e) {
+  onEnded(e) {
     this.setState({ isPlaying: false })
   }
 
-  playClick (e) {
+  playClick(e) {
     const audioElem = this.Sound.Player.audioEl
     if (this.state.isPlaying) {
       audioElem.pause()
     } else {
       audioElem.play()
     }
-    this.setState((prevState) => ({ isPlaying: !prevState.isPlaying }))
+    this.setState(prevState => ({ isPlaying: !prevState.isPlaying }))
   }
 
-  markerClick (index) {
-    this.setState({isPlaying: false})
-    this.setState({redirectPath: ''})
+  markerClick(index) {
+    this.setState({ isPlaying: false })
+    this.setState({ redirectPath: '' })
 
     const currentSound = document.getElementById('snd' + index)
     currentSound.scrollIntoView()
 
     const pathToRedirect = `/${this.state.sounds[index].permalink}/map`
-    this.setState({redirectPath: pathToRedirect})
+    this.setState({ redirectPath: pathToRedirect })
   }
 
-  listClick (e) {
-    this.setState({isPlaying: false})
+  listClick(e) {
+    this.setState({ isPlaying: false })
   }
 
-  searchChange (e) {
-    this.setState({reset: true})
-    this.setState({filter: e.target.value.toLowerCase()})
+  searchChange(e) {
+    this.setState({ reset: true })
+    this.setState({ filter: e.target.value.toLowerCase() })
     this.setState(filterList)
   }
 
-  searchSubmit (e) {
+  searchSubmit(e) {
     e.preventDefault()
-    this.setState({reset: true})
-    this.setState({filter: ''})
-    this.setState((prevState) => ({sounds: prevState.sounds}))
+    this.setState({ reset: true })
+    this.setState({ filter: '' })
+    this.setState(prevState => ({ sounds: prevState.sounds }))
   }
 
-  searchReset (e) {
-    this.setState({reset: false})
+  searchReset(e) {
+    this.setState({ reset: false })
     this.setState(filterList)
   }
 
-  componentDidMount () {
+  componentDidMount() {
     fetch('/api')
-      .then((res) => res.json())
-      .then((res) => console.log(res))
-      .catch((err) => console.log(err))
-    this.setState((prevState, props) => ({sounds: props.sounds}))
+      .then(res => res.json())
+      .then(res => console.log(res))
+      .catch(err => console.log(err))
+    this.setState((prevState, props) => ({ sounds: props.sounds }))
   }
 
-  render () {
+  render() {
     return (
       <div>
         <Switch>
-          <Route exact path='/' component={Welcome} />
-          <Route exact
-            path='/:permalink/:sub'
+          <Route exact path="/" component={Welcome} />
+          <Route
+            exact
+            path="/:permalink/:sub"
             render={({ match }) => {
-              const snd = getSoundByTitle(match.params.permalink, this.props.sounds)
+              const snd = getSoundByTitle(
+                match.params.permalink,
+                this.props.sounds
+              )
               return (
-                <div className='App flex flex-column flex-row-ns f5 f4-l black-80 bg-white'>
-                  {this.state.redirectPath ? <Redirect to={this.state.redirectPath} /> : null}
-                  
+                <div className="App flex flex-column flex-row-ns f5 f4-l black-80 bg-white">
+                  {this.state.redirectPath
+                    ? <Redirect to={this.state.redirectPath} />
+                    : null}
+
                   <Search
                     filter={this.state.filter}
                     handleSubmit={this.searchSubmit}
@@ -111,14 +117,20 @@ class App extends Component {
 
                   <Menu id={match.params.permalink} />
 
-                  {match.params.sub === 'photos' && <Photos currentSound={snd} />}
-                  {match.params.sub === 'info'   && <Info currentSound={snd} />}
-                  {match.params.sub === 'map'    && <Mapa currentSound={snd} sounds={this.state.sounds} onClick={this.markerClick} />}
+                  {match.params.sub === 'photos' &&
+                    <Photos currentSound={snd} />}
+                  {match.params.sub === 'info' && <Info currentSound={snd} />}
+                  {match.params.sub === 'map' &&
+                    <Mapa
+                      currentSound={snd}
+                      sounds={this.state.sounds}
+                      onClick={this.markerClick}
+                    />}
 
-                  <div className='flex flex-column sideBar vh-60 vh-100-ns w-100 mw6-ns ph1 bl-m bl-l fadeIn animated'>
+                  <div className="flex flex-column sideBar vh-60 vh-100-ns w-100 mw6-ns ph1 bl-m bl-l fadeIn animated">
 
                     <Sound
-                      ref={ref => (this.Sound = ref)}
+                      ref={ref => this.Sound = ref}
                       currentSound={snd}
                       onEnded={this.onEnded}
                       playClick={this.playClick}
@@ -138,7 +150,7 @@ class App extends Component {
               )
             }}
           />
-          <Route path='*' component={NoMatch} />
+          <Route path="*" component={NoMatch} />
         </Switch>
       </div>
     )
