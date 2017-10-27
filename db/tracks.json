@@ -135,7 +135,10 @@
     "userName": "champignonsdesbois",
     "userPic": "https://i1.sndcdn.com/avatars-000048739118-kdh3w7-large.jpg",
     "userID": 5485538,
-    "images": [],
+    "images": [
+      "parowoz.jpg",
+      "parowoz2.jpg"
+    ],
     "info": {
       "author": "bartosz grzyb",
       "title": "odjazd parowozu hałabała",
