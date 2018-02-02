@@ -3,17 +3,24 @@
   "version": "3.0.0",
   "description": "dzwiękowa mapa wrocławia",
   "main": "./src/server/index.js",
+  "bin": "dist/server.js",
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "export NODE_ENV=production && webpack -p --config webpack.config.client.js && webpack -p --config webpack.config.server.js",
-    "start": "export PORT=16661 && pm2 start dist/server.js --name=\"mapa\"",
-    "deploy": "npm run build && npm run start",
-    "stop": "pm2 stop mapa && pm2 delete mapa",
-    "restart": "pm2 restart mapa",
+    "prepackage": "npm run build",
+    "package": "pkg -t node9-alpine-x64 --output app package.json",
+    "start": "export PORT=16661 && node dist/server.js",
+    "stop": "pm2 stop server && pm2 delete server",
     "dev:server": "webpack --config webpack.config.server.js --watch",
     "dev:client": "webpack --config webpack.config.client.js --watch",
     "dev:start": "export PORT=16661 && pm2 start dist/server.js --watch dist/server.js",
     "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\" \"npm run dev:start\""
+  },
+  "pkg": {
+    "assets": [],
+    "scripts": [
+      "/dist/**/*.js"
+    ]
   },
   "repository": {
     "type": "git",
@@ -32,6 +39,7 @@
     "helmet": "^3.5.0",
     "morgan": "^1.8.1",
     "node-fetch": "^1.6.3",
+    "pkg": "^4.3.0",
     "pm2": "^2.4.6",
     "react": "^15.5.3",
     "react-dom": "^15.5.3",
