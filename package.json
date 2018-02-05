@@ -17,7 +17,11 @@
     "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\" \"npm run dev:start\""
   },
   "pkg": {
-    "assets": [],
+    "assets": [
+      "/db",
+      "/dist",
+      "/client"
+    ],
     "scripts": [
       "/dist/**/*.js"
     ]

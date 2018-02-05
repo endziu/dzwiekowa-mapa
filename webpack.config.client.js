@@ -7,9 +7,7 @@ const RobotstxtPlugin = require('robotstxt-webpack-plugin').default
 const srcPath = path.resolve(__dirname, 'client')
 const distPath = path.resolve(__dirname, 'dist')
 
-const VENDOR_LIBS = [
-  'react', 'react-dom', 'react-router', 'react-router-dom'
-]
+const VENDOR_LIBS = ['react', 'react-dom', 'react-router', 'react-router-dom']
 
 module.exports = {
   context: srcPath,
@@ -48,11 +46,13 @@ module.exports = {
       inject: 'body'
     }),
     new RobotstxtPlugin({
-      policy: [{
-        userAgent: '*',
-        allow: '/*',
-        disallow: '/api'
-      }],
+      policy: [
+        {
+          userAgent: '*',
+          allow: '/*',
+          disallow: '/api'
+        }
+      ],
       host: 'https://dzwiekowamapa.pl'
     }),
     new ExtractTextPlugin('style.css'),
@@ -61,10 +61,6 @@ module.exports = {
         NODE_ENV: JSON.stringify('production')
       }
     }),
-    new webpack.optimize.CommonsChunkPlugin({
-      names: ['vendor', 'manifest']
-    }),
-    new webpack.optimize.OccurrenceOrderPlugin(),
     new CompressionPlugin({
       asset: '[path].gz[query]',
       algorithm: 'gzip',
