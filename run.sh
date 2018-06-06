@@ -1,1 +1,0 @@
-docker run -d --rm -p 16661:16661 mapa
