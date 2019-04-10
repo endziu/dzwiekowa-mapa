@@ -8,7 +8,7 @@
     "prebuild": "rimraf dist",
     "build": "export NODE_ENV=production && webpack -p --config webpack.config.client.js && webpack -p --config webpack.config.server.js",
     "prepackage": "npm run build",
-    "package": "pkg -t node9-alpine-x64 --output app package.json",
+    "package": "pkg -t node10-alpine-x64 --output app package.json",
     "start": "export PORT=16661 && node dist/server.js",
     "stop": "pm2 stop server && pm2 delete server",
     "dev:server": "webpack --config webpack.config.server.js --watch",
