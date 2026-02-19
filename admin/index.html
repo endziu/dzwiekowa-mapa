@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin — Dźwiękowa Mapa</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+    label { display: block; font-weight: 600; margin-bottom: 4px; font-size: 0.85rem; }
+    input[type=text], input[type=number], input[type=date], input[type=time], textarea {
+      width: 100%; border: 1px solid #d1d5db; border-radius: 4px; padding: 6px 8px;
+      font-size: 0.9rem; outline: none;
+    }
+    input:focus, textarea:focus { border-color: #000; }
+  </style>
+</head>
+<body class="bg-gray-50 min-h-screen p-6">
+  <div class="max-w-2xl mx-auto">
+    <h1 class="text-2xl font-light mb-1">dźwiękowa mapa — admin</h1>
+    <p class="text-sm text-gray-500 mb-6">Dodaj lub zaktualizuj nagranie</p>
+
+    <div id="status" class="hidden mb-4 p-3 rounded text-sm font-medium"></div>
+
+    <form id="trackForm" class="space-y-4">
+
+      <!-- Metadata -->
+      <div class="bg-white border border-gray-200 rounded p-4 space-y-3">
+        <h2 class="font-semibold text-sm uppercase tracking-wide text-gray-400 mb-2">Metadane</h2>
+
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label>Tytuł *</label>
+            <input type="text" name="title" required />
+          </div>
+          <div>
+            <label>Permalink * <span class="text-gray-400 font-normal">(URL slug)</span></label>
+            <input type="text" name="permalink" required placeholder="np. fontanna-rynek" />
+          </div>
+        </div>
+
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label>Autor nagrania *</label>
+            <input type="text" name="author" required />
+          </div>
+          <div>
+            <label>Sprzęt</label>
+            <input type="text" name="gear" />
+          </div>
+        </div>
+
+        <div>
+          <label>Lokalizacja *</label>
+          <input type="text" name="location" required placeholder="np. 4 Rynek, Stare Miasto, Wrocław" />
+        </div>
+
+        <div class="grid grid-cols-3 gap-3">
+          <div>
+            <label>GPS — szerokość</label>
+            <input type="number" name="gps_lat" step="any" placeholder="51.110395" />
+          </div>
+          <div>
+            <label>GPS — długość</label>
+            <input type="number" name="gps_lng" step="any" placeholder="17.031008" />
+          </div>
+          <div>
+            <label>Czas trwania (ms)</label>
+            <input type="number" name="duration" placeholder="99900" />
+          </div>
+        </div>
+
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label>Data *</label>
+            <input type="text" name="date" placeholder="DD.MM.YYYY" required />
+          </div>
+          <div>
+            <label>Czas nagrania *</label>
+            <input type="text" name="time" placeholder="HH:MM" required />
+          </div>
+        </div>
+
+        <div>
+          <label>Opis</label>
+          <textarea name="description" rows="3" style="resize:vertical"></textarea>
+        </div>
+      </div>
+
+      <!-- Files -->
+      <div class="bg-white border border-gray-200 rounded p-4 space-y-3">
+        <h2 class="font-semibold text-sm uppercase tracking-wide text-gray-400 mb-2">Pliki</h2>
+
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label>Plik audio (MP3) *</label>
+            <input type="file" name="audio" accept="audio/mpeg,.mp3" class="text-sm" />
+          </div>
+          <div>
+            <label>Waveform (PNG)</label>
+            <input type="file" name="waveform" accept="image/png,.png" class="text-sm" />
+          </div>
+        </div>
+
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label>Avatar autora</label>
+            <input type="file" name="avatar" accept="image/*" class="text-sm" />
+          </div>
+          <div>
+            <label>Zdjęcia <span class="text-gray-400 font-normal">(można wybrać kilka)</span></label>
+            <input type="file" name="images" accept="image/*" multiple class="text-sm" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Cloudinary URLs (filled after upload) -->
+      <div class="bg-white border border-gray-200 rounded p-4 space-y-3">
+        <h2 class="font-semibold text-sm uppercase tracking-wide text-gray-400 mb-2">URL-e Cloudinary</h2>
+        <p class="text-xs text-gray-400">Wypełniane automatycznie po kliknięciu „Wyślij pliki". Możesz też wpisać ręcznie.</p>
+
+        <div>
+          <label>stream_url</label>
+          <input type="text" id="stream_url" placeholder="https://res.cloudinary.com/..." />
+        </div>
+        <div>
+          <label>waveform_url</label>
+          <input type="text" id="waveform_url" placeholder="https://res.cloudinary.com/..." />
+        </div>
+        <div>
+          <label>authorAvatar</label>
+          <input type="text" id="authorAvatar" placeholder="https://res.cloudinary.com/... (lub puste)" />
+        </div>
+        <div>
+          <label>images <span class="text-gray-400 font-normal">(jeden URL per linia)</span></label>
+          <textarea id="images_urls" rows="3" placeholder="https://res.cloudinary.com/..." style="resize:vertical"></textarea>
+        </div>
+      </div>
+
+      <!-- Actions -->
+      <div class="flex gap-3">
+        <button type="button" id="btnUpload"
+          class="flex-1 bg-white border border-black text-black hover:bg-black hover:text-white transition-colors py-2 font-medium text-sm">
+          1. Wyślij pliki do Cloudinary
+        </button>
+        <button type="submit"
+          class="flex-1 bg-black text-white hover:bg-gray-800 transition-colors py-2 font-medium text-sm">
+          2. Zapisz nagranie
+        </button>
+      </div>
+    </form>
+  </div>
+
+  <script>
+    const form = document.getElementById('trackForm')
+    const status = document.getElementById('status')
+
+    function showStatus(msg, ok = true) {
+      status.textContent = msg
+      status.className = `mb-4 p-3 rounded text-sm font-medium ${ok ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'}`
+      status.classList.remove('hidden')
+    }
+
+    function getVal(name) {
+      return (form.querySelector(`[name="${name}"]`) || {}).value?.trim() || ''
+    }
+
+    // Step 1: upload files
+    document.getElementById('btnUpload').addEventListener('click', async () => {
+      const permalink = getVal('permalink')
+      if (!permalink) return showStatus('Wpisz permalink przed wysłaniem plików.', false)
+
+      const fd = new FormData()
+      fd.append('permalink', permalink)
+
+      const fields = ['audio', 'waveform', 'avatar']
+      for (const f of fields) {
+        const input = form.querySelector(`[name="${f}"]`)
+        if (input?.files[0]) fd.append(f, input.files[0])
+      }
+      const imgInput = form.querySelector('[name="images"]')
+      if (imgInput?.files.length) {
+        for (const file of imgInput.files) fd.append('images', file)
+      }
+
+      showStatus('Wysyłanie plików do Cloudinary…')
+      try {
+        const res = await fetch('/api/upload', { method: 'POST', body: fd })
+        const data = await res.json()
+        if (!res.ok) return showStatus(`Błąd: ${data.error}`, false)
+
+        if (data.stream_url)   document.getElementById('stream_url').value = data.stream_url
+        if (data.waveform_url) document.getElementById('waveform_url').value = data.waveform_url
+        if (data.authorAvatar) document.getElementById('authorAvatar').value = data.authorAvatar
+        if (data.images?.length) document.getElementById('images_urls').value = data.images.join('\n')
+
+        showStatus('Pliki wysłane! Sprawdź URL-e powyżej, a następnie kliknij „Zapisz nagranie".')
+      } catch (err) {
+        showStatus(`Błąd połączenia: ${err.message}`, false)
+      }
+    })
+
+    // Step 2: save track
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault()
+
+      const lat = getVal('gps_lat')
+      const lng = getVal('gps_lng')
+
+      const track = {
+        title:       getVal('title'),
+        permalink:   getVal('permalink'),
+        author:      getVal('author'),
+        gear:        getVal('gear'),
+        location:    getVal('location'),
+        date:        getVal('date'),
+        time:        getVal('time'),
+        description: getVal('description'),
+        duration:    Number(getVal('duration')) || 0,
+        gps:         { lat, lng },
+        stream_url:  document.getElementById('stream_url').value.trim(),
+        waveform_url:document.getElementById('waveform_url').value.trim(),
+        authorAvatar:document.getElementById('authorAvatar').value.trim() || null,
+        images:      document.getElementById('images_urls').value.trim()
+                       .split('\n').map(s => s.trim()).filter(Boolean),
+      }
+
+      try {
+        const res = await fetch('/api/track', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(track),
+        })
+        const data = await res.json()
+        if (!res.ok) return showStatus(`Błąd: ${data.error}`, false)
+        showStatus(`Zapisano! Baza ma teraz ${data.total} nagrań.`)
+        form.reset()
+        document.getElementById('stream_url').value = ''
+        document.getElementById('waveform_url').value = ''
+        document.getElementById('authorAvatar').value = ''
+        document.getElementById('images_urls').value = ''
+      } catch (err) {
+        showStatus(`Błąd połączenia: ${err.message}`, false)
+      }
+    })
+  </script>
+</body>
+</html>

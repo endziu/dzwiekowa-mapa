@@ -4,3 +4,4 @@ dist/
 .DS_Store
 desktop.ini
 npm-debug.log
+.env
