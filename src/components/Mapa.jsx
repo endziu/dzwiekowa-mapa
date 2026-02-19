@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { APIProvider, Map, AdvancedMarker, Pin } from '@vis.gl/react-google-maps'
 
 // Replace with a real Map ID from Google Cloud Console for production
-const MAPS_KEY = 'AIzaSyB7GQAjLtFuxLYjfSQq3PLX3o0mX6qT-CU'
+const MAPS_KEY = import.meta.env.VITE_GOOGLE_MAPS_KEY
 const MAP_ID = 'DEMO_MAP_ID'
 
 export default function Mapa({ currentSound, sounds, onMarkerClick }) {
