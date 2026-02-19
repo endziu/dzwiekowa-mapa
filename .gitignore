@@ -5,3 +5,4 @@ dist/
 desktop.ini
 npm-debug.log
 .env
+db/tracks/
