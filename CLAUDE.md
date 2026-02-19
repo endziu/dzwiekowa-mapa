@@ -97,6 +97,10 @@ Run locally only — never expose to the internet.
 5. Click **"Zapisz nagranie"** — prepends the new entry to `db/json/tracks.json`
 6. Rebuild and redeploy the site
 
+## Preferences
+
+- Use **bun** instead of node for running scripts (e.g. `bun script.js` not `node script.js`)
+
 ## What to ignore
 
 - `db/tracks/` — local copies of media files, gitignored, already on Cloudinary
