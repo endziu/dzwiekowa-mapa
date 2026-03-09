@@ -7,15 +7,15 @@ Sound map of Wrocław — audio recordings placed on a Google Maps satellite vie
 - **Vite 6** + **React 18** + **Tailwind CSS v4**
 - **react-router-dom v6** — client-side routing
 - **@vis.gl/react-google-maps** — Google Maps integration
-- Fully static — `npm run build` outputs `dist/` with no server needed
+- Fully static — `bun run build` outputs `dist/` with no server needed
 
 ## Commands
 
 ```bash
-npm run dev      # dev server (localhost:5173)
-npm run build    # production build → dist/
-npm run preview  # preview the production build locally
-npm run admin    # local admin panel → http://localhost:3333
+bun run dev      # dev server (localhost:5173)
+bun run build    # production build → dist/
+bun run preview  # preview the production build locally
+bun run admin    # local admin panel → http://localhost:3333
 ```
 
 ## Project structure
@@ -91,7 +91,7 @@ location / {
 Run locally only — never expose to the internet.
 
 1. Copy `.env.example` to `.env` and fill in Cloudinary credentials
-2. `npm run admin` → open http://localhost:3333
+2. `bun run admin` → open http://localhost:3333
 3. Fill in track metadata + select files
 4. Click **"Wyślij pliki"** — uploads audio, waveform, avatar, images to Cloudinary
 5. Click **"Zapisz nagranie"** — prepends the new entry to `db/json/tracks.json`
