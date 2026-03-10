@@ -57,7 +57,7 @@ function SoundLayout() {
       </div>
 
       {/* sidebar */}
-      <div className="flex flex-col flex-1 ns:flex-none ns:w-[512px] border-t ns:border-t-0 ns:border-l border-neutral-200 overflow-hidden">
+      <div className="flex flex-col flex-1 ns:flex-none ns:w-[512px] border-t ns:border-t-0 ns:border-l border-neutral-200 overflow-hidden p-2">
         <Player
           key={permalink}
           ref={playerRef}

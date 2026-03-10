@@ -38,7 +38,7 @@ const Player = forwardRef(({ sound, isPlaying, onPlay, onEnded }, ref) => {
         onEnded={onEnded}
       />
 
-      <div className="flex flex-row">
+      <div className="flex flex-row gap-2">
         {/* play / pause button */}
         <button
           onClick={onPlay}
@@ -58,15 +58,15 @@ const Player = forwardRef(({ sound, isPlaying, onPlay, onEnded }, ref) => {
         </button>
 
         {/* waveform + progress overlay */}
-        <div className="relative flex-1 pl-2 h-12 cursor-pointer" onClick={handleSeek}>
+        <div className="relative flex-1 h-12 cursor-pointer" onClick={handleSeek}>
+          <div
+            className="absolute inset-y-0 left-0 bg-black/80 pointer-events-none"
+            style={{ width: `${time.percent}%` }}
+          />
           <img
             src={sound.waveform_url}
             alt="waveform"
             className="absolute inset-0 w-full h-full object-fill bg-black/20"
-          />
-          <div
-            className="absolute inset-y-0 left-0 bg-black/80 pointer-events-none"
-            style={{ width: `${time.percent}%` }}
           />
         </div>
       </div>
