@@ -1,6 +1,10 @@
-# Dźwiękowa Mapa Wrocławia
+# CLAUDE.md
 
-Sound map of Wrocław — audio recordings placed on a Google Maps satellite view. Live at https://dzwiekowamapa.pl.
+This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+
+## Project Overview
+
+**Dźwiękowa Mapa Wrocławia** — sound map of Wrocław, audio recordings placed on a Google Maps satellite view. Live at https://dzwiekowamapa.pl.
 
 ## Stack
 
@@ -72,7 +76,7 @@ Custom theme is defined in `src/index.css`:
 
 ## Google Maps
 
-- API key is hardcoded in `src/components/Mapa.jsx`
+- API key is loaded from `.env` via `VITE_GOOGLE_MAPS_KEY` (see `.env.example`)
 - `MAP_ID` is set to `"DEMO_MAP_ID"` — replace with a real Map ID from Google Cloud Console for production (required for `AdvancedMarker`)
 
 ## Deployment (VPS / nginx)
