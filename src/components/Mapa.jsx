@@ -3,7 +3,7 @@ import { APIProvider, Map, AdvancedMarker, Pin } from '@vis.gl/react-google-maps
 
 // Replace with a real Map ID from Google Cloud Console for production
 const MAPS_KEY = import.meta.env.VITE_GOOGLE_MAPS_KEY
-const MAP_ID = 'DEMO_MAP_ID'
+const MAP_ID = '18aaa6acf1c584f810a090b4'
 
 export default function Mapa({ currentSound, sounds, onMarkerClick }) {
   const toLatLng = s => ({ lat: s.gps.lat, lng: s.gps.lng })
