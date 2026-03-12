@@ -47,6 +47,8 @@ app.post(
     try {
       const { permalink } = req.body
       if (!permalink) return res.status(400).json({ error: 'permalink is required' })
+      if (!/^[a-z0-9-]+$/.test(permalink))
+        return res.status(400).json({ error: 'permalink must be lowercase letters, digits, and hyphens only' })
 
       const base = `mapadb/${permalink}`
       const results = {}
@@ -94,6 +96,17 @@ app.post('/api/track', (req, res) => {
     const required = ['title', 'permalink', 'stream_url', 'waveform_url', 'author', 'date', 'time', 'location']
     const missing = required.filter(f => !track[f])
     if (missing.length) return res.status(400).json({ error: `Missing fields: ${missing.join(', ')}` })
+
+    if (!/^[a-z0-9-]+$/.test(track.permalink))
+      return res.status(400).json({ error: 'permalink must be lowercase letters, digits, and hyphens only' })
+
+    const lat = parseFloat(track.gps?.lat)
+    const lng = parseFloat(track.gps?.lng)
+    if (!Number.isFinite(lat) || lat < -90 || lat > 90)
+      return res.status(400).json({ error: 'gps.lat must be a number between -90 and 90' })
+    if (!Number.isFinite(lng) || lng < -180 || lng > 180)
+      return res.status(400).json({ error: 'gps.lng must be a number between -180 and 180' })
+    track.gps = { lat, lng }
 
     const tracks = JSON.parse(readFileSync(TRACKS_PATH, 'utf8'))
     const idx = tracks.findIndex(t => t.permalink === track.permalink)

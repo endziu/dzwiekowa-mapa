@@ -6,7 +6,7 @@ const MAPS_KEY = import.meta.env.VITE_GOOGLE_MAPS_KEY
 const MAP_ID = 'DEMO_MAP_ID'
 
 export default function Mapa({ currentSound, sounds, onMarkerClick }) {
-  const toLatLng = s => ({ lat: parseFloat(s.gps.lat), lng: parseFloat(s.gps.lng) })
+  const toLatLng = s => ({ lat: s.gps.lat, lng: s.gps.lng })
 
   const [camera, setCamera] = useState({ center: toLatLng(currentSound), zoom: 15 })
 

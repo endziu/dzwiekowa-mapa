@@ -57,7 +57,7 @@ admin/
   "images": ["https://res.cloudinary.com/endziu/image/upload/..."],
   "author": "string",
   "authorAvatar": "https://... or null",
-  "gps": { "lat": "51.110395", "lng": "17.031008" },
+  "gps": { "lat": 51.110395, "lng": 17.031008 },
   "time": "HH:MM",
   "date": "DD.MM.YYYY",
   "gear": "string",
