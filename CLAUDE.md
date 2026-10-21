@@ -9,7 +9,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## Stack
 
 - **Vite 6** + **React 18** + **Tailwind CSS v4**
-- **react-router-dom v6** — client-side routing
+- **react-router-dom v7** — client-side routing (Declarative Mode / BrowserRouter)
 - **@vis.gl/react-google-maps** — Google Maps integration
 - Fully static — `bun run build` outputs `dist/` with no server needed
 
