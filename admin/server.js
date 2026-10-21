@@ -18,7 +18,7 @@ cloudinary.config({
 })
 
 const upload = multer({ storage: multer.memoryStorage() })
-const app = express()
+export const app = express()
 app.use(express.json())
 
 app.get('/', (_req, res) => res.sendFile(join(__dirname, 'index.html')))
@@ -125,6 +125,8 @@ app.post('/api/track', (req, res) => {
   }
 })
 
-app.listen(PORT, '127.0.0.1', () => {
-  console.log(`\n  Admin panel → http://localhost:${PORT}\n`)
-})
+if (import.meta.main) {
+  app.listen(PORT, '127.0.0.1', () => {
+    console.log(`\n  Admin panel → http://localhost:${PORT}\n`)
+  })
+}
